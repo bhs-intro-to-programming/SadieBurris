@@ -19,6 +19,9 @@ let ballSize = 15;
 // thing we would get from calling now().
 const drawFrame = (time) => {
     drawBall(15 + now(), ballSize)
+    if now() > 20 {
+        now() === 0;
+    };
 };
 
 // Compute the height in pixels at time t after the ball hit the ground
