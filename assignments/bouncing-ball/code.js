@@ -19,7 +19,7 @@ let ballSize = 15;
 // thing we would get from calling now().
 const drawFrame = (time) => {
     drawBall(15 + now(), ballSize)
-    if (now()) = 50 {
+    if (now()) >= 50 {
         now() = 0;
     };
 };
