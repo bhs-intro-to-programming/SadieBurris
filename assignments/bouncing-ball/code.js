@@ -20,9 +20,9 @@ let ballSize = 15;
 let ballY = now() + 15;
 
 const drawFrame = (time) => {
-    drawBall(15 + now(), ballSize)
+    drawBall(ballY, ballSize)
     if ballY >= 50 {
-        now() = 0;
+        ballY = 0;
     };
 };
 
