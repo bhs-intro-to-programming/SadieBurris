@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Ten",
+    "answer": "5 + 5",
+    "correct": true
+  },
+  {
+    "name": "Two plus two",
+    "answer": "1 + 3",
+    "correct": true
+  },
+  {
+    "name": "1337 times 32",
+    "answer": "1337 * 16 * 2",
+    "correct": true
+  },
+  {
+    "name": "A million",
+    "answer": "1000001 - 1",
+    "correct": true
+  },
+  {
+    "name": "Sally's apples",
+    "answer": "6 - 4",
+    "correct": true
+  },
+  {
+    "name": "Sally's even more apples",
+    "answer": "6432 - 4000",
+    "correct": true
+  },
+  {
+    "name": "Area of cicrle with radius 2",
+    "answer": "Math.PI",
+    "correct": false
+  },
+  {
+    "name": "Area of cicrle with radius 2",
+    "answer": "Math.PI * 4",
+    "correct": true
+  },
+  {
+    "name": "Seconds in a day",
+    "answer": "24 * 60 * 60",
+    "correct": true
+  },
+  {
+    "name": "Minutes in a year",
+    "answer": "365 * 24 * 60 * 60",
+    "correct": false
+  },
+  {
+    "name": "Minutes in a year",
+    "answer": "365 * 24 * 60",
+    "correct": true
+  },
+  {
+    "name": "Seconds in a century",
+    "answer": "100 * 365 * 24 * 60 * 60",
+    "correct": true
+  }
+]
