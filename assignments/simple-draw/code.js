@@ -45,4 +45,4 @@
 
 //drawFilledRect(5, height - 20, 45, 15, 'purple');
 
-drawFilledRect(0, 550, 200, 200, 'green');
+drawFilledRect(0, 550, 200, 500, 'green');
