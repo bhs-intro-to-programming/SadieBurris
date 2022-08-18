@@ -59,4 +59,4 @@ drawFilledCircle(330, 120, 30, 'white');
 drawFilledCircle(360, 130, 20, 'white');
 drawFilledCircle(300, 130, 20, 'white');
 
-drawFilledCircle(100, 100, 50, 'gray');
+drawFilledCircle(100, 100, 50, 'white');
