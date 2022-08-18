@@ -52,4 +52,4 @@ drawFilledRect(0, 480, 500, 200, 'green');
 drawFilledCircle(400, 100, 50, 'yellow');
 
 drawFilledCircle(250, 200, 30, 'white');
-drawFilledCircle(275, 210, 20, 'white');
+drawFilledCircle(280, 210, 20, 'white');
