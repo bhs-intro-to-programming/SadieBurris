@@ -61,4 +61,4 @@ drawFilledCircle(300, 130, 20, 'white');
 
 //moon
 drawFilledCircle(100, 100, 50, 'white');
-drawFilledCircle(130, 100, 50, 'blue');
+drawFilledCircle(120, 100, 50, 'blue');
