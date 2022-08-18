@@ -50,3 +50,5 @@ drawFilledRect(0, 0, 500, 600, 'blue');
 drawFilledRect(0, 480, 500, 200, 'green');
 
 drawFilledCircle(400, 100, 50, 'yellow');
+
+drawFilledCircle(250, 200, 30, 'white');
