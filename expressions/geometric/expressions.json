@@ -1,0 +1,117 @@
+[
+  {
+    "name": "Perimeter of a square",
+    "answer": "s * 4",
+    "correct": true
+  },
+  {
+    "name": "Perimeter of a rectangle",
+    "answer": "(w * 2) + (h * 2)",
+    "correct": true
+  },
+  {
+    "name": "Area of a square",
+    "answer": "s * s",
+    "correct": true
+  },
+  {
+    "name": "Area of a rectangle",
+    "answer": "w * h",
+    "correct": true
+  },
+  {
+    "name": "Area of a triangle",
+    "answer": "b / 2 * h",
+    "correct": true
+  },
+  {
+    "name": "Area of a trapezoid",
+    "answer": "(b1 + b2) / 2 * h",
+    "correct": true
+  },
+  {
+    "name": "Area of a circle",
+    "answer": "r ** 2 * Math.PI",
+    "correct": true
+  },
+  {
+    "name": "Circumference of a circle",
+    "answer": "2 * Math.PI * r",
+    "correct": true
+  },
+  {
+    "name": "The curved surface area of a cylinder",
+    "answer": "2 * Math.PI. r * h",
+    "correct": false
+  },
+  {
+    "name": "The curved surface area of a cylinder",
+    "answer": "2 * Math.PI * r * h",
+    "correct": true
+  },
+  {
+    "name": "Total surface area of a cylinder",
+    "answer": "2 * Math.PI * r * h + 2 * (2 * Math.PI * r)",
+    "correct": false
+  },
+  {
+    "name": "Total surface area of a cylinder",
+    "answer": "2 * Math.PI * r * h + (2 * (2 * Math.PI * r))",
+    "correct": false
+  },
+  {
+    "name": "Total surface area of a cylinder",
+    "answer": "(2 * Math.PI * r * h) + (2 * (2 * Math.PI * r))",
+    "correct": false
+  },
+  {
+    "name": "Total surface area of a cylinder",
+    "answer": "(2 * Math.PI * r * h) + 2 * (r** 2 * Math.PI)",
+    "correct": true
+  },
+  {
+    "name": "Volume of a Cylinder",
+    "answer": "r ** 2 * Math.PI * h",
+    "correct": true
+  },
+  {
+    "name": "The curved surface area of a cone from slant height",
+    "answer": "Math.PI * r * s",
+    "correct": true
+  },
+  {
+    "name": "Total surface area of a cone from slant height",
+    "answer": "Math.PI * r * s + r ** 2 * Math.PI",
+    "correct": true
+  },
+  {
+    "name": "Total surface area of a cone from height",
+    "answer": "Math.PI * r * Math.sqrt(r ** 2 + h ** 2) + r ** 2 * Math.PI",
+    "correct": true
+  },
+  {
+    "name": "Volume of a cone",
+    "answer": "r ** 2 * Math.PI * (h / 3)",
+    "correct": true
+  },
+  {
+    "name": "Surface area of a sphere",
+    "answer": "r ** 2 * Math.PI * 4",
+    "correct": true
+  },
+  {
+    "name": "Volume of sphere",
+    "answer": "Math.PI * r ** 3 * 4/3",
+    "correct": true
+  },
+  {
+    "name": "Midpoint of line",
+    "answer": "(a + b) / 2",
+    "correct": true
+  },
+  {
+    "name": "Length of hypotenuse",
+    "answer": "Math.sqrt(a ** 2 + b ** 2)",
+    "correct": true
+  }
+]
