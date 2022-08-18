@@ -51,6 +51,6 @@ drawFilledRect(0, 480, 500, 200, 'green');
 
 drawFilledCircle(400, 100, 50, 'yellow');
 
-drawFilledCircle(320, 120, 30, 'white');
-drawFilledCircle(350, 130, 20, 'white');
-drawFilledCircle(290, 130, 20, 'white');
+drawFilledCircle(330, 120, 30, 'white');
+drawFilledCircle(360, 130, 20, 'white');
+drawFilledCircle(300, 130, 20, 'white');
