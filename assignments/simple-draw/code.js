@@ -47,4 +47,4 @@
 
 drawFilledRect(0, 550, 500, 200, 'green');
 
-drawFilledCircle(100, 500, 50, 'white');
+drawFilledCircle(400, 500, 50, 'white');
