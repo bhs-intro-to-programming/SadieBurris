@@ -46,7 +46,7 @@
 //drawFilledRect(5, height - 20, 45, 15, 'purple');
 let i = 330;
 //sky
-drawFilledRect(0, 0, 500, 600, 'blue');
+
 
 //ground
 drawFilledRect(0, 480, 500, 200, 'green');
@@ -57,6 +57,7 @@ drawFilledCircle(400, 100, 50, 'yellow');
 //cloud
 do{
     i -= 1;
+    drawFilledRect(0, 0, 500, 600, 'blue');
     drawFilledCircle(i, 120, 30, 'white');
     drawFilledCircle(i + 30, 130, 20, 'white');
     drawFilledCircle(i - 30, 130, 20, 'white');
