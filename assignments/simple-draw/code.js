@@ -55,16 +55,31 @@ drawFilledRect(0, 480, 500, 200, 'green');
 drawFilledCircle(400, 100, 50, 'yellow');
 
 //cloud
-do{
-    i -= 1;
-    drawFilledRect(0, 0, 500, 600, 'blue');
-    drawFilledCircle(i, 120, 30, 'white');
-    drawFilledCircle(i + 30, 130, 20, 'white');
-    drawFilledCircle(i - 30, 130, 20, 'white');
-    }while (i > 0);
+
 
 //moon
 
 drawFilledCircle(100, 100, 50, 'white');
 
 drawFilledCircle(120, 100, 50, 'blue');
+
+do{
+    i -= 1;
+    drawFilledRect(0, 0, 500, 600, 'blue');
+    drawFilledCircle(i, 120, 30, 'white');
+    drawFilledCircle(i + 30, 130, 20, 'white');
+    drawFilledCircle(i - 30, 130, 20, 'white');
+    drawFilledRect(0, 480, 500, 200, 'green');
+
+//sun
+drawFilledCircle(400, 100, 50, 'yellow');
+
+//cloud
+
+
+//moon
+
+drawFilledCircle(100, 100, 50, 'white');
+
+drawFilledCircle(120, 100, 50, 'blue');
+    }while (i > 0);
