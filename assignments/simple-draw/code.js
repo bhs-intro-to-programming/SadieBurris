@@ -45,12 +45,18 @@
 
 //drawFilledRect(5, height - 20, 45, 15, 'purple');
 
+//sky
 drawFilledRect(0, 0, 500, 600, 'blue');
 
+//ground
 drawFilledRect(0, 480, 500, 200, 'green');
 
+//sun
 drawFilledCircle(400, 100, 50, 'yellow');
 
+//cloud
 drawFilledCircle(330, 120, 30, 'white');
 drawFilledCircle(360, 130, 20, 'white');
 drawFilledCircle(300, 130, 20, 'white');
+
+drawFilledCircle(100, 100, 50, 'gray');
