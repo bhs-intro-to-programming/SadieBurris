@@ -44,7 +44,7 @@
 //drawFilledCircle(width - 50, height - 50, 50, 'red');
 
 //drawFilledRect(5, height - 20, 45, 15, 'purple');
-
+let i = 330;
 //sky
 drawFilledRect(0, 0, 500, 600, 'blue');
 
@@ -55,10 +55,15 @@ drawFilledRect(0, 480, 500, 200, 'green');
 drawFilledCircle(400, 100, 50, 'yellow');
 
 //cloud
-drawFilledCircle(330, 120, 30, 'white');
-drawFilledCircle(360, 130, 20, 'white');
-drawFilledCircle(300, 130, 20, 'white');
+do{
+    i -= 1;
+    drawFilledCircle(i, 120, 30, 'white');
+    drawFilledCircle(i + 30, 130, 20, 'white');
+    drawFilledCircle(i - 30, 130, 20, 'white');
+    }while (i > 0);
 
 //moon
+
 drawFilledCircle(100, 100, 50, 'white');
+
 drawFilledCircle(120, 100, 50, 'blue');
