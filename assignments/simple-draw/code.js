@@ -50,6 +50,10 @@
 //ground
 drawFilledRect(0, 480, 500, 200, 'green');
 
+drawFilledCircle(330, 120, 30, 'white');
+drawFilledCircle(360, 130, 20, 'white');
+drawFilledCircle(300, 130, 20, 'white');
+
 //sun
 drawFilledCircle(400, 100, 50, 'yellow');
 
@@ -63,9 +67,14 @@ drawFilledCircle(100, 100, 50, 'white');
 drawFilledCircle(120, 100, 50, 'blue');
 
 drawFilledRect(0, 0, 500, 600, 'blue');
-drawFilledCircle(330, 120, 30, 'white');
-drawFilledCircle(360, 130, 20, 'white');
-drawFilledCircle(300, 130, 20, 'white');
+
+
+
+
+
+
+
+
 drawFilledRect(0, 480, 500, 200, 'green');
 
 //sun
