@@ -62,7 +62,7 @@ drawFilledCircle(400, 100, 50, 'yellow');
 drawFilledCircle(100, 100, 50, 'white');
 drawFilledCircle(120, 100, 50, 'blue');
 
-drawFilledRect(150, 350, 200, 200, 'brown')
+drawFilledRect(150, 350, 200, 200, 'blue')
 drawLine(200, 300, 300, 400, 'brown', 150);
 drawLine(150, 350, 350, 350, 'black', 1)
 drawFilledRect(275, 460, 50, 90, 'black');
