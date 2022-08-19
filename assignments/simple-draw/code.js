@@ -67,4 +67,4 @@ drawLine(200, 300, 300, 400, 'brown', 150);
 drawLine(150, 350, 350, 350, 'black', 1)
 drawFilledRect(260, 450, 50, 100, 'black');
 drawFilledRect(175, 390, 50, 50, 'blue');
-drawFilledRect(215, 390, 50, 50, 'blue');
+drawFilledRect(315, 390, 50, 50, 'blue');
