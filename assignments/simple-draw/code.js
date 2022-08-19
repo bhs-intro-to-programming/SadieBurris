@@ -45,7 +45,7 @@
 
 
 //sky
-
+drawFilledRect(0, 0, 500, 600, 'blue');
 
 //ground
 drawFilledRect(0, 480, 500, 200, 'green');
@@ -66,7 +66,7 @@ drawFilledCircle(100, 100, 50, 'white');
 
 drawFilledCircle(120, 100, 50, 'blue');
 
-drawFilledRect(0, 0, 500, 600, 'blue');
+
 
 
 
