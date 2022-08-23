@@ -54,7 +54,7 @@ drawFilledCircle(400, 100, 50, 'yellow');
 
 //cloud
 const cloudX = 330;
-const cloudY = 120;
+const cloudY = 200;
 drawFilledCircle(cloudX, cloudY, 30, 'white');
 drawFilledCircle(cloudX + 30, cloudY + 10, 20, 'white');
 drawFilledCircle(cloudX - 30, cloudY + 10, 20, 'white');
