@@ -72,7 +72,7 @@ const houseX = 150;
 //why would you want to change house Y?????
 drawFilledRect(houseX, 350, 200, 200, 'brown')
 drawLine(houseX + 50, 300, houseX + 150, 400, 'brown', 150);
-drawLine(houseX, 350, 350, 350, 'black', 1)
+drawLine(houseX, 350, houseX + 200, 350, 'black', 1)
 drawFilledRect(houseX + 125, 460, 50, 90, 'black');
 drawFilledRect(houseX + 25, 390, 50, 50, 'blue');
 drawFilledRect(houseX + 125, 390, 50, 50, 'blue');
