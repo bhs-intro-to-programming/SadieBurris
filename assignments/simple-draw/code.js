@@ -50,7 +50,7 @@ drawFilledRect(0, 0, 500, 600, 'blue');
 drawFilledRect(0, 480, 500, 200, 'green');
 
 //sun
-const sunX = 200
+const sunX = 400
 const sunY = 100
 drawFilledCircle(400, 100, 50, 'yellow');
 
