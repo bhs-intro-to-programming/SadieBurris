@@ -60,7 +60,8 @@ drawFilledCircle(300, 130, 20, 'white');
 
 //moon
 const moonX = 100;
-drawFilledCircle(moonX, 100, 50, 'white');
+const moonY = 100;
+drawFilledCircle(moonX, moonY, 50, 'white');
 drawFilledCircle(120, 100, 50, 'blue');
 
 drawFilledRect(150, 350, 200, 200, 'brown')
