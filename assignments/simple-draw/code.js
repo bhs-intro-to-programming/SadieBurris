@@ -50,8 +50,8 @@ drawFilledRect(0, 0, 500, 600, 'blue');
 drawFilledRect(0, 480, 500, 200, 'green');
 
 //sun
-const sunX = 400
-const sunY = 100
+const sunX = 400;
+const sunY = 100;
 drawFilledCircle(sunX, sunY, 50, 'yellow');
 
 //cloud
