@@ -43,7 +43,7 @@
 
 //drawFilledCircle(width - 50, height - 50, 50, 'red');
 
-const centerX = x / 2;
+
 
 //sky
 drawFilledRect(0, 0, 500, 600, 'blue');
