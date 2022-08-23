@@ -62,7 +62,7 @@ drawFilledCircle(300, 130, 20, 'white');
 const moonX = 100;
 const moonY = 100;
 drawFilledCircle(moonX, moonY, 50, 'white');
-drawFilledCircle(120, 100, 50, 'blue');
+drawFilledCircle(moonX + 20, moonY, 50, 'blue');
 
 drawFilledRect(150, 350, 200, 200, 'brown')
 drawLine(200, 300, 300, 400, 'brown', 150);
