@@ -67,10 +67,13 @@ const moonY = 100;
 drawFilledCircle(moonX, moonY, 50, 'white');
 drawFilledCircle(moonX + 20, moonY, 50, 'blue');
 
-drawFilledRect(150, 350, 200, 200, 'brown')
-drawLine(200, 300, 300, 400, 'brown', 150);
-drawLine(150, 350, 350, 350, 'black', 1)
-drawFilledRect(275, 460, 50, 90, 'black');
-drawFilledRect(175, 390, 50, 50, 'blue');
-drawFilledRect(275, 390, 50, 50, 'blue');
-drawFilledCircle(285, 500, 5, 'gray');
+
+const houseX = 150;
+//why would you want to change house Y?????
+drawFilledRect(houseX, 350, 200, 200, 'brown')
+drawLine(houseX + 50, 300, houseX + 150, 400, 'brown', 150);
+drawLine(houseX, 350, 350, 350, 'black', 1)
+drawFilledRect(houseX + 125, 460, 50, 90, 'black');
+drawFilledRect(houseX + 25, 390, 50, 50, 'blue');
+drawFilledRect(houseX + 125, 390, 50, 50, 'blue');
+drawFilledCircle(houseX + 135, 500, 5, 'gray');
