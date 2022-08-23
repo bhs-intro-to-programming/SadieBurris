@@ -43,8 +43,6 @@
 
 //drawFilledCircle(width - 50, height - 50, 50, 'red');
 
-
-
 //sky
 drawFilledRect(0, 0, 500, 600, 'blue');
 
@@ -60,7 +58,7 @@ drawFilledCircle(360, 130, 20, 'white');
 drawFilledCircle(300, 130, 20, 'white');
 
 //moon
-const moonX = 100;
+const moonX = 200;
 const moonY = 100;
 drawFilledCircle(moonX, moonY, 50, 'white');
 drawFilledCircle(moonX + 20, moonY, 50, 'blue');
