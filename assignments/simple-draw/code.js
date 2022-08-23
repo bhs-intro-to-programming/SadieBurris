@@ -52,7 +52,7 @@ drawFilledRect(0, 480, 500, 200, 'green');
 //sun
 const sunX = 400
 const sunY = 100
-drawFilledCircle(400, 100, 50, 'yellow');
+drawFilledCircle(sunX, sunY, 50, 'yellow');
 
 //cloud
 const cloudX = sunX - 70;
