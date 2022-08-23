@@ -68,7 +68,7 @@ drawFilledCircle(moonX, moonY, 50, 'white');
 drawFilledCircle(moonX + 20, moonY, 50, 'blue');
 
 
-const houseX = 150;
+const houseX = 200;
 //why would you want to change house Y?????
 drawFilledRect(houseX, 350, 200, 200, 'brown')
 drawLine(houseX + 50, 300, houseX + 150, 400, 'brown', 150);
