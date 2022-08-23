@@ -53,9 +53,11 @@ drawFilledRect(0, 480, 500, 200, 'green');
 drawFilledCircle(400, 100, 50, 'yellow');
 
 //cloud
-drawFilledCircle(330, 120, 30, 'white');
-drawFilledCircle(360, 130, 20, 'white');
-drawFilledCircle(300, 130, 20, 'white');
+const cloudX = 330;
+const cloudY = 120;
+drawFilledCircle(cloudX, cloudY, 30, 'white');
+drawFilledCircle(cloudX + 30, cloudY + 10, 20, 'white');
+drawFilledCircle(cloudX - 30, cloudY + 10, 20, 'white');
 
 //moon
 const moonX = 100;
