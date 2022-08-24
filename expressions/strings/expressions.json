@@ -64,5 +64,11 @@
     "answer": "'sharks'[0]",
     "correct": false,
     "timestamp": 1661377737208
+  },
+  {
+    "name": "First character",
+    "answer": "s[0]",
+    "correct": true,
+    "timestamp": 1661377801385
   }
 ]
