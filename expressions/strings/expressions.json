@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "name": "Capitalize",
+    "answer": "s[1].to",
+    "correct": false,
+    "timestamp": 1661379359665
+  }
+]
