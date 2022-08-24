@@ -4,5 +4,11 @@
     "answer": "s[1].to",
     "correct": false,
     "timestamp": 1661379359665
+  },
+  {
+    "name": "Indexing",
+    "answer": "'f'",
+    "correct": true,
+    "timestamp": 1661379487693
   }
 ]
