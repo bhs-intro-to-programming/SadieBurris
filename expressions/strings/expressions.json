@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "name": "Capitalize first three",
+    "answer": "s.substring",
+    "correct": false,
+    "timestamp": 1661378858674
+  }
+]
