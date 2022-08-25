@@ -41,4 +41,9 @@ const drawFallingTriangle = (x, time) => {
 // the same way in both places.)
 animate(drawFrame);
 */
+//HOW TO DEFINE FUNCTION
+//const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 
+let x = 100;
+let y = 100;
+drawFilledCircle(x, y, 50, 'blue');
