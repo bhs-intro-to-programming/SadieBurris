@@ -53,7 +53,7 @@ let y = 100;
 
 const drawMovingThing = (time) => {
     clear();
-    drawFilledCircle(time/50, time/50, 50, 'blue');
+    drawFilledCircle(time/20, time/20, 50, 'blue');
 };
 
 animate(drawMovingThing);
