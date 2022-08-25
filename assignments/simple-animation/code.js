@@ -55,4 +55,4 @@ const drawMovingThing = (x, y) => {
     drawMovingThing();
 };
 
-drawMovingThing();
+animate(drawMovingThing);
