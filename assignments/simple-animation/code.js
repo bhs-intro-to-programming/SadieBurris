@@ -37,8 +37,6 @@ const drawFallingTriangle = (x, time) => {
 // of drawFrame either here or where it is defined. (Or, if you must, change it
 // the same way in both places.)
 
-
-
 //HOW TO DEFINE FUNCTION
 //const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 
@@ -47,7 +45,11 @@ let y = 100;
 
 const drawMovingThing = (time) => {
     clear();
+    if(x < 400) {}
     drawFilledCircle(time/20, time/20, 50, 'blue');
+} else {
+    time = 0;
+}
 };
 
 animate(drawMovingThing);
