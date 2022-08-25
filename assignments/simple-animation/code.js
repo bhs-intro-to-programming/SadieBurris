@@ -52,6 +52,6 @@ const drawMovingThing = (x, y) => {
     x++;
     y++;
     drawMovingThing();
-}
+};
 
 drawMovingThing();
