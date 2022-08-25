@@ -40,7 +40,7 @@ const drawFallingTriangle = (x, time) => {
 //HOW TO DEFINE FUNCTION
 //const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 
-drawFilledRect(0, 0, 500, 500, 'blue')
+drawFilledRect(100, 100, 500, 500, 'blue')
 
 let x = 100;
 let y = 100;
