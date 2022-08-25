@@ -45,11 +45,7 @@ let y = 100;
 
 const drawMovingThing = (time) => {
     clear();
-    if(x < 0) {}
     drawFilledCircle(time/20, time/20, 50, 'blue');
-} else {
-    time = 0;
-}
 };
 
 animate(drawMovingThing);
