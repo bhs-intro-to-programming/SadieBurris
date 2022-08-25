@@ -4,11 +4,7 @@
 // change the code in here using the same functions you had in the simple
 // drawing exercise to draw shapes. The argument to this function, time, is the
 // number of milliseconds (one millionth of a second) since the program started.
-const drawFrame = (time) => {
-  clear();
-  drawFilledCircle((time / 3) % width, height / 2, 25, 'blue');
-  drawFallingTriangle(width / 2, time);
-};
+
 /*
 // This is a function that we define to make it easier to draw a triangle. You
 // may want to experiment with writing your own functions using this one as a
@@ -40,6 +36,13 @@ const drawFallingTriangle = (x, time) => {
 // Leave this code here or the animation won't run. Also don't change the name
 // of drawFrame either here or where it is defined. (Or, if you must, change it
 // the same way in both places.)
+
+const drawFrame = (time) => {
+  clear();
+  drawFilledCircle((time / 3) % width, height / 2, 25, 'blue');
+  drawFallingTriangle(width / 2, time);
+};
+
 animate(drawFrame);
 
 //HOW TO DEFINE FUNCTION
@@ -48,11 +51,8 @@ animate(drawFrame);
 let x = 100;
 let y = 100;
 
-const drawMovingThing = (x, y) => {
-    drawFilledCircle(x, y, 50, 'blue');
-    x++;
-    y++;
-    drawMovingThing();
+const drawMovingThing = (time) => {
+    drawFilledCircle(time, time, 50, 'blue');
 };
 
 animate(drawMovingThing);
