@@ -40,12 +40,14 @@ const drawFallingTriangle = (x, time) => {
 //HOW TO DEFINE FUNCTION
 //const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
 
+drawFilledRect(0, 0, 500, 500, 'blue')
+
 let x = 100;
 let y = 100;
 
 const drawMovingThing = (time) => {
     clear();
-    drawFilledCircle(((time/5) % (width - 100)) + 50, ((time/5) % (height - 100)) + 50, 5, 'blue');
+    drawFilledCircle(((time/5) % (width - 100)) + 50, ((time/5) % (height - 100)) + 50, 5, 'white');
 };
 
 animate(drawMovingThing);
