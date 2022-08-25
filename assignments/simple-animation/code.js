@@ -51,6 +51,7 @@ const drawMovingThing = (time, x, y) => {
     drawFilledCircle(x, y, 50, 'blue');
     x++;
     y++;
+    drawMovingThing();
 }
 
 drawMovingThing();
