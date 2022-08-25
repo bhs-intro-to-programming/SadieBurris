@@ -46,4 +46,9 @@ animate(drawFrame);
 
 let x = 100;
 let y = 100;
-drawFilledCircle(x, y, 50, 'blue');
+
+const drawMovingThing = (time, x, y) => {
+    drawFilledCircle(x, y, 50, 'blue');
+    x++;
+    y++;
+}
