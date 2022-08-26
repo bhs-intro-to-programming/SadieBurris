@@ -45,7 +45,7 @@ let y = 100;
 
 const drawMovingThing = (time) => {
     clear();
-    drawFilledRect(0, 0, 500, 500, 'blue');
+    drawFilledRect(0, 0, 500, 500, 'light blue');
     drawFilledCircle((time/5) % (width), (time/3) % (height), 5, 'white');
 };
 
