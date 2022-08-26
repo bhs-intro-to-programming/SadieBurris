@@ -55,7 +55,7 @@ const drawMovingThing = (time) => {
     if (x + (time/5) >= width || y >= height) {
         x = (Math.random() * width);
         y = 0;
-    }
+    };
 };
 
 animate(drawMovingThing);
