@@ -44,11 +44,10 @@ const drawFallingTriangle = (x, time) => {
 //Me code thingy :)
 
 
-
+    let x = Math.random() * width;
 //let x = 100;
 
 const drawMovingThing = (time) => {
-    let x = Math.random() * width;
     let y = (time/3) % height;
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
