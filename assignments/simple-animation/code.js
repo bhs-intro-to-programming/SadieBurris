@@ -50,3 +50,4 @@ const drawMovingThing = (time) => {
 };
 
 animate(drawMovingThing);
+animate(drawMovingThing);
