@@ -43,7 +43,7 @@ const drawFallingTriangle = (x, time) => {
 
 //Me code thingy :)
 
-let x = (Math.random() * width);
+let x = Math.random() * width;
 let y = (time/3) % height;
 
 //let x = 100;
@@ -53,7 +53,7 @@ const drawMovingThing = (time) => {
     drawFilledRect(0, 0, 500, 500, 'blue');
     drawFilledCircle(x + (time/5) % width, y, 5, 'white');
     if (x + (time/5) >= width || y >= height) {
-        x = (Math.random() * width);
+        x = Math.random() * width;
     };
 };
 
