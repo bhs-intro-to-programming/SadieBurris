@@ -46,7 +46,6 @@ const drawFallingTriangle = (x, time) => {
 let x = (Math.random() * width);
 
 //let x = 100;
-let y = 100;
 
 const drawMovingThing = (time) => {
     let y = (time/3) % height
