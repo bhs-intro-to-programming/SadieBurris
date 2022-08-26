@@ -55,6 +55,7 @@ const drawMovingThing = (time) => {
     drawFilledCircle(x + (time/5) % width, y, 5, 'white');
     if (x + (time/5) >= width || y >= height) {
         x = (Math.random() * width);
+        y = 0;
     }
 };
 
