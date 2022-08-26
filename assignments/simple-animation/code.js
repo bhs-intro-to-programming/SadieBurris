@@ -43,15 +43,15 @@ const drawFallingTriangle = (x, time) => {
 
 //Me code thingy :)
 
+let x = (Math.random() * width);
 
-
-let x = 100;
+//let x = 100;
 let y = 100;
 
 const drawMovingThing = (time) => {
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
-    drawFilledCircle((time/5) % width, (time/3) % height, 5, 'white');
+    drawFilledCircle(x + (time/5) % width, (time/3) % height, 5, 'white');
 };
 
 animate(drawMovingThing);
