@@ -53,6 +53,9 @@ const drawMovingThing = (time) => {
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
     drawFilledCircle(x + (time/5) % width, y, 5, 'white');
+    if (x + (time/5) >= width || y >= height) {
+        x = (Math.random() * width);
+    }
 };
 
 animate(drawMovingThing);
