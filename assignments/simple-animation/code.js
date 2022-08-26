@@ -49,9 +49,10 @@ let x = (Math.random() * width);
 let y = 100;
 
 const drawMovingThing = (time) => {
+    let y = (time/3) % height
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
-    drawFilledCircle(x + (time/5) % width, (time/3) % height, 5, 'white');
+    drawFilledCircle(x + (time/5) % width, y, 5, 'white');
 };
 
 animate(drawMovingThing);
