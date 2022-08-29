@@ -49,10 +49,11 @@ let x = Math.random();
 
 const drawMovingThing = (time) => {
     let y = (time/3) % height;
+    let currentX = x + (time/5) % width;
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
-    drawFilledCircle(x + (time/5) % width, y, 5, 'white');
-    if (x + (time/5) >= width || y >= height) {
+    drawFilledCircle(currentX, y, 5, 'white');
+    if (currentX) >= width || y >= height) {
         x = Math.random() * width;
     };
 };
