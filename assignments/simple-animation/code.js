@@ -49,7 +49,7 @@ let start = now();
 //let x = 100;
 
 const drawMovingThing = () => {
-    let y = ((now() - start)/3) % height;
+    let y = ((now() - start)/3);
     let currentX = x + ((now() - start)/5) % width;
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
