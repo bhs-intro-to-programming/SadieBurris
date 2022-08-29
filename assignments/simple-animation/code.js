@@ -61,5 +61,6 @@ const drawMovingThing = () => {
 };
 
 animate(drawMovingThing);
+animate(drawMovingThing);
 
 
