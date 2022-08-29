@@ -53,7 +53,7 @@ const drawMovingThing = (time) => {
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
     drawFilledCircle(currentX, y, 5, 'white');
-    if current) >= width || y >= height) {
+    if (currentX >= width || y >= height) {
         x = Math.random() * width;
     };
 };
