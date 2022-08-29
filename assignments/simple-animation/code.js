@@ -50,7 +50,7 @@ let start = now();
 
 const drawMovingThing = () => {
     let y = ((now() - start)/3);
-    let currentX = x + ((now() - start)/5) % width;
+    let currentX = x + ((now() - start)/5);
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
     drawFilledCircle(currentX, y, 5, 'white');
