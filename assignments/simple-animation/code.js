@@ -45,18 +45,18 @@ const drawFallingTriangle = (x, time) => {
 
 
 let x = Math.random();
-let start = now();
+let start = time;
 //let x = 100;
 
 const drawMovingThing = (time) => {
-    let y = ((now() - start)/3) % height;
-    let currentX = x + ((now() - start)/5) % width;
+    let y = ((time - start)/3) % height;
+    let currentX = x + ((time - start)/5) % width;
     clear();
     drawFilledRect(0, 0, 500, 500, 'blue');
     drawFilledCircle(currentX, y, 5, 'white');
     if (currentX >= width || y >= height) {
         x = Math.random() * width;
-        start = now();
+        start = time;
     };
 };
 
