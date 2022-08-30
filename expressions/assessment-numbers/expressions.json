@@ -54,5 +54,12 @@
     "answer": "Math.PI * 4",
     "correct": true,
     "timestamp": 1661895942659
+  },
+  {
+    "name": "Remainder",
+    "canonical": "a % b",
+    "answer": "a % b",
+    "correct": true,
+    "timestamp": 1661895964573
   }
 ]
