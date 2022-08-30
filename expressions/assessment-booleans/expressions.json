@@ -96,5 +96,12 @@
     "answer": "!sleepy || !dark",
     "correct": true,
     "timestamp": 1661896337038
+  },
+  {
+    "name": "Dragging?",
+    "canonical": "!enoughSleep && lotsOfWork",
+    "answer": "!enoughSleep && lotsOfWork",
+    "correct": true,
+    "timestamp": 1661896355903
   }
 ]
