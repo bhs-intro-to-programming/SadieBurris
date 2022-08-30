@@ -89,5 +89,12 @@
     "answer": "member && !outSick",
     "correct": true,
     "timestamp": 1661896320254
+  },
+  {
+    "name": "Time to sleep?",
+    "canonical": "!sleepy || !dark",
+    "answer": "!sleepy || !dark",
+    "correct": true,
+    "timestamp": 1661896337038
   }
 ]
