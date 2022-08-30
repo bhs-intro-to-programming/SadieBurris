@@ -1,3 +1,4 @@
+/*
 let x = Math.random();
 let start = now();
 //let x = 100;
@@ -15,3 +16,5 @@ const drawMovingThing = () => {
 };
 
 animate(drawMovingThing);
+*/
+
