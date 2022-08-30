@@ -75,5 +75,12 @@
     "answer": "!fun || tired",
     "correct": true,
     "timestamp": 1661896285349
+  },
+  {
+    "name": "Doing well?",
+    "canonical": "enoughSleep && keepingUp",
+    "answer": "enoughSleep && keepingUp",
+    "correct": true,
+    "timestamp": 1661896296885
   }
 ]
