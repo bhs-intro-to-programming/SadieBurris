@@ -5,6 +5,9 @@ let ballSize = 15;
 
 const drawFrame = (time) => {
    drawBall(time/15, ballSize)
+    if (time/15 <= 100) {
+      
+    }
 };
 
 
