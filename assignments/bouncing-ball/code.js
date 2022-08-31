@@ -4,7 +4,7 @@ let gravity = 0.001;
 let ballSize = 15;
 
 const drawFrame = (time) => {
-   drawBall(time, ballSize)
+   drawBall(time/15, ballSize)
 };
 
 
