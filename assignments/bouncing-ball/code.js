@@ -20,7 +20,7 @@ let ballSize = 15;
 let ballY = now() + 15;
 
 const drawFrame = (time) => {
-   
+   drawBall(ballY, ballSize)
 };
 
 // Compute the height in pixels at time t after the ball hit the ground
