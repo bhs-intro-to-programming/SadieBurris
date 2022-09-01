@@ -17,10 +17,11 @@ const drawMovingThing = () => {
 
 animate(drawMovingThing);
 */
+
 let start = now()
 
 const drawFrame = () => {
-   drawBall((now() - start)/15, ballSize)
+   drawBall((now() - start)/15, (now() - start)/15, ballSize, 'blue')
     if (now() - start/15 <= 100) {
       start = now();
     }
