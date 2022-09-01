@@ -18,3 +18,9 @@ const drawMovingThing = () => {
 animate(drawMovingThing);
 */
 
+const drawFrame = (time) => {
+   drawBall(time/15, ballSize)
+    if (now() - start/15 <= 100) {
+      start = now();
+    }
+};
