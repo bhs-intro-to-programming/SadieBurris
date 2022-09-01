@@ -18,7 +18,7 @@ const drawMovingThing = () => {
 animate(drawMovingThing);
 */
 
-const drawBouncingThing = () => {
+const drawBouncingThing = (time) => {
   drawFilledCircle(time/ 15, time / 15, 5, 'blue')
 };
 
