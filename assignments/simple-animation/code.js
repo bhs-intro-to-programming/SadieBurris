@@ -20,7 +20,7 @@ animate(drawMovingThing);
 let start = now();
 
 const drawBouncingThing = () => {
-  drawFilledCircle(now() - start)/ 15, 200, 5, 'blue')
+  drawFilledCircle(now() - start)/ 15, 200, 5, 'blue');
   
 };
 
