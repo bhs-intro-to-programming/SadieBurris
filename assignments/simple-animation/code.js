@@ -23,7 +23,9 @@ const drawBouncingThing = () => {
   let currentX = (now() - start) / 15;
   clear();
   drawFilledCircle(currentX, 200, 5, 'blue');
-  
+  if (currentX >= width) {
+    start = now() * -1 + width;
+  }
   
 };
 
