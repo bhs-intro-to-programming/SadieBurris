@@ -18,13 +18,15 @@ const drawMovingThing = () => {
 animate(drawMovingThing);
 */
 let start = now();
+let direction = currentXPositive;
 
 const drawBouncingThing = () => {
-  let currentX = (now() - start) / 15;
+  let currentXPositive = (now() - start) / 15;
+  let currentXNegitive = -((now() - start) / 15) + width
   clear();
-  drawFilledCircle(currentX, 200, 5, 'blue');
+  drawFilledCircle(direction, 200, 5, 'blue');
   if (currentX >= width) {
-    start = now() * -1 + width;
+    direction = currentXNegitive
   }
   
 };
