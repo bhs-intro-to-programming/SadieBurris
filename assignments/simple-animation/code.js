@@ -17,12 +17,10 @@ const drawMovingThing = () => {
 
 animate(drawMovingThing);
 */
-let start = now();
-let direction = currentXPositive;
 
 const drawBouncingThing = (time) => {
   let left = time / 10 % (width * 2);
-  let right = (width * 2) - time % (width * 2)
+  let right = (width * 2) - (time / 10) % (width * 2)
   if (Math.min(left, right) === left) {
     drawFilledCircle(left, 200, 5, 'blue');
 } else {
