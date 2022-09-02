@@ -19,6 +19,7 @@ animate(drawMovingThing);
 */
 
 const drawBouncingThing = (time) => {
+  clear();
   let left = time / 10 % (width * 2);
   let right = (width * 2) - (time / 10) % (width * 2)
   if (Math.min(left, right) === left) {
