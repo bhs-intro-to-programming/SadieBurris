@@ -24,4 +24,4 @@ const drawBouncingThing = () => {
   
 };
 
-drawBouncingThing();
+animate(drawBouncingThing);
