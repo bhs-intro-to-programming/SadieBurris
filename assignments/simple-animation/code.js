@@ -25,7 +25,7 @@ const drawBouncingThing = (time) => {
   if (Math.min(left, right) === left) {
     drawFilledCircle(left, 200, 5, 'blue');
 } else {
-    drawFilledCircle(width + right, 200, 5, 'blue');
+    drawFilledCircle(width - right, 200, 5, 'blue');
 } 
 };
 
