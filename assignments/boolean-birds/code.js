@@ -25,4 +25,4 @@ const eatsWorms = (isRed, isSpotted) => isSpotted || isRed;
 const eatsNuts = (isRed, isSpotted) => isRed || !isSpotted;
 const eatsFish = (isRed, isSpotted) => !isRed || isSpotted;
 const eatsMice = (isRed, isSpotted) => !isRed || !isSpotted;
-const isRed = () => 'Flobby' || 'Bloggy';
+const isRed = (s) => s === 'Flobby' || 'Bloggy';
