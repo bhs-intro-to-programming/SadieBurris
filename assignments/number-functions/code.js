@@ -6,4 +6,5 @@ const mod = (num1, num2) => num1 % num2;
 const averageOfTwo = (num1, num2) => (num1 + num2) / 2;
 const averageOfThree = (num1, num2, num3) => (num1 + num2 + num3) / 3;
 const distance = (num1, num2) => Math.abs(num1 - num2);
-const manhattanDistance = (x1, x2, y1, y2) => Math.abs(x2 - x1) + Math.abs(y2 - y1)
+
+const manhattanDistance = (x1, y1, x2, y2) => Math.abs(x2 - x1) + Math.abs(y2 - y1);
