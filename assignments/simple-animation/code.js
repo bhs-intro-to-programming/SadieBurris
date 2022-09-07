@@ -24,6 +24,6 @@ const drawBouncingThing = (time) => {
   if(xLocation <= width) {
     drawFilledCircle(xLocation, 200, 5, 'blue');
   } else if(xLocation >= width) {
-    drawFilledCircle(xLocation - width * 2, 200, 5, 'blue');
+    drawFilledCircle(width - (xLocation - width), 200, 5, 'blue');
   }
 };
