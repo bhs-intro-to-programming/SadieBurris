@@ -18,6 +18,7 @@ const drawMovingThing = () => {
 animate(drawMovingThing);
 */
 
+/*
 const drawBouncingThing = (time) => {
   var xLocation = time % (width * 2);
   clear()
@@ -29,3 +30,4 @@ const drawBouncingThing = (time) => {
 };
 
 animate(drawBouncingThing);
+*/
