@@ -27,3 +27,5 @@ const drawBouncingThing = (time) => {
     drawFilledCircle(width - (xLocation - width), 200, 5, 'blue');
   }
 };
+
+animate(drawBouncingThing);
