@@ -19,7 +19,7 @@ animate(drawMovingThing);
 */
 
 const drawBouncingThing = (time) => {
-  var xLocation = time % width * 2;
+  var xLocation = time % (width * 2);
   clear()
   if(xLocation <= width) {
     drawFilledCircle(xLocation, 200, 5, 'blue');
