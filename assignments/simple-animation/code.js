@@ -19,15 +19,11 @@ animate(drawMovingThing);
 */
 
 const drawBouncingThing = (time) => {
-  clear();
-  let left = time / 10 % (width * 2);
-  let right = width - time / 10
-  if (Math.min(left, right) === left) {
-    drawFilledCircle(left, 200, 5, 'blue');
-} else if (Math.min(left, right) === right) {
-    drawFilledCircle(width - right, 200, 5, 'blue');
-} 
+  var xLocation = time % width * 2;
+  clear()
+  if(xLocation <= width) {
+    drawFilledCircle(xLocation, 200, 5, 'blue');
+  } else if(xLocation >= width) {
+    drawFilledCircle(xLocation - width * 2)
+  }
 };
-
-animate(drawBouncingThing);
-
