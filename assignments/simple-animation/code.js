@@ -32,4 +32,16 @@ const drawBouncingThing = (time) => {
 animate(drawBouncingThing);
 */
 
-drawTriangle(width/2, 0, 0, height, width, height);
+
+const makeSir = (time) => {
+  drawTriangle(width/2, 0, 0, height, width, height);
+  const x1 = width/2 - (1/2 ** time) * width/2;
+  const y1 = 1/2 ** time * width;
+  const x2 =;
+  const y2 =;
+  const x3 =;
+  const y3 =;
+  drawTriangle(x1, y1, )
+} 
+
+makeSir();
