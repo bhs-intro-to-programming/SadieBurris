@@ -39,4 +39,5 @@ drawFilledCircle(houseX + 135, 500, 5, 'gray');
 drawTriangle(width/2, 0, 0, height, width, height);
 drawTriangle(width/4, height/2, width * 3/4, height / 2, width/2, height);
 drawTriangle(width * 3/8, height/4, width * 5/8, height/4, width/2, height/2);
-drawTriangle(width * 1/8, height * 3/4, width * 3/8, height * 3/4, width /4, height);
+drawTriangle(width * 1/8, height * 3/4, width * 3/8, height * 3/4, width/4, height);
+drawTriangle(width * 5/8, height * 3/4, width * 7/8, height * 3/4, width * 3/4, height);
