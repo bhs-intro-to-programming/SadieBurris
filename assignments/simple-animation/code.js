@@ -41,6 +41,6 @@ const makeSir = (time) => {
   const x3 = width/2;
   const y3 = height * 1/2 ** time;
   drawTriangle(x1, y1, x2, y2, x3, y3)
-} 
+};
 
 makeSir();
