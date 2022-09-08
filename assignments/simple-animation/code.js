@@ -31,3 +31,5 @@ const drawBouncingThing = (time) => {
 
 animate(drawBouncingThing);
 */
+
+drawTriangle(width/2, 0, 0, height, width, height);
