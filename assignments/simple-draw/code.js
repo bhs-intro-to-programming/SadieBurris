@@ -33,7 +33,7 @@
  *  width - the width of the drawing area.
  *  height - the height of the drawing area.
  *
- */
+ 
 
 //drawLine(0, 0, width, height, 'red')
 
@@ -77,3 +77,5 @@ drawFilledRect(houseX + 125, 460, 50, 90, 'black');
 drawFilledRect(houseX + 25, 390, 50, 50, 'blue');
 drawFilledRect(houseX + 125, 390, 50, 50, 'blue');
 drawFilledCircle(houseX + 135, 500, 5, 'gray');
+
+*/
