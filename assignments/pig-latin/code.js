@@ -38,5 +38,5 @@ const advancedPigLatin = (s) => {
   return s + 'way';
   } else {
   return s.substring(s.search(/[aeiou]/)) + s.substring(0, s.search(/[aeiou]/)) + 'ay';
-  }
+  };
 };
