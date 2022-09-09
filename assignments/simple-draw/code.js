@@ -45,3 +45,4 @@ drawTriangle(width * 7/16, height * 1/8, width * 9/16, height * 1/8, width / 2, 
 drawTriangle(width * 5/16, height * 3/8, width * 7/16, height * 3/8, width * 3/8, height / 2);
 drawTriangle(width * 9/16, height * 3/8, width * 11/16, height * 3/8, width * 5/8, height / 2);
 drawTriangle(width * 3/16, height * 5/8, width * 5/16, height * 5/8, width * 1/4, height * 3/4);
+drawTriangle(width * 1/16, height * 7/8, width * 3/16, height * 7/8, width * 1/8, height);
