@@ -23,12 +23,11 @@
  *
  *  clear()
  */
-drawFilledCircle(width/2, height/2, 10, 'red');
-/*
+
 const drawLineCircle = (r) => {
   for(let i = 0; r * 2 * i > width; i++) {
     drawFilledCircle(r * 2 * i, 200, r, 'red');
   }
-}
+};
 
-drawLineCircle(10);*/
+drawLineCircle(10);
