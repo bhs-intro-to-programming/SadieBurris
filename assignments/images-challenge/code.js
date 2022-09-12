@@ -23,3 +23,11 @@
  *
  *  clear()
  */
+
+const drawLineCircle = (r) => {
+  for(i = 0, r * 2 * i > width, i++) {
+    drawFilledCircle(r * 2 * i, 200, r, 'red');
+  }
+}
+
+drawLineCircle();
