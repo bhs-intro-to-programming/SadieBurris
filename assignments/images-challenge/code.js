@@ -32,7 +32,7 @@ const drawLineCircle = (r) => {
 
 drawLineCircle(10);
 */
-
+let color = '';
 const drawTarget = (numRing) => {
   for(let i = 0; i > numRing; i++) {
     if(i % 2 === 1) {
