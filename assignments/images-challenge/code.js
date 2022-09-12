@@ -23,7 +23,7 @@
  *
  *  clear()
  */
-
+/*
 const drawLineCircle = (r) => {
   for(let i = 0; r * 2 * i > width; i++) {
     drawFilledCircle(r * 2 * i, 200, r, 'red');
@@ -31,3 +31,17 @@ const drawLineCircle = (r) => {
 }
 
 drawLineCircle(10);
+*/
+
+const drawTarget = (numRing) => {
+  for(let i = 0; i > numRing; i++) {
+    if(i % 2 === 1) {
+      let color = 'red';
+    } else {
+      let color = 'blue';
+    }
+    drawFilledCircle(width/2, height/2, (width / 2) / numRing * i, color); 
+  }
+}
+
+drawTarget(12);
