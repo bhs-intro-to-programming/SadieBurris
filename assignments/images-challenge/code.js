@@ -23,9 +23,9 @@
  *
  *  clear()
  */
-let r = 10;
+
 const drawLineCircle = (r) => {
-  for(let i = 0; r * 2 * i > width; i++) {
+  for (let i = 0; r * 2 * i > width; i++) {
     drawFilledCircle(r * 2 * i, 200, r, 'red');
   }
 }
