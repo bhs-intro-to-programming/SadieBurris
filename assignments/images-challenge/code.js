@@ -34,14 +34,14 @@ drawLineCircle(10);
 */
 
 const drawTarget = (numRing) => {
-  for(let i = 0; i < numRing; i++) {
+  for (let i = 0; i < numRing; i++) {
     let color;
-    if(i % 2 === 1) {
-     color = 'red';
+    if (i % 2 === 1) {
+      color = 'red';
     } else {
       color = 'blue';
     }
-    drawFilledCircle(width/2, height/2, numRing - i / (width / 2), color); 
+    drawFilledCircle(width / 2, height / 2, (numRing - i) / (width / 2), color);
   }
 }
 
