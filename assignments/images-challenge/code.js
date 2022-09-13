@@ -78,7 +78,7 @@ const drawCheckers = (edgeNum) => {
       } else {
         color = 'red';
       }
-      drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
+      drawFilledRect(j * sqrWidth * width, i * sqrWidth * width, sqrWidth, sqrWidth, color);
     }
   }
 }
