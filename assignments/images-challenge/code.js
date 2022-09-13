@@ -38,12 +38,10 @@ const drawTarget = (numRing) => {
     let color;
     if(i % 2 === 1) {
      color = 'red';
-     drawFilledCircle(width/2, height/2, (width / 2) / numRing * i, color); 
     } else {
       color = 'blue';
-      drawFilledCircle(width/2, height/2, (width / 2) / numRing * i, color); 
     }
-    
+    drawCircle(width/2, height/2, (width / 2) / numRing * i, color, lineWidth=1); 
   }
 }
 
