@@ -83,4 +83,4 @@ const drawCheckers = (edgeNum) => {
   }
 }
 
-drawCheckers(5);
+drawCheckers(12);
