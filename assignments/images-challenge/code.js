@@ -66,6 +66,7 @@ drawTarget(12);
 const drawCheckers = (edgeNum) => {
   var checkWidth = Math.min(width / edgeNum, height / edgeNum);
   var sqrWidth = checkWidth / edgeNum;
+  var color;
   for (let i = 0; i < edgeNum + 1; i++) {
     for (let j = 0; j < edgeNum + 1; j++) {
       if (i % 2 === 1 && j % 2 === 1) {
