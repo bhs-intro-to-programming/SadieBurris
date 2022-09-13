@@ -45,4 +45,4 @@ const drawTarget = (numRing) => {
   }
 }
 
-drawTarget(12);
+drawTarget(15);
