@@ -47,7 +47,7 @@ const drawLineCircle = (r) => {
 
 drawLineCircle(10);
 */
-
+/*
 const drawTarget = (numRing) => {
   for (let i = 0; i < numRing; i++) {
     let color;
@@ -61,5 +61,25 @@ const drawTarget = (numRing) => {
 }
 
 drawTarget(12);
+*/
 
+const drawCheckers = (edgeNum) => {
+  var checkWidth = Math.min(width / edgeNum, height / edgeNum);
+  var sqrWidth = checkWidth / edgeNum;
+  for (let i = 0; i < edgeNum + 1; i++) {
+    for (let j = 0; j < edgeNum + 1; j++) {
+      if (i % 2 === 1 && j % 2 === 1) {
+        color = 'red';
+      } else if (i % 2 === 1 && j % 2 === 0) {
+        color = 'blue';
+      } else if (i % 2 === 0 && j % 2 === 1) {
+        color = 'red';
+      } else {
+        color = 'blue';
+      }
+      drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
+    }
+  }
+}
 
+drawCheckers(12);
