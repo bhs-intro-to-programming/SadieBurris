@@ -32,7 +32,20 @@ const drawLineCircle = (r) => {
 
 drawLineCircle(10);
 */
+const drawLineCircle = (r) => {
+  for(let i = 0; r * 2 * i < width; i++) {
+    let color;
+    if (i % 2 === 1) {
+      color = 'red';
+    } else {
+      color = 'blue';
+    }
+    drawFilledCircle(r * 2 * i, 200, r, color);
+  }
+}
 
+drawLineCircle(10);
+/*
 const drawTarget = (numRing) => {
   for (let i = 0; i < numRing; i++) {
     let color;
@@ -46,3 +59,5 @@ const drawTarget = (numRing) => {
 }
 
 drawTarget(12);
+*/
+
