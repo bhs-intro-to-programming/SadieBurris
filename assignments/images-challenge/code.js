@@ -41,7 +41,7 @@ const drawTarget = (numRing) => {
     } else {
       color = 'blue';
     }
-    drawCircle(width/2, height/2, (width / 2) / numRing * i, color, lineWidth=1); 
+    drawCircle(width/2, height/2, (width / 2) / numRing * i, color, 1); 
   }
 }
 
