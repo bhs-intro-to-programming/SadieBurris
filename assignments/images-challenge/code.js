@@ -41,7 +41,7 @@ const drawTarget = (numRing) => {
     } else {
       color = 'blue';
     }
-    drawFilledCircle(width/2, height/2, (width / 2) * (numRing - i), color); 
+    drawFilledCircle(width/2, height/2, (width / 2) / (numRing - i), color); 
   }
 }
 
