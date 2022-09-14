@@ -89,7 +89,7 @@ drawCheckers(10);
 const drawLineyCurve = (numLines) => {
   let heightDist;
   let widthDist;
-  for (let i = 0; i < numLines) {
+  for (let i = 0; i < numLines; i++) {
     heightDist = height / numLines;
     widthDist = width / numLines;
     drawLine(0, heightDist * i, widthDist * i, height, 'blue', 1);
