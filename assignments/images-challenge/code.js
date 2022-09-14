@@ -124,3 +124,17 @@ const drawRanCircle = (r, prob) => {
 
 drawRanCircle(10, 0.1);
 */
+const drawSqrCrc = (r) => {
+  let crcDist = r * 2;
+  let num = (Math.min(height - crcDist, width - crcDist) / (r * 2)) - crcDist;
+  for (let i = 0; num < i; i++) {
+    drawCircle(i * crcDist + crcDist, height / 2 - num / 2, r, 'blue', 1);
+    drawCircle(i * crcDist + crcDist, height / 2 + num / 2, r, 'blue', 1);
+  }
+  for (let j = 0; num < j; j++) {
+    drawCircle(width / 2 - num / 2, i * crcDist + crcDist, r, 'blue', 1);
+    drawCircle(width / 2 + num / 2, i * crcDist + crcDist, r, 'blue', 1);
+  }
+}
+
+drawSqrCrc(10);
