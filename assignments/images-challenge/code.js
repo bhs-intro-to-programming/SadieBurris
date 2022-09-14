@@ -84,3 +84,12 @@ const drawCheckers = (edgeNum) => {
 }
 
 drawCheckers(10);
+
+const drawLineyCurve = (numLines) => {
+  let (let i = 0; i < numLines) {
+    var dist = 0
+    drawLine(0, dist * i, dist * i, height, 'blue', 1);
+  }
+}
+
+drawLineyCurve(50);
