@@ -121,4 +121,4 @@ const drawRanCircle = (r, prob) => {
   }
 }
 
-drawRanCircle(10);
+drawRanCircle(10, 0.1);
