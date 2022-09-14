@@ -110,12 +110,13 @@ drawRectCircle(20);
 */
 const drawRanCircle = (r, prob) => {
   for (let i = 0; r * 2 * i < width; i++) {
-    for (let j = 0; r * 2 * j < height; j++)
+    for (let j = 0; r * 2 * j < height; j++) {
       var colorNum = Math.random();
-    if (colorNum > prob) {
-      drawCircle(r * 2 * i, r * 2 * j, r, 'red', 1);
-    } else {
-      drawFilledCircle(r * 2 * i, r * 2 * j, r, 'red');
+      if (colorNum > prob) {
+        drawCircle(r * 2 * i, r * 2 * j, r, 'red', 1);
+      } else {
+        drawFilledCircle(r * 2 * i, r * 2 * j, r, 'red');
+      }
     }
   }
 }
