@@ -106,4 +106,4 @@ const drawRectCircle = (r) => {
   }
 }
 
-drawRectCircle(5);
+drawRectCircle(20);
