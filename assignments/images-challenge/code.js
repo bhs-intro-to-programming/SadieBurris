@@ -96,4 +96,4 @@ const drawLineyCurve = (numLines) => {
   }
 }
 
-drawLineyCurve(4);
+drawLineyCurve(100);
