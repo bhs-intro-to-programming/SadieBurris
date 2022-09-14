@@ -62,7 +62,7 @@ const drawTarget = (numRing) => {
 
 drawTarget(12);
 */
-
+/*
 const drawCheckers = (edgeNum) => {
   var checkWidth = Math.min(width, height);
   var sqrWidth = checkWidth / edgeNum;
@@ -84,11 +84,15 @@ const drawCheckers = (edgeNum) => {
 }
 
 drawCheckers(10);
+*/
 
 const drawLineyCurve = (numLines) => {
+  let heightDist;
+  let widthDist;
   let (let i = 0; i < numLines) {
-    var dist = 0
-    drawLine(0, dist * i, dist * i, height, 'blue', 1);
+    heightDist = height / numLines;
+    widthDist = width / numLines;
+    drawLine(0, heightDist * i, widthDist * i, height, 'blue', 1);
   }
 }
 
