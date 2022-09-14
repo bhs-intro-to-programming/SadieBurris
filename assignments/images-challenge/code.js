@@ -85,7 +85,7 @@ const drawCheckers = (edgeNum) => {
 
 drawCheckers(10);
 */
-
+/*
 const drawLineyCurve = (numLines) => {
   let heightDist;
   let widthDist;
@@ -97,3 +97,13 @@ const drawLineyCurve = (numLines) => {
 }
 
 drawLineyCurve(100);
+*/
+
+const drawRectCircle = (r) => {
+  for(let i = 0; r * 2 * i < width; i++) {
+    for(let j = 0; r * 2 * j < width; j++)
+    drawCircle(r * 2 * i, r * 2 * j, r, 'red', 1);
+  }
+}
+
+drawRectCircle();
