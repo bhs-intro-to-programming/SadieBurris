@@ -98,7 +98,7 @@ const drawLineyCurve = (numLines) => {
 
 drawLineyCurve(100);
 */
-/*
+
 const drawRectCircle = (r) => {
   for(let i = 0; r * 2 * i < width; i++) {
     for(let j = 0; r * 2 * j < height; j++)
@@ -107,7 +107,7 @@ const drawRectCircle = (r) => {
 }
 
 drawRectCircle(20);
-*/
+
 /*
 const drawRanCircle = (r, prob) => {
   for (let i = 0; r * 2 * i < width; i++) {
