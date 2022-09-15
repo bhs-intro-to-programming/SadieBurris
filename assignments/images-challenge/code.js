@@ -133,4 +133,4 @@ const drawSqrCrc = (r) => {
   }
 }
 
-drawSqrCrc(50);
+drawSqrCrc(20);
