@@ -130,8 +130,6 @@ const drawSqrCrc = (r) => {
   for (let i = 0; num < i; i++) {
     drawCircle(i * crcDist + crcDist, height / 2 - num / 2, r, 'blue', 1);
     drawCircle(i * crcDist + crcDist, height / 2 + num / 2, r, 'blue', 1);
-  }
-  for (let j = 0; num < j; j++) {
     drawCircle(width / 2 - num / 2, i * crcDist + crcDist, r, 'blue', 1);
     drawCircle(width / 2 + num / 2, i * crcDist + crcDist, r, 'blue', 1);
   }
