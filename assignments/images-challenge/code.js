@@ -124,6 +124,7 @@ const drawRanCircle = (r, prob) => {
 
 drawRanCircle(10, 0.1);
 */
+/*
 const drawSqrCrc = (r) => {
   var checkLength = Math.min(width, height) - 1 * (r * 2);
   for(let i = 0; r * 2 * i < checkLength; i++) {
@@ -135,3 +136,4 @@ const drawSqrCrc = (r) => {
 }
 
 drawSqrCrc(20);
+*/
