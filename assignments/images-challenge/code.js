@@ -96,7 +96,7 @@ const drawLineyCurve = (numLines) => {
   }
 }
 
-drawLineyCurve(200);
+drawLineyCurve(150);
 
 /*
 const drawRectCircle = (r) => {
