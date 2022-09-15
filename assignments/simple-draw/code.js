@@ -51,3 +51,4 @@ drawTriangle(width * 11/16, height * 5/8, width * 13/16, height * 5/8, width * 3
 drawTriangle(width * 9/16, height * 7/8, width * 11/16, height * 7/8, width * 5/8, height);
 drawTriangle(width * 13/16, height * 7/8, width * 15/16, height * 7/8, width * 7/8, height);
 drawTriangle(width * 15/32, height * 1/16, width * 17/32, height * 1/16, width * 1/2, height * 1/8);
+drawTriangle(width * 13/32, height * 3/16, width * 15/32, height * 3/16, width * 9/16, height * 1/4);
