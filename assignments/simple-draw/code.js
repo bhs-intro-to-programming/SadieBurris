@@ -60,3 +60,4 @@ const autoTri = (x1, y1, wid) => {
 }
 
 drawTriangle(width / 2, 0, 0, height, width, height);
+autoTri(width * 1/4, height * 1/2, width * 1/2)
