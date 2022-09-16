@@ -68,7 +68,7 @@ autoTri(width * 7 / 16, height * 1 / 8, width * 1 / 8);
 
 const sirUp = (depth) => {
   for (let i = 1; i < depth; i++) {
-    autoTri(width * (1 + i ** 2) / (2 ** i * 2), height * 1 / (2 ** i * 2), width * 1 / (2 ** i * 2))
+    autoTri(width * (i - i ** 2) / (2 ** i * 2), height * 1 / (2 ** i * 2), width * 1 / (2 ** i * 2))
   }
 }
 
