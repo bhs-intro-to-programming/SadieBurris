@@ -54,13 +54,13 @@ drawTriangle(width * 15/32, height * 1/16, width * 17/32, height * 1/16, width *
 drawTriangle(width * 13/32, height * 3/16, width * 15/32, height * 3/16, width * 7/16, height * 1/4);
 drawTriangle(width * 17/32, height * 3/16, width * 19/32, height * 3/16, width * 9/16, height * 1/4);
 */
-/*
+
 const autoTri = (x1, y1, wid) => {
   drawTriangle(x1, y1, x1 + wid, y1, x1 + wid / 2, y1 + wid * 6 / 5)
 }
 
 drawTriangle(width / 2, 0, 0, height, width, height);
-
+/*
 autoTri(width * 1 / 4, height * 1 / 2, width * 1 / 2)
 autoTri(width * 3 / 8, height * 1 / 4, width * 1 / 4);
 autoTri(width * 7 / 16, height * 1 / 8, width * 1 / 8);
