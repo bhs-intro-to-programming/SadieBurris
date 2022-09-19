@@ -77,3 +77,10 @@ const sirUp = (depth) => {
 
 sirUp(20);
 */
+x = width * 1/4;
+y = height * 1/2;
+wid = width * 1/2;
+const drawSir = (x, y, wid) => {
+  autoTri(x, y, wid);
+}
+
