@@ -79,9 +79,8 @@ sirUp(20);
 */
 
 const drawSir = (x, y, wid) => {
-  let x = width * 1/4;
-  let y = height * 1/2;
-  let wid = width * 1/2;
   autoTri(x, y, wid);
 }
+
+drawSir(width * 1/4, height * 1/2, width * 1/2)
 
