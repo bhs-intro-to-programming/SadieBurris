@@ -131,6 +131,6 @@ drawSqrCrc(25);
 const drawSqrCrc = (r) => {
   const checkNum = Math.min(width % (r * 2), height % (r * 2));
   for (let i = 0; checkNum >= i; i++) {
-    drawCircle(r * 2 * i + r, height / 2 - (r * 2 * checkNum / 2) )
+    drawCircle(r * 2 * i + r, height / 2 - (r * 2 * checkNum / 2))
   }
 }
