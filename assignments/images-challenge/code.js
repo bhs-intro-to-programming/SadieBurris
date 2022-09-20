@@ -103,8 +103,7 @@ const drawRanCircle = (r, prob) => {
   const d = r * 2
   for (let i = 0; d * i < width; i++) {
     for (let j = 0; d * j < height; j++) {
-      var colorNum = Math.random();
-      if (colorNum > prob) {
+      if (Math.random() > prob) {
         drawCircle(d * i, d * j, r, 'red', 1);
       } else {
         drawFilledCircle(d * i, d * j, r, 'red');
@@ -113,7 +112,7 @@ const drawRanCircle = (r, prob) => {
   }
 }
 
-//drawRanCircle(10, 0.1);
+drawRanCircle(10, 0.1);
 
 
 const drawSqrCrc = (r) => {
