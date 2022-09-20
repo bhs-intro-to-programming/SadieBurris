@@ -113,7 +113,7 @@ const drawRanCircle = (r, prob) => {
   }
 }
 
-drawRanCircle(10, 0.1);
+//drawRanCircle(10, 0.1);
 
 
 const drawSqrCrc = (r) => {
