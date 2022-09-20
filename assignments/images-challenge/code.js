@@ -30,10 +30,10 @@ const drawLineCircle = (r) => {
   }
 }
 
-//drawLineCircle(10);
+drawLineCircle(10);
 
 
-const drawLineCircle = (r) => {
+const alterLineCircle = (r) => {
   for(let i = 0; r * 2 * i < width; i++) {
     let color;
     if (i % 2 === 1) {
@@ -45,7 +45,7 @@ const drawLineCircle = (r) => {
   }
 }
 
-//drawLineCircle(10);
+//alterLineCircle(10);
 
 
 const drawTarget = (numRing) => {
