@@ -125,4 +125,4 @@ const drawSqrCrc = (r) => {
   }
 }
 
-drawSqrCrc(5);
+drawSqrCrc(25);
