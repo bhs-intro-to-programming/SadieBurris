@@ -121,7 +121,7 @@ const drawSqrCrc = (r) => {
     drawCircle(r * 2 * i + r, height / 2 - checkLength / 2, r, 'red', 1);
     drawCircle(r * 2 * i + r, height / 2 + checkLength / 2 - r, r, 'red', 1);
     drawCircle(r, r * 2 * i + height / 2 - checkLength / 2, r, 'red', 1);
-    drawCircle(width / 2 - checkLength / 2 + r, r * 2 * i + height / 2 - checkLength / 2, r, 'red', 1);
+    drawCircle(checkLength + r, r * 2 * i + height / 2 - checkLength / 2, r, 'red', 1);
   }
 }
 
