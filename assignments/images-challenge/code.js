@@ -119,7 +119,7 @@ const drawSqrCrc = (r) => {
   var checkLength = Math.min(width, height) - 1 * (r * 2);
   for(let i = 0; r * 2 * i < checkLength; i++) {
     drawCircle(r * 2 * i + r * 2, height / 2 - checkLength / 2, r, 'red', 1);
-    drawCircle(r * 2 * i + r * 2, height / 2 + checkLength + r / 2, r, 'red', 1);
+    drawCircle(r * 2 * i + r * 2, height / 2 + checkLength / 2 + r, r, 'red', 1);
     drawCircle(width / 2 + checkLength / 2, r * 2 * i + 70, r, 'red', 1);
     drawCircle(width / 2 - checkLength / 2 + 20, r * 2 * i + 70, r, 'red', 1);
   }
