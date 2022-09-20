@@ -116,7 +116,7 @@ const drawRanCircle = (r, prob) => {
 
 
 const drawSqrCrc = (r) => {
-  var checkLength = Math.min(width % (r * 2), height * (r * 2) * (r * 2));
+  var checkLength = Math.min(width % (r * 2), height * (r * 2)) * (r * 2);
   for(let i = 0; r * 2 * i < checkLength; i++) {
     drawCircle(r * 2 * i + r, height / 2 - checkLength / 2, r, 'red', 1);
     drawCircle(r * 2 * i + r, height / 2 + checkLength / 2 - r * 2, r, 'red', 1);
