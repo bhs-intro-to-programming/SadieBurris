@@ -40,7 +40,7 @@ const alterLineCircle = (r) => {
   }
 }
 
-alterLineCircle(10);
+//alterLineCircle(10);
 
 
 const drawTarget = (numRing) => {
@@ -50,7 +50,7 @@ const drawTarget = (numRing) => {
   }
 }
 
-//drawTarget(12);
+drawTarget(12);
 
 
 const drawCheckers = (edgeNum) => {
