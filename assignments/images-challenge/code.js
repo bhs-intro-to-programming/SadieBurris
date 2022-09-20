@@ -50,7 +50,7 @@ const drawTarget = (numRing) => {
   }
 }
 
-drawTarget(12);
+//drawTarget(12);
 
 
 const drawCheckers = (edgeNum) => {
@@ -77,11 +77,10 @@ const drawCheckers = (edgeNum) => {
 
 
 const drawLineyCurve = (numLines) => {
-  let heightDist;
-  let widthDist;
+  const heightDist = height / numLines;
+  const widthDist = width / numLines;
   for (let i = 0; i < numLines; i++) {
-    heightDist = height / numLines;
-    widthDist = width / numLines;
+    
     drawLine(0, heightDist * i, widthDist * i, height, 'blue', 1);
   }
 }
