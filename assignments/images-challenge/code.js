@@ -85,17 +85,18 @@ const drawLineyCurve = (numLines) => {
   }
 }
 
-drawLineyCurve(150);
+//drawLineyCurve(150);
 
 
 const drawRectCircle = (r) => {
-  for(let i = 0; r * 2 * i < width; i++) {
-    for(let j = 0; r * 2 * j < height; j++)
-    drawCircle(r * 2 * i, r * 2 * j, r, 'red', 1);
+  const d = 2 * r
+  for(let i = 0; d * i < width; i++) {
+    for(let j = 0; d * j < height; j++)
+    drawCircle(d * i, d * j, r, 'red', 1);
   }
 }
 
-//drawRectCircle(20);
+drawRectCircle(20);
 
 
 const drawRanCircle = (r, prob) => {
