@@ -50,12 +50,7 @@ const alterLineCircle = (r) => {
 
 const drawTarget = (numRing) => {
   for (let i = 0; i < numRing; i++) {
-    let color;
-    if (i % 2 === 1) {
-      color = 'red';
-    } else {
-      color = 'blue';
-    }
+    let color = i % 2 === 0 ? 'blue' : 'red';
     drawFilledCircle(width / 2, height / 2, ((numRing - i) / numRing) * (width / 2), color);
   }
 }
