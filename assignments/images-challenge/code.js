@@ -30,7 +30,7 @@ const drawLineCircle = (r) => {
   }
 }
 
-drawLineCircle(11);
+//drawLineCircle(11);
 
 
 const alterLineCircle = (r) => {
@@ -45,7 +45,7 @@ const alterLineCircle = (r) => {
   }
 }
 
-//alterLineCircle(10);
+alterLineCircle(10);
 
 
 const drawTarget = (numRing) => {
