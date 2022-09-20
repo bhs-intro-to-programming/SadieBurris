@@ -100,19 +100,20 @@ const drawRectCircle = (r) => {
 
 
 const drawRanCircle = (r, prob) => {
-  for (let i = 0; r * 2 * i < width; i++) {
-    for (let j = 0; r * 2 * j < height; j++) {
+  const d = r * 2
+  for (let i = 0; d * i < width; i++) {
+    for (let j = 0; d * j < height; j++) {
       var colorNum = Math.random();
       if (colorNum > prob) {
-        drawCircle(r * 2 * i, r * 2 * j, r, 'red', 1);
+        drawCircle(d * i, d * j, r, 'red', 1);
       } else {
-        drawFilledCircle(r * 2 * i, r * 2 * j, r, 'red');
+        drawFilledCircle(d * i, d * j, r, 'red');
       }
     }
   }
 }
 
-//drawRanCircle(10, 0.1);
+drawRanCircle(10, 0.1);
 
 
 const drawSqrCrc = (r) => {
