@@ -26,7 +26,7 @@
 
 const drawLineCircle = (r) => {
   for(let i = 0; r * 2 * i < width; i++) {
-    drawFilledCircle((width / 2  - (i * r * 2)) + r * 2 * i, 200, r, 'red');
+    drawFilledCircle(r * 2 * i, 200, r, 'red');
   }
 }
 
