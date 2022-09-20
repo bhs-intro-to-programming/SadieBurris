@@ -23,16 +23,16 @@
  *
  *  clear()
  */
-/*
+
 const drawLineCircle = (r) => {
   for(let i = 0; r * 2 * i < width; i++) {
     drawFilledCircle(r * 2 * i, 200, r, 'red');
   }
 }
 
-drawLineCircle(10);
-*/
-/*
+//drawLineCircle(10);
+
+
 const drawLineCircle = (r) => {
   for(let i = 0; r * 2 * i < width; i++) {
     let color;
@@ -45,9 +45,9 @@ const drawLineCircle = (r) => {
   }
 }
 
-drawLineCircle(10);
-*/
-/*
+//drawLineCircle(10);
+
+
 const drawTarget = (numRing) => {
   for (let i = 0; i < numRing; i++) {
     let color;
@@ -60,9 +60,9 @@ const drawTarget = (numRing) => {
   }
 }
 
-drawTarget(12);
-*/
-/*
+//drawTarget(12);
+
+
 const drawCheckers = (edgeNum) => {
   var checkWidth = Math.min(width, height);
   var sqrWidth = checkWidth / edgeNum;
@@ -83,8 +83,8 @@ const drawCheckers = (edgeNum) => {
   }
 }
 
-drawCheckers(10);
-*/
+//drawCheckers(10);
+
 
 const drawLineyCurve = (numLines) => {
   let heightDist;
@@ -96,9 +96,9 @@ const drawLineyCurve = (numLines) => {
   }
 }
 
-drawLineyCurve(150);
+//drawLineyCurve(150);
 
-/*
+
 const drawRectCircle = (r) => {
   for(let i = 0; r * 2 * i < width; i++) {
     for(let j = 0; r * 2 * j < height; j++)
@@ -106,9 +106,9 @@ const drawRectCircle = (r) => {
   }
 }
 
-drawRectCircle(20);
-*/
-/*
+//drawRectCircle(20);
+
+
 const drawRanCircle = (r, prob) => {
   for (let i = 0; r * 2 * i < width; i++) {
     for (let j = 0; r * 2 * j < height; j++) {
@@ -122,9 +122,9 @@ const drawRanCircle = (r, prob) => {
   }
 }
 
-drawRanCircle(10, 0.1);
-*/
-/*
+//drawRanCircle(10, 0.1);
+
+
 const drawSqrCrc = (r) => {
   var checkLength = Math.min(width, height) - 1 * (r * 2);
   for(let i = 0; r * 2 * i < checkLength; i++) {
@@ -135,5 +135,4 @@ const drawSqrCrc = (r) => {
   }
 }
 
-drawSqrCrc(20);
-*/
+//drawSqrCrc(20);
