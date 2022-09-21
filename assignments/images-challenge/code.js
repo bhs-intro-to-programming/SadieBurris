@@ -86,7 +86,7 @@ const drawRectCircle = (r) => {
   const startHei = (height - numCircHei * d) / 2;
   for (let i = 0; d * i < numCircWid * d; i++) {
     for (let j = 0; d * j < numCircHei * d; j++)
-      drawCircle(d * i + startWid, d * j + startHei, r, 'red', 1);
+      drawCircle(d * i + startWid + r, d * j + startHei + r, r, 'red', 1);
   }
 }
 
