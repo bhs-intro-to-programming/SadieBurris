@@ -81,8 +81,8 @@ const drawLineyCurve = (numLines) => {
 const drawRectCircle = (r) => {
   const d = 2 * r
   for (let i = 0; d * (i + 1) < width; i++) {
-    for (let j = 0; d * (j + 1) < height; j++)
-      drawCircle(d * (i + 1), d * j, r, 'red', 1);
+    for (let j = 0; d * j + r < height; j++)
+      drawCircle(d * i + r , d * j, r, 'red', 1);
   }
 }
 
