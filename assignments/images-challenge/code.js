@@ -91,8 +91,8 @@ drawRectCircle(18);
 
 const drawRanCircle = (r, prob) => {
   const d = r * 2
-  for (let i = 0; d * i < width; i++) {
-    for (let j = 0; d * j < height; j++) {
+  for (let i = 0; d * i - r < width; i++) {
+    for (let j = 0; d * j - r < height; j++) {
       if (Math.random() > prob) {
         drawCircle(d * i, d * j, r, 'red', 1);
       } else {
