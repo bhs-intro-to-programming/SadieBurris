@@ -25,7 +25,7 @@
  */
 
 const drawLineCircle = (r) => {
-  for(let i = 0; r * 2 * i + r < width - r; i++) {
+  for (let i = 0; r * 2 * i + r < width - r; i++) {
     drawFilledCircle(r * 2 * i + r, height / 2, r, 'red');
   }
 }
@@ -34,7 +34,7 @@ const drawLineCircle = (r) => {
 
 
 const alterLineCircle = (r) => {
-  for(let i = 0; r * 2 * i + r < width; i++) {
+  for (let i = 0; r * 2 * i + r < width; i++) {
     let color = i % 2 === 0 ? 'blue' : 'red';
     drawFilledCircle(r * 2 * i + r, 200, r, color);
   }
@@ -63,10 +63,10 @@ const drawCheckers = (edgeNum) => {
     } else {
       color = 'blue'
     }
-      drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
-    }
+    drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
   }
 }
+
 
 drawCheckers(10);
 
@@ -84,9 +84,9 @@ const drawLineyCurve = (numLines) => {
 
 const drawRectCircle = (r) => {
   const d = 2 * r
-  for(let i = 0; d * i < width; i++) {
-    for(let j = 0; d * j < height; j++)
-    drawCircle(d * i, d * j, r, 'red', 1);
+  for (let i = 0; d * i < width; i++) {
+    for (let j = 0; d * j < height; j++)
+      drawCircle(d * i, d * j, r, 'red', 1);
   }
 }
 
