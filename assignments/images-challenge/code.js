@@ -54,11 +54,11 @@ const drawTarget = (numRing) => {
 
 
 const drawCheckers = (edgeNum) => {
-  var checkWidth = Math.min(width, height);
-  var sqrWidth = checkWidth / edgeNum;
-  var color;
+  const checkWidth = Math.min(width, height);
+  const sqrWidth = checkWidth / edgeNum;
+  let color;
   for (let i = 0; i < edgeNum; i++) {
-    for (let j = 0; j < edgeNum + 1; j++) {
+    for (let j = 0; j < edgeNum; j++) {
       if (i % 2 === 1 && j % 2 === 1) {
         color = 'red';
       } else if (i % 2 === 1 && j % 2 === 0) {
@@ -73,14 +73,13 @@ const drawCheckers = (edgeNum) => {
   }
 }
 
-//drawCheckers(10);
+drawCheckers(10);
 
 
 const drawLineyCurve = (numLines) => {
   const heightDist = height / numLines;
   const widthDist = width / numLines;
   for (let i = 0; i < numLines; i++) {
-    
     drawLine(0, heightDist * i, widthDist * i, height, 'blue', 1);
   }
 }
