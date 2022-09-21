@@ -80,8 +80,9 @@ const drawLineyCurve = (numLines) => {
 
 const drawRectCircle = (r) => {
   const d = 2 * r
-  for (let i = 0; d * i + r < width; i++) {
-    for (let j = 0; d * j < height; j++)
+  const numCirc = Math.floor(width / d) 
+  for (let i = 0; d * i < numCirc; i++) {
+    for (let j = 0; d * j < numCirc; j++)
       drawCircle(d * i + r, d * j + r, r, 'red', 1);
   }
 }
@@ -91,9 +92,8 @@ drawRectCircle(18);
 
 const drawRanCircle = (r, prob) => {
   const d = r * 2
-  const numCirc = Math.floor(width / d) 
-  for (let i = 0; d * i < numCirc; i++) {
-    for (let j = 0; d * j < numCirc; j++) {
+  for (let i = 0; d * i < width; i++) {
+    for (let j = 0; d * j < height; j++) {
       if (Math.random() > prob) {
         drawCircle(d * i, d * j, r, 'red', 1);
       } else {
