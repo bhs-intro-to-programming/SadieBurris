@@ -59,9 +59,9 @@ const drawCheckers = (edgeNum) => {
   let color;
   for (let i = 0; i < edgeNum; i++) {
     if ((i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1)) {
-      color = 'red'
+      color = 'red';
     } else {
-      color = 'blue'
+      color = 'blue';
     }
     drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
   }
