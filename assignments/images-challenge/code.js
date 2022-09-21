@@ -58,16 +58,11 @@ const drawCheckers = (edgeNum) => {
   const sqrWidth = checkWidth / edgeNum;
   let color;
   for (let i = 0; i < edgeNum; i++) {
-    for (let j = 0; j < edgeNum; j++) {
-      if (i % 2 === 1 && j % 2 === 1) {
-        color = 'red';
-      } else if (i % 2 === 1 && j % 2 === 0) {
-        color = 'blue';
-      } else if (i % 2 === 0 && j % 2 === 1) {
-        color = 'blue';
-      } else {
-        color = 'red';
-      }
+    if ((i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1)) {
+      color = 'red'
+    } else {
+      color = 'blue'
+    }
       drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
     }
   }
