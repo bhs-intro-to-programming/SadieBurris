@@ -90,7 +90,7 @@ const drawRectCircle = (r) => {
   }
 }
 
-drawRectCircle(8);
+drawRectCircle(20);
 
 
 const drawRanCircle = (r, prob) => {
