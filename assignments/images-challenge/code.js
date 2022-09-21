@@ -73,7 +73,7 @@ const drawCheckers = (edgeNum) => {
   }
 }
 
-//drawCheckers(10);
+drawCheckers(10);
 
 
 const drawLineyCurve = (numLines) => {
