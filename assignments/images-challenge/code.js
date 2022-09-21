@@ -56,14 +56,10 @@ const drawTarget = (numRing) => {
 const drawCheckers = (edgeNum) => {
   const checkWidth = Math.min(width, height);
   const sqrWidth = checkWidth / edgeNum;
-  let color;
+
   for (let i = 0; i < edgeNum; i++) {
     for (let j = 0; j < edgeNum; j++) {
-      if ((i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1)) {
-        color = 'red';
-      } else {
-        color = 'blue';
-      }
+      let color = (i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1) ? 'red' : 'blue';
       drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
     }
   }
