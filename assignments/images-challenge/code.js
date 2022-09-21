@@ -123,7 +123,7 @@ drawSqrCrc(25);
 */
 
 const drawSqrCrc = (r) => {
-  const numCirc = Math.floor(width / d);
+  const numCirc = Math.floor(width / (r * 2));
   for (let i = 0; numCirc > i; i++) {
     drawCircle(r * 2 * i + r, (height - (height - numCirc * r * 2)) / 2, r, 'blue');
   }
