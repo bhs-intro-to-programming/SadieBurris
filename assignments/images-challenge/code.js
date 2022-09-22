@@ -125,7 +125,7 @@ drawSqrCrc(25);
 const drawSqrCrc = (r) => {
   const distCirc = Math.floor(width / (r * 2)) * r * 2;
   for (let i = 0; distCirc >= i; i++) {
-    drawCircle(r * 2 * i + r + (width - distCirc), height - distCirc, r, 'blue');
+    drawCircle(r * 2 * i + (width - distCirc), height - distCirc, r, 'blue');
   }
 }
 
