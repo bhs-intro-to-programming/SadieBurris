@@ -114,6 +114,7 @@ const drawSqrCrc = (r) => {
   const wCircStart = (width - wDistCirc * r * 2) / 2;
   for (let i = 0; wDistCirc > i; i++) {
     drawCircle(r * 2 * i + wCircStart + r, (height % width) / 2 + wCircStart + r, r, 'blue');
+    drawCircle(r * 2 * i + wCircStart + r, height - (height % width) / 2 - wCircStart - r, r, 'blue');
   }
 }
 
