@@ -110,10 +110,10 @@ const drawRanCircle = (r, prob) => {
 
 
 const drawSqrCrc = (r) => {
-  const distCirc = Math.floor(width / (r * 2));
-  const circStart = (width - distCirc * r * 2) / 2;
+  const wDistCirc = Math.floor(width / (r * 2));
+  const wCircStart = (width - wDistCirc * r * 2) / 2;
   for (let i = 0; distCirc > i; i++) {
-    drawCircle(r * 2 * i + circStart + r, circStart, r, 'blue');
+    drawCircle(r * 2 * i + wCircStart + r, wCircStart, r, 'blue');
   }
 }
 
