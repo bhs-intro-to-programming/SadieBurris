@@ -113,7 +113,7 @@ const drawSqrCrc = (r) => {
   const wDistCirc = Math.floor(width / (r * 2));
   const wCircStart = (width - wDistCirc * r * 2) / 2;
   for (let i = 0; wDistCirc > i; i++) {
-    drawCircle(r * 2 * i + wCircStart + r, (height % width) / 2 + wCircStart, r, 'blue');
+    drawCircle(r * 2 * i + wCircStart + r, (height % width) / 2 + wCircStart + r, r, 'blue');
   }
 }
 
