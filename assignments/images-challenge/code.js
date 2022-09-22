@@ -123,9 +123,9 @@ drawSqrCrc(25);
 */
 
 const drawSqrCrc = (r) => {
-  const numCirc = Math.floor(width / (r * 2));
+  const distCirc = width - Math.floor(width / (r * 2)) * r;
   for (let i = 0; numCirc > i; i++) {
-    drawCircle(r * 2 * i + r, (height - (height - numCirc * r * 2)) / 2, r, 'blue');
+    drawCircle(r * 2 * i + r + distCirc, (height - height - distCirc) / 2, r, 'blue');
   }
 }
 
