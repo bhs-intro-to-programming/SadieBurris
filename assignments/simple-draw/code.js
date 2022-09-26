@@ -64,7 +64,7 @@ drawTriangle(width / 2, 0, 0, height, width, height);
 autoTri(width * 1 / 4, height * 1 / 2, width * 1 / 2)
 autoTri(width * 3 / 8, height * 1 / 4, width * 1 / 4);
 autoTri(width * 7 / 16, height * 1 / 8, width * 1 / 8);
-
+*/
 
 const sirUp = (depth) => {
   for (let i = 1; i < depth; i++) {
@@ -76,5 +76,3 @@ const sirUp = (depth) => {
 }
 
 sirUp(20);
-*/
-
