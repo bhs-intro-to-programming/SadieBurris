@@ -60,6 +60,8 @@ const autoTri = (x1, y1, wid) => {
 }
 
 drawTriangle(width / 2, 0, 0, height, width, height);
+
+
 let i;
 const sir = (x, y, wid) => {
   i++;
