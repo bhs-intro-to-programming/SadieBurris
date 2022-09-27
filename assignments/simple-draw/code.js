@@ -60,9 +60,12 @@ const autoTri = (x1, y1, wid) => {
 }
 
 drawTriangle(width / 2, 0, 0, height, width, height);
-/*
-autoTri(width * 1 / 4, height * 1 / 2, width * 1 / 2)
-autoTri(width * 3 / 8, height * 1 / 4, width * 1 / 4);
-autoTri(width * 7 / 16, height * 1 / 8, width * 1 / 8);
-*/
 
+const sir = (x, y, wid) => {
+  drawTriangle(x, y, wid)
+  sir(x + wid / 2, y + wid, wid / 2)
+  sir(x - wid / 2, y - wid, wid / 2)
+  sir(x + wid * 1.5, y - wid, wid / 2)
+}
+
+sir(1/4 * width, 1/2 * height, width * 1/2)
