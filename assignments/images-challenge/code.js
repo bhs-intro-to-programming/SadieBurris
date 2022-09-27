@@ -122,17 +122,3 @@ const drawSqrCrc = (r) => {
 
 //drawSqrCrc(18);
 
-const autoTri = (x1, y1, wid) => {
-  drawTriangle(x1, y1, x1 + wid, y1, x1 + wid / 2, y1 + wid * 6 / 5)
-}
-
-drawTriangle(width / 2, 0, 0, height, width, height);
-
-const sir = (x, y, wid) => {
-  drawTriangle(x, y, wid)
-  sir(x + wid / 2, y + wid, wid / 2)
-  sir(x - wid / 2, y - wid, wid / 2)
-  sir(x + wid * 1.5, y - wid, wid / 2)
-}
-
-sir(1/4 * width, 1/2 * height, width * 1/2)
