@@ -64,7 +64,7 @@ drawTriangle(width / 2, 0, 0, height, width, height);
 
 let i;
 const sir = (x, y, wid) => {
-  i++;
+  i = i + i;
   drawTriangle(x, y, wid)
   if (i < 20) {
   sir(x + wid / 2, y + wid, wid / 2)
