@@ -56,7 +56,7 @@ drawTriangle(width * 17/32, height * 3/16, width * 19/32, height * 3/16, width *
 */
 
 const autoTri = (x1, y1, wid) => {
-  drawTriangle(x1, y1, x1 + wid, y1, x1 + wid / 2, y1 + wid * 5/16)
+  drawTriangle(x1, y1, x1 + wid, y1, x1 + wid / 2, y1 + wid * 7/16)
 }
 
 drawTriangle(width / 2, 0, 0, height, width, height);
