@@ -68,4 +68,4 @@ const sir = (x, y, wid) => {
   sir(x + wid * 1.5, y - wid, wid / 2)
 }
 
-sir(1/4 * width, 1/2 * height, width * 1/2)
+sir(1/4 * width, 1/2 * height, width * 1/2);
