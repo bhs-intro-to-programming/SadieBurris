@@ -67,8 +67,8 @@ const sir = (x, y, wid, depth) => {
   autoTri(x, y, wid)
   if (depth > 0) {
   sir(x - wid / 4, y + wid * 7/16, wid / 2)
-  sir(x + wid / 4, y - wid * 7/32, wid / 2)
-  sir(x + wid * 3/4, y - wid * 7/16, wid / 2)
+  sir(x + wid / 4, y - wid * 7/16, wid / 2)
+  sir(x + wid * 3/4, y - wid * 7/32, wid / 2)
   }
   depth = depth - 1;
 }
