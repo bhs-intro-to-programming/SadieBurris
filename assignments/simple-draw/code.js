@@ -77,6 +77,7 @@ const carp = (x, y, widX, widY, depth) => {
   if (depth > 0) {
     carp(x + widX * 1/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
     carp(x + widX * 4/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
+    carp(x + widX * 4/3, y + widY * 1/3, widX / 3, widY / 3, depth - 1)
   }
 }
 
