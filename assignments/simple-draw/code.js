@@ -74,5 +74,3 @@ const sir = (x, y, wid, depth) => {
 }
 
 sir(1/4 * width, 1/2 * height, width * 1/2, 10);
-
-//use depth
