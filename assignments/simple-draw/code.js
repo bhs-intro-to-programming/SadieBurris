@@ -56,16 +56,16 @@ drawTriangle(width * 17/32, height * 3/16, width * 19/32, height * 3/16, width *
 */
 
 const autoTri = (x1, y1, wid) => {
-  drawTriangle(x1, y1, x1 + wid, y1, x1 + wid / 2, y1 + wid * 7/16)
+  drawTriangle(x1, y1, x1 + wid, y1, x1 + wid / 2, y1 + wid * 7 / 16)
 }
 
 
 const sir = (x, y, wid, depth) => {
   autoTri(x, y, wid)
   if (depth > 0) {
-  sir(x - wid / 4, y + wid * 7/32, wid / 2, depth - 1)
-  sir(x + wid / 4, y - wid * 7/32, wid / 2, depth - 1)
-  sir(x + wid * 3/4, y + wid * 7/32, wid / 2, depth - 1)
+    sir(x - wid / 4, y + wid * 7 / 32, wid / 2, depth - 1)
+    sir(x + wid / 4, y - wid * 7 / 32, wid / 2, depth - 1)
+    sir(x + wid * 3 / 4, y + wid * 7 / 32, wid / 2, depth - 1)
   }
 }
 
@@ -75,15 +75,25 @@ const sir = (x, y, wid, depth) => {
 const carp = (x, y, widX, widY, depth) => {
   drawFilledRect(x, y, widX, widY)
   if (depth > 0) {
-    carp(x + widX * 1/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
-    carp(x + widX * 4/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
-    carp(x + widX * 4/3, y + widY * 1/3, widX / 3, widY / 3, depth - 1)
-    carp(x + widX * 4/3, y + widY * 4/3, widX / 3, widY / 3, depth - 1)
-    carp(x + widX * 1/3, y + widY * 4/3, widX / 3, widY / 3, depth - 1)
-    carp(x - widX * 2/3, y + widY * 4/3, widX / 3, widY / 3, depth - 1)
-    carp(x - widX * 2/3, y + widY * 1/3, widX / 3, widY / 3, depth - 1)
-    carp(x - widX * 2/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
+    for (let exe = 0; exe < 4; exe++){
+      for (let wiy = 0; wiy < 4; wiy++){
+        
+      }
+    }
   }
 }
 
 carp(width / 3, height / 3, width / 3, height / 3, 6);
+
+//1 124, 2 124, 4 124
+
+/*
+  carp(x + widX * 1/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
+  carp(x + widX * 4/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
+  carp(x + widX * 4/3, y + widY * 1/3, widX / 3, widY / 3, depth - 1)
+  carp(x + widX * 4/3, y + widY * 4/3, widX / 3, widY / 3, depth - 1)
+  carp(x + widX * 1/3, y + widY * 4/3, widX / 3, widY / 3, depth - 1)
+  carp(x - widX * 2/3, y + widY * 4/3, widX / 3, widY / 3, depth - 1)
+  carp(x - widX * 2/3, y + widY * 1/3, widX / 3, widY / 3, depth - 1)
+  carp(x - widX * 2/3, y - widY * 2/3, widX / 3, widY / 3, depth - 1)
+*/
