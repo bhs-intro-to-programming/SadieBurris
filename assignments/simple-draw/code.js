@@ -65,11 +65,10 @@ drawTriangle(width / 2, 0, 0, height, width, height);
 
 const sir = (x, y, wid, depth) => {
   autoTri(x, y, wid)
-  depth -= 1;
   if (depth > 0) {
-  sir(x - wid / 4, y + wid * 7/32, wid / 2)
-  sir(x + wid / 4, y - wid * 7/32, wid / 2)
-  sir(x + wid * 3/4, y + wid * 7/32, wid / 2)
+  sir(x - wid / 4, y + wid * 7/32, wid / 2, depth - 1)
+  sir(x + wid / 4, y - wid * 7/32, wid / 2, depth - 1)
+  sir(x + wid * 3/4, y + wid * 7/32, wid / 2, depth - 1)
   }
 }
 
