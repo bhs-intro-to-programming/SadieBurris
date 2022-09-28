@@ -59,7 +59,7 @@ const autoTri = (x1, y1, wid) => {
   drawTriangle(x1, y1, x1 + wid, y1, x1 + wid / 2, y1 + wid * 7/16)
 }
 
-//drawTriangle(width / 2, 0, 0, height, width, height);
+drawTriangle(width / 2, 0, 0, height, width, height);
 
 
 
@@ -72,12 +72,12 @@ const sir = (x, y, wid, depth) => {
   }
 }
 
-//sir(1/4 * width, 1/2 * height, width * 1/2, 10);
+sir(1/4 * width, 1/2 * height, width * 1/2, 10);
 
 
-const carp = (x, y, wid, depth) => {
-  drawFilledRect(x, y, wid, wid)
+const carp = (x, y, widX, widY, depth) => {
+  drawFilledRect(x, y, widX, widY)
   if (depth > 0) {
-    
+    carp(x, y - widY * 5/3, widX / 3, widY / 3, depth - 1)
   }
 }
