@@ -78,3 +78,5 @@ const carp = (x, y, widX, widY, depth) => {
     carp(x, y - widY * 5/3, widX / 3, widY / 3, depth - 1)
   }
 }
+
+carp(width / 3, height / 3, width / 3, height / 3)
