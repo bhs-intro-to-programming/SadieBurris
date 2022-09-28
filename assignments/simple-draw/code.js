@@ -75,7 +75,7 @@ const sir = (x, y, wid, depth) => {
 const carp = (x, y, widX, widY, depth) => {
   drawFilledRect(x, y, widX, widY)
   if (depth > 0) {
-    carp(x + width * 1/3, y - widY * 5/3, widX / 3, widY / 3, depth - 1)
+    carp(0, y - widY * 5/3, widX / 3, widY / 3, depth - 1)
   }
 }
 
