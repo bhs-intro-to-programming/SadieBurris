@@ -86,7 +86,7 @@ const carp = (x, y, widX, widY, depth) => {
   }
 }
 
-carp(width / 3, height / 3, width / 3, height / 3, 1);
+carp(width / 3, height / 3, width / 3, height / 3, 3);
 
 //1 124, 2 124, 4 124
 
