@@ -71,8 +71,8 @@ const sir = (x, y, wid, depth) => {
 
 //sir(1/4 * width, 1/2 * height, width * 1/2, 10);
 
-const addVs = (num1, num2, num3) => num1 + num2 * num3/3;
-const subVs = (num1, num2, num3) => num1 - num2 * num3/3;
+const add = (num1, num2, num3) => num1 + num2 * num3/3;
+const sub = (num1, num2, num3) => num1 - num2 * num3/3;
 const carp = (x, y, widX, widY, depth) => {
   drawFilledRect(x, y, widX, widY)
   if (depth > 0) {
