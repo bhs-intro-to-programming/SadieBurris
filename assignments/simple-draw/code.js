@@ -80,13 +80,13 @@ const carp = (x, y, widX, widY, depth) => {
       for (let wiy = 0; wiy < 4; wiy++) {
         let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
         let opY = wiy === 1 || wiy === 4 ? add(x, widY, wiy) : sub(x, widY, wiy)
-        //carp(opX, opY, widX / 3, widY / 3, depth - 1)
+        carp(opX, opY, widX / 3, widY / 3, depth - 1)
       }
     }
   }
 }
 
-carp(width / 3, height / 3, width / 3, height / 3, 6);
+carp(width / 3, height / 3, width / 3, height / 3, 0);
 
 //1 124, 2 124, 4 124
 
