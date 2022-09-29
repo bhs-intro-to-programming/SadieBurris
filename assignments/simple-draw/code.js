@@ -78,9 +78,12 @@ const carp = (x, y, widX, widY, depth) => {
   if (depth > 0) {
     for (let exe = 0; exe < 4; exe++) {
       for (let wiy = 0; wiy < 4; wiy++) {
+        if (exe === 3 || wiy === 3){
+        } else {
         let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
         let opY = wiy === 1 || wiy === 4 ? add(x, widY, wiy) : sub(x, widY, wiy)
         carp(opX, opY, widX / 3, widY / 3, depth - 1)
+        }
       }
     }
   }
