@@ -5,10 +5,19 @@ const emit = (a, b, product) => {
 };
 
 // Write your code here ...
-const averageWeight = (totalWeight, numItems) => totalWeight/numItems;
+const averageWeight = (totalWeight, numItems) => totalWeight / numItems;
 const hypotenuse = (x, y) => Math.sqrt(x ** 2 + y ** 2);
-const maxRadius = (x, y) => Math.min(x/2, y/2);
+const maxRadius = (x, y) => Math.min(x / 2, y / 2);
 const numCircles = (r, wid) => wid % (r * 2);
 const offset = (screen, object) => (screen - object) / 2;
 const canSleepIn = (weekday, vacation) => !weekday || vacation;
 const canGoToProm = (senior, invitedBySenior, promNoGo) => senior && !promNoGo || invitedBySenior && !promNoGo;
+const getsSpeedingTicket = (speed, grouch) => {
+  if (grouch && speed > 65) {
+    return true
+  } else if (!grouch && speed > 70) {
+    return true
+  } else {
+    return false
+  }
+}
