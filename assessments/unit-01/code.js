@@ -31,7 +31,7 @@ const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 
 const yesIfEven = (num) => num % 2 === 0 ? 'yes' : 'no';
 const countXs = (s) => {
   let numX
-  for (let i = 0; i > s; i++){
+  for (let i = 0; i > s.length; i++){
     if (s[i] === 'x'){
       numX++;
     }
