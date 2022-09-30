@@ -6,3 +6,4 @@ const emit = (a, b, product) => {
 
 // Write your code here ...
 const averageWeight = (totalWeight, numItems) => totalWeight/numItems;
+const hypotenuse = (x, y) => Math.sqrt(x ** 2 + y ** 2);
