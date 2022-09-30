@@ -31,7 +31,7 @@ const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 
 const yesIfEven = (num) => num % 2 === 0 ? 'yes' : 'no';
 const countXs = (s) => {
   let numX = 0;
-  for (let i = 0; i < s.length; i++) {
+  for (let i = 0; i <= s.length; i++) {
     if (s[i] === 'x') {
       numX++;
     }
@@ -44,4 +44,12 @@ const timesTable = (n) => {
       emit(i, j, i * j)
     }
   }
+}
+const containsX = (s) => {
+  for (let i = 0; i <= s.length; i++) {
+    if (s[i] === 'x'){
+      return true
+    }
+  }
+  return false
 }
