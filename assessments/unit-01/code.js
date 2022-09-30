@@ -38,3 +38,10 @@ const countXs = (s) => {
   }
   return numX;
 }
+const timesTable = (n) => {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      emit(i, j, i * j)
+    }
+  }
+}
