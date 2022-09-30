@@ -28,3 +28,4 @@ const secondHalf = (s) => s.substring(Math.floor(s.length/2));
 const upDown = (s) => s.toUpperCase() + s.toLowerCase();
 const everyOther = (s) => s[0] + s[2] + s[4];
 const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 1].toLowerCase();
+const yesIfEven = (num) => num % 2 === 0 ? 'yes' : 'no';
