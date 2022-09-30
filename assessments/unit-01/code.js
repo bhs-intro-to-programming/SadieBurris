@@ -9,4 +9,5 @@ const averageWeight = (totalWeight, numItems) => totalWeight/numItems;
 const hypotenuse = (x, y) => Math.sqrt(x ** 2 + y ** 2);
 const maxRadius = (x, y) => Math.min(x/2, y/2);
 const numCircles = (r, wid) => wid % (r * 2);
-const offset = (screen, object) => Math.abs((screen - object) / 2);
+const offset = (screen, object) => (screen - object) / 2;
+const canSleepIn = (weekday, vacation) => !weekday || vacation;
