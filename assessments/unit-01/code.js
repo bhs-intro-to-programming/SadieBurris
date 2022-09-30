@@ -11,3 +11,4 @@ const maxRadius = (x, y) => Math.min(x/2, y/2);
 const numCircles = (r, wid) => wid % (r * 2);
 const offset = (screen, object) => (screen - object) / 2;
 const canSleepIn = (weekday, vacation) => !weekday || vacation;
+const canGoToProm = (senior, invitedBySenior, promNoGo) => senior || invitedBySenior && !promNoGo;
