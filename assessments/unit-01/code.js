@@ -7,3 +7,4 @@ const emit = (a, b, product) => {
 // Write your code here ...
 const averageWeight = (totalWeight, numItems) => totalWeight/numItems;
 const hypotenuse = (x, y) => Math.sqrt(x ** 2 + y ** 2);
+const maxRadius = (x, y) => Math.min(x/2, y/2);
