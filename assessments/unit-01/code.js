@@ -29,3 +29,12 @@ const upDown = (s) => s.toUpperCase() + s.toLowerCase();
 const everyOther = (s) => s[0] + s[2] + s[4];
 const upDownLastCharacter = (s) => s[s.length - 1].toUpperCase() + s[s.length - 1].toLowerCase();
 const yesIfEven = (num) => num % 2 === 0 ? 'yes' : 'no';
+const countXs = (s) => {
+  let numX
+  for (let i = 0; i > s; i++){
+    if (s[i] === 'x'){
+      numX++;
+    }
+  }
+  return numX;
+}
