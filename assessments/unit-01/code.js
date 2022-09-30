@@ -25,3 +25,4 @@ const moreThanTwiceAsLong = (s, d) => s.length / 2 > d.length;
 const aFartherThanB = (a, b, c) => Math.abs(c - a) > Math.abs(b - a);
 const firstHalf = (s) => s.substring(0, Math.floor(s.length/2));
 const secondHalf = (s) => s.substring(Math.floor(s.length/2));
+const upDown = (s) => s.toUpperCase + s.toLowerCase;
