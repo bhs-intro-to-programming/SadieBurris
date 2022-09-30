@@ -55,7 +55,7 @@ const containsX = (s) => {
 }
 const sumSquares = (n) => {
   const num = 0;
-  for (let i = 0; i < num; i++) {
+  for (let i = 0; i < n; i++) {
     num = num + i ** 2;
   }
   return num;
