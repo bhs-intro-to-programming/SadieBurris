@@ -21,3 +21,4 @@ const getsSpeedingTicket = (speed, grouch) => {
     return false
   }
 }
+const moreThanTwiceAsLong = (s, d) => s.length / 2 > d.length;
