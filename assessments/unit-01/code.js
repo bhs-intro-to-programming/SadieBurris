@@ -22,3 +22,4 @@ const getsSpeedingTicket = (speed, grouch) => {
   }
 }
 const moreThanTwiceAsLong = (s, d) => s.length / 2 > d.length;
+const aFartherThanB = (a, b, c) => Math.abs(c - a) > Math.abd(b - a);
