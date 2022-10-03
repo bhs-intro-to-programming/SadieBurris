@@ -90,7 +90,7 @@ const carp = (x, y, widX, widY, depth) => {
   }
 }
 
-carp(width / 3, height / 3, width / 3, height / 3, 4);
+//carp(width / 3, height / 3, width / 3, height / 3, 4);
 
 const reCarp = (x, y, widX, widY, depth) => {
   drawFilledRect(x, y, widX, widY)
@@ -106,7 +106,7 @@ const reCarp = (x, y, widX, widY, depth) => {
 }
 
 
-//reCarp();
+reCarp();
 
 //1 124, 2 124, 4 124
 
