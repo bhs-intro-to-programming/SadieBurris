@@ -90,15 +90,18 @@ const carp = (x, y, widX, widY, depth) => {
   }
 }
 
-carp(width / 3, height / 3, width / 3, height / 3, 4);
+//carp(width / 3, height / 3, width / 3, height / 3, 4);
+
+const reAdd1 = (num1, num2) => num1 + num2 * 1 / 3;
+const reAdd2 = (num1, num2) => num1 + num2 * 4 / 3;
+const reSub = (num1, num2) => num1 - num2 * 2 / 3;
 
 const reCarp = (x, y, widX, widY, depth) => {
   drawFilledRect(x, y, widX, widY)
   if (depth > 0) {
     for (let exe = 0; exe < 3; exe++) {
       for (let wiy = 0; wiy < 3; wiy++) {
-        let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
-        let opY = wiy === 1 || wiy === 4 ? add(y, widY, wiy) : sub(y, widY, wiy);
+        let opX = exe === 0 ? reSub(x, widX) : //double thingy thing
         carp(opX, opY, widX / 3, widY / 3, depth - 1)
       }
     }
