@@ -82,7 +82,7 @@ const carp = (x, y, widX, widY, depth) => {
         if (exe === 3 || wiy === 2|| exe === 0 || wiy === 0){
         } else {
         let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
-        let opY = wiy === 1 || wiy === 4 ? add(x, widY, wiy) : sub(x, widY, wiy);
+        let opY = wiy === 1 || wiy === 4 ? add(y, widY, wiy) : sub(y, widY, wiy);
         carp(opX, opY, widX / 3, widY / 3, depth - 1)
         }
       }
