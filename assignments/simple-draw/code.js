@@ -77,8 +77,8 @@ const sub = (num1, num2, num3) => num1 - num2 * num3 / 3;
 const carp = (x, y, widX, widY, depth) => {
   drawFilledRect(x, y, widX, widY)
   if (depth > 0) {
-    for (let exe = 0; exe < 4; exe++) {
-      for (let wiy = 0; wiy < 4; wiy++) {
+    for (let exe = 0; exe <= 4; exe++) {
+      for (let wiy = 0; wiy <= 4; wiy++) {
         if (exe === 3 || wiy === 2|| exe === 0 || wiy === 0){
         } else {
         let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
