@@ -79,11 +79,11 @@ const carp = (x, y, widX, widY, depth) => {
   if (depth > 0) {
     for (let exe = 0; exe <= 4; exe++) {
       for (let wiy = 0; wiy <= 4; wiy++) {
-        if (exe === 3 || exe === 0 || wiy === 0 || wiy === 3){
+        if (exe === 3 || exe === 0 || wiy === 0 || wiy === 3) {
         } else {
-        let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
-        let opY = wiy === 1 || wiy === 4 ? add(y, widY, wiy) : sub(y, widY, wiy);
-        carp(opX, opY, widX / 3, widY / 3, depth - 1)
+          let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
+          let opY = wiy === 1 || wiy === 4 ? add(y, widY, wiy) : sub(y, widY, wiy);
+          carp(opX, opY, widX / 3, widY / 3, depth - 1)
         }
       }
     }
@@ -91,6 +91,22 @@ const carp = (x, y, widX, widY, depth) => {
 }
 
 carp(width / 3, height / 3, width / 3, height / 3, 4);
+
+const reCarp = (x, y, widX, widY, depth) => {
+  drawFilledRect(x, y, widX, widY)
+  if (depth > 0) {
+    for (let exe = 0; exe < 3; exe++) {
+      for (let wiy = 0; wiy < 3; wiy++) {
+        let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
+        let opY = wiy === 1 || wiy === 4 ? add(y, widY, wiy) : sub(y, widY, wiy);
+        carp(opX, opY, widX / 3, widY / 3, depth - 1)
+      }
+    }
+  }
+}
+
+
+//reCarp();
 
 //1 124, 2 124, 4 124
 
