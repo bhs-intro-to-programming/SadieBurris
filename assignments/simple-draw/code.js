@@ -110,7 +110,7 @@ const reCarp = (x, y, widX, widY, depth) => {
 }
 
 
-reCarp(width / 3, height / 3, width / 3, height / 3, 4);
+reCarp(width / 3, height / 3, width / 3, height / 3, 5);
 
 //1 124, 2 124, 4 124
 
