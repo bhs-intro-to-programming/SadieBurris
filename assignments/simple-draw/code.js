@@ -103,7 +103,7 @@ const reCarp = (x, y, widX, widY) => {
       for (let wiy = 0; wiy < 3; wiy++) {
         let opX = exe === 0 ? reSub(x, widX) : exe === 1 ? reAdd1(x, widX) : reAdd2(x, widX)
         let opY = wiy === 0 ? reSub(y, widY) : wiy === 1 ? reAdd1(y, widY) : reAdd2(y, widY)
-        carp(opX, opY, widX / 3, widY / 3, depth - 1)
+        carp(opX, opY, widX / 3, widY / 3)
       }
     }
   }
