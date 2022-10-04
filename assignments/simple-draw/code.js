@@ -96,9 +96,9 @@ const reAdd1 = (num1, num2) => num1 + num2 * 1 / 3;
 const reAdd2 = (num1, num2) => num1 + num2 * 4 / 3;
 const reSub = (num1, num2) => num1 - num2 * 2 / 3;
 
-const reCarp = (x, y, widX, widY, depth) => {
+const reCarp = (x, y, widX, widY) => {
   drawFilledRect(x, y, widX, widY)
-  if (depth > 0) {
+  if (widY > 1) {
     for (let exe = 0; exe < 3; exe++) {
       for (let wiy = 0; wiy < 3; wiy++) {
         let opX = exe === 0 ? reSub(x, widX) : exe === 1 ? reAdd1(x, widX) : reAdd2(x, widX)
@@ -110,7 +110,7 @@ const reCarp = (x, y, widX, widY, depth) => {
 }
 
 
-reCarp(width / 3, height / 3, width / 3, height / 3, 6);
+reCarp(width / 3, height / 3, width / 3, height / 3);
 
 //1 124, 2 124, 4 124
 
