@@ -98,7 +98,7 @@ const reSub = (num1, num2) => num1 - num2 * 2 / 3;
 
 const reCarp = (x, y, widX, widY) => {
   drawFilledRect(x, y, widX, widY)
-  if (widY > 10) {
+  if (widY > 1) {
     for (let exe = 0; exe < 3; exe++) {
       for (let wiy = 0; wiy < 3; wiy++) {
         let opX = exe === 0 ? reSub(x, widX) : exe === 1 ? reAdd1(x, widX) : reAdd2(x, widX)
