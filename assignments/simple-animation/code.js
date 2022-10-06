@@ -38,5 +38,5 @@ RULES!!
 Living cells with 2 or 3 living neighbors live on
 Any dead cell with exactly 3 living neighbors is born
 All other cells die
-/*
+*/
 
