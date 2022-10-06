@@ -43,7 +43,7 @@ All other cells die
 const gameOfLife = () => {
   for(let i = 0; i < width; i++) {
     for(let j = 0; j < height; j++) {
-      let color = Math.random() > 0.99 ? 'black' : 'white'
+      let color = Math.random() > 0.9 ? 'black' : 'white'
       drawFilledRect(i, j, 1, 1, color)
     }
   }
