@@ -32,15 +32,11 @@ const drawBouncingThing = (time) => {
 animate(drawBouncingThing);
 */
 
-drawTriangle(width/2, 0, 0, height, width, height);
-const makeSir = (time) => {
-  const x1 = width/2 - (1/2 ** time) * width/2;
-  const y1 = 1/2 ** time * height;
-  const x2 = x1;
-  const y2 = width/2 + (1/2 ** time) * width/2;
-  const x3 = width/2;
-  const y3 = height * 1/2 ** time;
-  drawTriangle(x1, y1, x2, y2, x3, y3);
-};
 
-animate(makeSir);
+/*
+RULES!!
+Living cells with 2 or 3 living neighbors live on
+Any dead cell with exactly 3 living neighbors is born
+All other cells die
+/*
+
