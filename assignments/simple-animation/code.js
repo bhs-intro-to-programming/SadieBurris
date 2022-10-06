@@ -47,7 +47,11 @@ const gameOfLife = () => {
     for(let j = 0; j < height; j++) {
       let color = Math.random() > 0.9 ? 'black' : 'white'
       drawFilledRect(i, j, 1, 1, color)
-      let assign = color === 'black' ? deadOrNo[i][j] = 1 : deadOrNo[i][j] = 0
+      if(color === 'black') {
+        deadOrNo[i][j] = 1;
+      } else {
+        deadOrNo[i][j] = 0;
+      }
     }
   }
 }
