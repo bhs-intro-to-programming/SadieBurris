@@ -71,46 +71,25 @@ const sir = (x, y, wid, depth) => {
 
 //sir(1/4 * width, 1/2 * height, width * 1/2, 10);
 
-const add = (num1, num2, num3) => num1 + num2 * num3 / 3;
-const sub = (num1, num2, num3) => num1 - num2 * num3 / 3;
+const add1 = (num1, num2) => num1 + num2 * 1 / 3;
+const add2 = (num1, num2) => num1 + num2 * 4 / 3;
+const sub = (num1, num2) => num1 - num2 * 2 / 3;
 
-const carp = (x, y, widX, widY, depth) => {
-  drawFilledRect(x, y, widX, widY)
-  if (depth > 0) {
-    for (let exe = 0; exe <= 4; exe++) {
-      for (let wiy = 0; wiy <= 4; wiy++) {
-        if (exe === 3 || exe === 0 || wiy === 0 || wiy === 3) {
-        } else {
-          let opX = exe === 1 || exe === 4 ? add(x, widX, exe) : sub(x, widX, exe);
-          let opY = wiy === 1 || wiy === 4 ? add(y, widY, wiy) : sub(y, widY, wiy);
-          carp(opX, opY, widX / 3, widY / 3, depth - 1)
-        }
-      }
-    }
-  }
-}
-
-//carp(width / 3, height / 3, width / 3, height / 3, 4);
-
-const reAdd1 = (num1, num2) => num1 + num2 * 1 / 3;
-const reAdd2 = (num1, num2) => num1 + num2 * 4 / 3;
-const reSub = (num1, num2) => num1 - num2 * 2 / 3;
-
-const reCarp = (x, y, widX, widY) => {
+const carp = (x, y, widX, widY) => {
   drawFilledRect(x, y, widX, widY)
   if (widY > 1) {
     for (let exe = 0; exe < 3; exe++) {
       for (let wiy = 0; wiy < 3; wiy++) {
-        let opX = exe === 0 ? reSub(x, widX) : exe === 1 ? reAdd1(x, widX) : reAdd2(x, widX)
-        let opY = wiy === 0 ? reSub(y, widY) : wiy === 1 ? reAdd1(y, widY) : reAdd2(y, widY)
-        reCarp(opX, opY, widX / 3, widY / 3)
+        let opX = exe === 0 ? sub(x, widX) : exe === 1 ? add1(x, widX) : add2(x, widX)
+        let opY = wiy === 0 ? sub(y, widY) : wiy === 1 ? add1(y, widY) : add2(y, widY)
+        carp(opX, opY, widX / 3, widY / 3)
       }
     }
   }
 }
 
 
-reCarp(width / 3, height / 3, width / 3, height / 3);
+carp(width / 3, height / 3, width / 3, height / 3);
 
 //1 124, 2 124, 4 124
 
