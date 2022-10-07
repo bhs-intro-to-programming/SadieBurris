@@ -11,15 +11,14 @@ const BB = '♝';
 const BKN = '♞';
 const BP = '♟';
 
-// Example of drawing one of the pieces
 
 const locations = [
   [BR, BKN, BB, BQ, BK, BB, BKN, BR],
   [BP, BP, BP, BP, BP, BP, BP, BP],
-  ['', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', ''],
-  ['', '', '', '', '', '', '', ''],
+  [],
+  [],
+  [],
+  [],
   [WP, WP, WP, WP, WP, WP, WP, WP],
   [WR, WKN, WB, WQ, WK, WB, WKN, WR],
 ]
