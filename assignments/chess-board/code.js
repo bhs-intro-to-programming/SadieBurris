@@ -36,7 +36,7 @@ const drawChessBoard = () => {
   }
 }
 
-drawChessBoard()
+//drawChessBoard()
 
 const drawPieces = () => {
   const squareSize = Math.min(width, height) / 8
@@ -51,4 +51,6 @@ const drawPieces = () => {
   }
 }
 
-drawPieces()
+//drawPieces()
+
+drawText('banana una na', 100, 0, 'black', 100)
