@@ -25,8 +25,7 @@ const locations = [
 ]
 
 const drawChessBoard = () => {
-  const checkWidth = Math.min(width, height);
-  const offset = (width - checkWidth) / 2
+  const offset = (width - Math.min(width, height)) / 2
   const sqrWidth = checkWidth / 8;
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
@@ -39,5 +38,5 @@ const drawChessBoard = () => {
 drawChessBoard()
 
 const drawPieces = () => {
-  
+
 }
