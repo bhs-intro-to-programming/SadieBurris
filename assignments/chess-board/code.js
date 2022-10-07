@@ -39,5 +39,14 @@ const drawChessBoard = () => {
 drawChessBoard()
 
 const drawPieces = () => {
-  
+  const squareSize = Math.min(width, height)/8
+  const pieceSize = squareSize - 10;
+  const pieceOffset = (width - Math.min(width, height)) / 2 + 5
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; i++) {
+      drawText(locations[i][j], pieceOffset + i * squareSize, 5 + j * squareSize, 'black', pieceSize);
+    }
+  }
 }
+
+drawPieces()
