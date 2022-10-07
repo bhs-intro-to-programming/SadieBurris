@@ -12,4 +12,17 @@ const BLACK_KNIGHT = '♞';
 const BLACK_PAWN   = '♟';
 
 // Example of drawing one of the pieces
-drawText(WHITE_KING, width/2, height/2, 'black', 64);
+//drawText(WHITE_KING, width/2, height/2, 'black', 64);
+
+const drawChess = () => {
+  const checkWidth = Math.min(width, height);
+  const sqrWidth = checkWidth / 8;
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      let color = (i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1) ? 'red' : 'blue';
+      drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
+    }
+  }
+}
+
+drawChess()
