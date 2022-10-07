@@ -19,7 +19,7 @@ const drawChess = () => {
   const sqrWidth = checkWidth / 8;
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
-      let color = (i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1) ? 'red' : 'blue';
+      let color = (i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1) ? 'black' : 'white';
       drawFilledRect(j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
     }
   }
