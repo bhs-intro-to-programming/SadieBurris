@@ -10,15 +10,16 @@ const BR = '♜';
 const BB = '♝';
 const BKN = '♞';
 const BP = '♟';
+const N = '';
 
 
 const locations = [
   [BR, BKN, BB, BQ, BK, BB, BKN, BR],
   [BP, BP, BP, BP, BP, BP, BP, BP],
-  [],
-  [],
-  [],
-  [],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
   [WP, WP, WP, WP, WP, WP, WP, WP],
   [WR, WKN, WB, WQ, WK, WB, WKN, WR],
 ]
