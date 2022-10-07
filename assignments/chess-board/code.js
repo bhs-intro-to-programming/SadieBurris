@@ -53,4 +53,4 @@ const drawPieces = () => {
 
 //drawPieces()
 
-drawText('banana una na', 100, 0, 'black', 100)
+drawText('banana una na', 100, 100, 'black', 100)
