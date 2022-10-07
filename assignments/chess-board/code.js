@@ -42,7 +42,7 @@ const drawPieces = () => {
   const squareSize = Math.min(width, height) / 8
   const pieceSize = squareSize - 10;
   const pieceOffset = (width - Math.min(width, height)) / 2 + 5
-  const blank =;
+  const blank = iCantGetItUndefined!!;
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; i++) {
       if (locations[i][j] !== blank) {
