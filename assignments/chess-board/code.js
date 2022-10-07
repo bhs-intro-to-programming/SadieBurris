@@ -36,7 +36,7 @@ const drawChessBoard = () => {
   }
 }
 
-//drawChessBoard()
+drawChessBoard()
 
 const drawPieces = () => {
   const squareSize = Math.min(width, height) / 8
@@ -49,5 +49,5 @@ const drawPieces = () => {
   }
 }
 
-drawPieces()
+//drawPieces()
 
