@@ -1,19 +1,30 @@
-const WHITE_KING   = '♔';
-const WHITE_QUEEN  = '♕';
-const WHITE_ROOK   = '♖';
-const WHITE_BISHOP = '♗';
-const WHITE_KNIGHT = '♘';
-const WHITE_PAWN   = '♙';
-const BLACK_KING   = '♚';
-const BLACK_QUEEN  = '♛';
-const BLACK_ROOK   = '♜';
-const BLACK_BISHOP = '♝';
-const BLACK_KNIGHT = '♞';
-const BLACK_PAWN   = '♟';
+const WK = '♔';
+const WQ = '♕';
+const WR = '♖';
+const WB = '♗';
+const WKN = '♘';
+const WP = '♙';
+const BK = '♚';
+const BQ = '♛';
+const BR = '♜';
+const BB = '♝';
+const BKN = '♞';
+const BP = '♟';
 
 // Example of drawing one of the pieces
 
-const drawChess = () => {
+const locations = [
+[BR, BKN, BB, BQ, BK, BB, BKN, BR],
+[BP, BP, BP, BP, BP, BP, BP, BP],
+[],
+[],
+[],
+[],
+[WP, WP, WP, WP, WP, WP, WP, WP],
+[WR, WKN, WB, WQ, WK, WB, WKN, WR],
+]
+
+const drawChessBoard = () => {
   const checkWidth = Math.min(width, height);
   const offset = (width - checkWidth) / 2
   const sqrWidth = checkWidth / 8;
@@ -25,5 +36,8 @@ const drawChess = () => {
   }
 }
 
-drawChess()
+drawChessBoard()
 
+const drawPieces = () => {
+  
+}
