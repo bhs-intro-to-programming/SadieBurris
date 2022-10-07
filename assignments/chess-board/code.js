@@ -27,4 +27,3 @@ const drawChess = () => {
 
 drawChess()
 
-drawText(WHITE_KING, width/2, height/2, 'black', 64);
