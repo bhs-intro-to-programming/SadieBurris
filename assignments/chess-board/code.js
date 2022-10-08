@@ -39,7 +39,7 @@ const drawChessBoard = () => {
 drawChessBoard()
 
 const drawPieces = () => {
-  const squareSize = 10
+  let squareSize = 10
   squareSize = Math.min(width, height);
   /*
   const pieceSize = squareSize - 10;
