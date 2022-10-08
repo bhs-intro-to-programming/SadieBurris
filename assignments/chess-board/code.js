@@ -45,7 +45,7 @@ const pieceOffset = (width - Math.min(width, height)) / 2 + pieceSize / 2 + 5;
 const drawPieces = () => {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-      drawText(locations[j][i], pieceOffset + j * squareSize, 5 + pieceSize + i * squareSize, 'black', pieceSize);
+      drawText(locations[j][i], pieceOffset + i * squareSize, 5 + pieceSize + j * squareSize, 'black', pieceSize);
     }
   }
 }
