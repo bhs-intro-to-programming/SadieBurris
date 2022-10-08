@@ -40,8 +40,7 @@ drawChessBoard()
 
 let squareSize = 0;
 const drawPieces = () => {
-  squareSize = Math.min(width, height);
-  //console.log(testingTesting)
+  squareSize = Math.min(width, height) / 8;
   /*
   const pieceSize = squareSize - 10;
   const pieceOffset = (width - Math.min(width, height)) / 2 + pieceSize / 2 + 5;
