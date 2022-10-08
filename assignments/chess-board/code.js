@@ -37,7 +37,7 @@ const drawChessBoard = () => {
 }
 
 drawChessBoard()
-const squareSize = 'banananana'
+const squareSize = Math.min(width, height);
 
 const drawPieces = () => {
   const testingTesting = 10;
