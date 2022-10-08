@@ -37,11 +37,11 @@ const drawChessBoard = () => {
 }
 
 drawChessBoard()
-const pleaseWork = 'banananana'
+const squareSize = 'banananana'
 
 const drawPieces = () => {
   const testingTesting = 10;
-  console.log(testingTesting)
+  //console.log(testingTesting)
   /*
   const pieceSize = squareSize - 10;
   const pieceOffset = (width - Math.min(width, height)) / 2 + pieceSize / 2 + 5;
