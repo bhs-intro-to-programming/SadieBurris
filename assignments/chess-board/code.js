@@ -37,6 +37,7 @@ const drawChessBoard = () => {
 }
 
 drawChessBoard()
+const pleaseWork = 'banananana'
 
 const drawPieces = () => {
   const testingTesting = 10;
