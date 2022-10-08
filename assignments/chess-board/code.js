@@ -36,7 +36,7 @@ const drawChessBoard = () => {
   }
 }
 
-drawChessBoard()
+//drawChessBoard()
 
 const squareSize = Math.min(width, height) / 8;
 const pieceSize = squareSize - 10;
