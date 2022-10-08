@@ -39,6 +39,8 @@ const drawChessBoard = () => {
 drawChessBoard()
 
 const drawPieces = () => {
+  console.log('hello!')
+  /*
   const squareSize = Math.min(width, height) / 8;
   const pieceSize = squareSize - 10;
   const pieceOffset = (width - Math.min(width, height)) / 2 + pieceSize / 2 + 5;
@@ -47,7 +49,8 @@ const drawPieces = () => {
       drawText(locations[j][i], pieceOffset + i * squareSize, 5 + pieceSize + j * squareSize, 'black', pieceSize);
     }
   }
+  */
 }
 
-//drawPieces()
+drawPieces()
 
