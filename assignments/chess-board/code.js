@@ -37,10 +37,10 @@ const drawChessBoard = () => {
 }
 
 drawChessBoard()
-const squareSize = Math.min(width, height);
+const squareSize;
 
 const drawPieces = () => {
-  const testingTesting = 10;
+  squareSize = Math.min(width, height);
   //console.log(testingTesting)
   /*
   const pieceSize = squareSize - 10;
