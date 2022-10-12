@@ -41,7 +41,7 @@ All other cells die
 */
 
 const deadOrNo = []
-const gameOfLife = () => {
+const gameOfLifeStart = () => {
   for (let i = 0; i < width; i++) {
     deadOrNo.push([])
     for (let j = 0; j < height; j++) {
@@ -56,4 +56,4 @@ const gameOfLife = () => {
   }
 }
 
-gameOfLife()
+gameOfLifeStart()
