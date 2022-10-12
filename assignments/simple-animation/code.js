@@ -46,11 +46,11 @@ const gameOfLife = () => {
     deadOrNo.push([])
     for(let j = 0; j < height; j++) {
       let color = Math.random() > 0.9 ? 'black' : 'white'
-      drawFilledRect(i, j, 1, 1, color)
+      drawFilledRect(j, i, 1, 1, color)
       if(color === 'black') {
-        deadOrNo[i][j] = 1;
+        deadOrNo[j][i] = 1;
       } else {
-        deadOrNo[i][j] = 0;
+        deadOrNo[j][i] = 0;
       }
     }
   }
