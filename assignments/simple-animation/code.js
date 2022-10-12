@@ -41,6 +41,7 @@ All other cells die
 */
 
 const deadOrNo1 = []
+const deadOrNo2 = []
 const gameOfLife = () => {
   for (let i = 0; i < width; i++) {
     deadOrNo1.push([])
@@ -52,6 +53,11 @@ const gameOfLife = () => {
       } else {
         deadOrNo1[i].push(0);
       }
+    }
+  }
+  for(let i = 0; i < width; i++){
+    for(let j = 0; j < height; j++){
+      for(let count = 0; count /*look at simple draw*/)
     }
   }
 }
