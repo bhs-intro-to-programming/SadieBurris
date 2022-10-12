@@ -42,15 +42,15 @@ All other cells die
 
 const gameOfLife = () => {
   const deadOrNo = []
-  for(let i = 0; i < width; i++) {
+  for (let i = 0; i < width; i++) {
     deadOrNo.push([])
-    for(let j = 0; j < height; j++) {
+    for (let j = 0; j < height; j++) {
       let color = Math.random() > 0.9 ? 'black' : 'white'
       drawFilledRect(j, i, 1, 1, color)
-      if(color === 'black') {
-        deadOrNo[j].push(1);
+      if (color === 'black') {
+        deadOrNo[i].push(1);
       } else {
-        deadOrNo[j].push(0);
+        deadOrNo[i].push(0);
       }
     }
   }
