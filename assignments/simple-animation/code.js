@@ -40,17 +40,17 @@ Any dead cell with exactly 3 living neighbors is born
 All other cells die
 */
 
-const deadOrNo = []
+const deadOrNo1 = []
 const gameOfLifeStart = () => {
   for (let i = 0; i < width; i++) {
-    deadOrNo.push([])
+    deadOrNo1.push([])
     for (let j = 0; j < height; j++) {
       let color = Math.random() > 0.9 ? 'black' : 'white'
       drawFilledRect(j, i, 1, 1, color)
       if (color === 'black') {
-        deadOrNo[i].push(1);
+        deadOrNo1[i].push(1);
       } else {
-        deadOrNo[i].push(0);
+        deadOrNo1[i].push(0);
       }
     }
   }
