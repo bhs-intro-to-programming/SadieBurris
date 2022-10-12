@@ -40,8 +40,8 @@ Any dead cell with exactly 3 living neighbors is born
 All other cells die
 */
 
+const deadOrNo = []
 const gameOfLife = () => {
-  const deadOrNo = []
   for (let i = 0; i < width; i++) {
     deadOrNo.push([])
     for (let j = 0; j < height; j++) {
