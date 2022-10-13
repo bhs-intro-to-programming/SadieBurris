@@ -7,3 +7,11 @@ const countTens = (ar) => {
   }
   return count;
 }
+
+const sum = (ar) => {
+  let count = 0;
+  for (let i = 0; i < ar.length; i++){
+    count = count + ar[i]
+  }
+  return count;
+}
