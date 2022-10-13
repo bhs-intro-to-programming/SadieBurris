@@ -15,3 +15,13 @@ const sum = (ar) => {
   }
   return count;
 }
+
+const evens = (ar) => {
+  const newAr = []
+  for (let i = 0; i < ar.length; i++){
+    if(ar[i] % 2 === 0) {
+      newAr.push(ar[i])
+    }
+  }
+  return newAr
+}
