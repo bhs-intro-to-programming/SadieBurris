@@ -43,21 +43,35 @@ All other cells die
 const deadOrNo1 = []
 const deadOrNo2 = []
 const gameOfLife = () => {
-  for (let i = 0; i < width; i++) {
+  for (let j = 0; j < width; j++) {
     deadOrNo1.push([])
-    for (let j = 0; j < height; j++) {
+    for (let i = 0; i < height; i++) {
       let color = Math.random() > 0.9 ? 'black' : 'white'
-      drawFilledRect(j, i, 1, 1, color)
+      drawFilledRect(i, j, 1, 1, color)
       if (color === 'black') {
-        deadOrNo1[i].push(1);
+        deadOrNo1[j].push(1);
       } else {
-        deadOrNo1[i].push(0);
+        deadOrNo1[j].push(0);
       }
     }
   }
-  for(let i = 0; i < width; i++){
-    for(let j = 0; j < height; j++){
-      for(let count = 0; count /*look at simple draw*/)
+  for(let j = 0; j < height; j++){
+    for(let i = 0; i < width; i++){
+      let neighbors = 0;
+      for(let countX = -1; countX < 2; countX++) {
+        for(let countY = -1; countY < 2; countY++) {
+          if(deadOrNo[j + countY][i + countX] === 1){
+            neighbors++
+          }
+          if(deadOrNo[j][i] === 1){
+            //need 2 or 3 to continue
+          } else if(deadOrNo[j][i] === 0){
+            //need 3 to reproduce
+          } else {
+            //die
+          }
+        }
+      }
     }
   }
 }
