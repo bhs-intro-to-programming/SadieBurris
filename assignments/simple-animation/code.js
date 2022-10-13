@@ -60,12 +60,12 @@ const gameOfLife = () => {
       let neighbors = 0;
       for(let countX = -1; countX < 2; countX++) {
         for(let countY = -1; countY < 2; countY++) {
-          if(deadOrNo[j + countY][i + countX] === 1){
+          if(deadOrNo1[j + countY][i + countX] === 1){
             neighbors++
           }
-          if(deadOrNo[j][i] === 1){
+          if(deadOrNo1[j][i] === 1){
             //need 2 or 3 to continue
-          } else if(deadOrNo[j][i] === 0){
+          } else if(deadOrNo1[j][i] === 0){
             //need 3 to reproduce
           } else {
             //die
