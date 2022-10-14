@@ -42,9 +42,10 @@ All other cells die
 
 const deadOrNo1 = []
 const deadOrNo2 = []
-const gameOfLife = () => {
+const gameOfLifeStart = () => {
   for (let j = 0; j < width; j++) {
     deadOrNo1.push([])
+    deadOrNo2.push([])
     for (let i = 0; i < height; i++) {
       let color = Math.random() > 0.9 ? 'black' : 'white'
       drawFilledRect(i, j, 1, 1, color)
@@ -55,25 +56,67 @@ const gameOfLife = () => {
       }
     }
   }
-  for(let j = 0; j < height; j++){
-    for(let i = 0; i < width; i++){
-      let neighbors = 0;
-      for(let countX = -1; countX < 2; countX++) {
-        for(let countY = -1; countY < 2; countY++) {
-          if(deadOrNo1[j + countY][i + countX] === 1){
-            neighbors++
-          }
-          if(deadOrNo1[j][i] === 1){
-            //need 2 or 3 to continue
-          } else if(deadOrNo1[j][i] === 0){
-            //need 3 to reproduce
-          } else {
-            //die
-          }
-        }
+}
+const neighbors = (i, j) => {
+  for (let countX = -1; countX < 2; countX++) {
+    for (let countY = -1; countY < 2; countY++) {
+      if (deadOrNo1[j + countY][i + countX] === 1) {
+        neighborsNum++
       }
     }
   }
+  return neighborsNum
+}
+const newLife = (nei) => {
+  if (deadOrNo1 === 1) {
+    if (nei === 3 || nei === 4) {
+      return true
+    } else {
+      return false
+    }
+  } else if (deadOrNo1 === 0) {
+    if (nei === 3) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return 'something is wrong'
+  }
+}
+const gameOfLife1 = () => {
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      if (newLife(neighbors(i, j)) === true) {
+        deadOrNo2[j][i] === 1
+        drawFilledRect(i, j, 1, 1, 'black')
+      } else {
+        deadOrNo2[j][i] === 0
+        drawFilledRect(i, j, 1, 1, 'white')
+      }
+    }
+  }
+  gameOfLife2();
+}
+const gameOfLife2 = () => {
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      if (newLife(neighbors(i, j)) === true) {
+        deadOrNo1[j][i] === 1
+        drawFilledRect(i, j, 1, 1, 'black')
+      } else {
+        deadOrNo1[j][i] === 0
+        drawFilledRect(i, j, 1, 1, 'white')
+      }
+    }
+  }
+  gameOfLife1();
+}
+const gameOfLife = () => {
+  gameOfLifeStart()
+  gameOfLife1()
 }
 
 gameOfLife()
+
+//saving saving
