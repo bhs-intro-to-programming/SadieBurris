@@ -57,7 +57,8 @@ const gameOfLifeStart = () => {
     }
   }
 }
-const neighbors = (i, j) => {
+const neighbors2 = (i, j) => {
+  let neighborsNum = 0
   for (let countX = -1; countX < 2; countX++) {
     for (let countY = -1; countY < 2; countY++) {
       if (deadOrNo1[j + countY][i + countX] === 1) {
@@ -67,7 +68,35 @@ const neighbors = (i, j) => {
   }
   return neighborsNum
 }
-const newLife = (nei) => {
+const neighbors1 = (i, j) => {
+  const neighborsNum = 0;
+  for (let countX = -1; countX < 2; countX++) {
+    for (let countY = -1; countY < 2; countY++) {
+      if (deadOrNo2[j + countY][i + countX] === 1) {
+        neighborsNum++
+      }
+    }
+  }
+  return neighborsNum
+}
+const newLife1 = (nei) => {
+  if (deadOrNo2 === 1) {
+    if (nei === 3 || nei === 4) {
+      return true
+    } else {
+      return false
+    }
+  } else if (deadOrNo2 === 0) {
+    if (nei === 3) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return 'something is wrong'
+  }
+}
+const newLife2 = (nei) => {
   if (deadOrNo1 === 1) {
     if (nei === 3 || nei === 4) {
       return true
@@ -87,7 +116,7 @@ const newLife = (nei) => {
 const gameOfLife1 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      if (newLife(neighbors(i, j)) === true) {
+      if (newLife2(neighbors(i, j)) === true) {
         deadOrNo2[j][i] === 1
         drawFilledRect(i, j, 1, 1, 'black')
       } else {
@@ -117,4 +146,4 @@ const gameOfLife = () => {
   gameOfLife1()
 }
 
-//gameOfLife()
+gameOfLife()
