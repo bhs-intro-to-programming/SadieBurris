@@ -117,6 +117,4 @@ const gameOfLife = () => {
   gameOfLife1()
 }
 
-gameOfLife()
-
-//saving saving
+//gameOfLife()
