@@ -135,7 +135,7 @@ const gameOfLife1 = () => {
       }
     }
   }
-  //gameOfLife2();
+  gameOfLife2();
 }
 const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
