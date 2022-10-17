@@ -86,7 +86,7 @@ const neighbors1 = (i, j) => {
   }
   return neighborsNum
 }
-/*
+
 const newLife1 = (nei) => {
   if (deadOrNo2 === 1) {
     if (nei === 3 || nei === 4) {
@@ -121,6 +121,7 @@ const newLife2 = (nei) => {
     return 'something is wrong'
   }
 }
+/*
 const gameOfLife1 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
