@@ -51,8 +51,10 @@ const gameOfLifeStart = () => {
       drawFilledRect(i, j, 1, 1, color)
       if (color === 'black') {
         deadOrNo2[j].push(1);
+        deadOrNo1[j].push(1);
       } else {
         deadOrNo2[j].push(0);
+        deadOrNo1[j].push(0);
       }
     }
   }
