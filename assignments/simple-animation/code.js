@@ -74,7 +74,7 @@ const neighbors2 = (i, j) => {
   return neighborsNum
 }
 const neighbors1 = (i, j) => {
-  const neighborsNum = 0;
+  let neighborsNum = 0;
 
   for (let countX = -1; countX < 2; countX++) {
     for (let countY = -1; countY < 2; countY++) {
@@ -135,7 +135,7 @@ const gameOfLife1 = () => {
       }
     }
   }
-  gameOfLife2();
+  //gameOfLife2();
 }
 const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
