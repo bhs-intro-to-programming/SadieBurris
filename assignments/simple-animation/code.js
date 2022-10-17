@@ -57,6 +57,7 @@ const gameOfLifeStart = () => {
     }
   }
 }
+/*
 const neighbors2 = (i, j) => {
   let neighborsNum = 0
 
@@ -151,5 +152,5 @@ const gameOfLife = () => {
   gameOfLifeStart()
   gameOfLife1()
 }
-
+*/
 //gameOfLife()
