@@ -148,9 +148,10 @@ const gameOfLife2 = () => {
   }
   gameOfLife1();
 }
+*/
 const gameOfLife = () => {
   gameOfLifeStart()
-  gameOfLife1()
+  //gameOfLife1()
 }
-*/
-//gameOfLife()
+
+gameOfLife()
