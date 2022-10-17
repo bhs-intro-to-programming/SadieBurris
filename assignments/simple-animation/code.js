@@ -116,7 +116,7 @@ const newLife2 = (nei) => {
 const gameOfLife1 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      if (newLife2(neighbors(i, j)) === true) {
+      if (newLife2(neighbors2(i, j)) === true) {
         deadOrNo2[j][i] === 1
         drawFilledRect(i, j, 1, 1, 'black')
       } else {
@@ -130,7 +130,7 @@ const gameOfLife1 = () => {
 const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      if (newLife(neighbors(i, j)) === true) {
+      if (newLife1(neighbors1(i, j)) === true) {
         deadOrNo1[j][i] === 1
         drawFilledRect(i, j, 1, 1, 'black')
       } else {
