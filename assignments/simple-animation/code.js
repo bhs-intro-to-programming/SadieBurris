@@ -57,7 +57,7 @@ const gameOfLifeStart = () => {
     }
   }
 }
-/*
+
 const neighbors2 = (i, j) => {
   let neighborsNum = 0
 
@@ -86,6 +86,7 @@ const neighbors1 = (i, j) => {
   }
   return neighborsNum
 }
+/*
 const newLife1 = (nei) => {
   if (deadOrNo2 === 1) {
     if (nei === 3 || nei === 4) {
