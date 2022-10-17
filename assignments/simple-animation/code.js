@@ -121,7 +121,7 @@ const newLife2 = (nei) => {
     return 'something is wrong'
   }
 }
-/*
+
 const gameOfLife1 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
@@ -150,7 +150,7 @@ const gameOfLife2 = () => {
   }
   gameOfLife1();
 }
-*/
+
 const gameOfLife = () => {
   gameOfLifeStart()
   //gameOfLife1()
