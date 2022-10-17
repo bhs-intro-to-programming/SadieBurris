@@ -133,7 +133,6 @@ const gameOfLife1 = () => {
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
         drawFilledRect(i, j, 1, 1, 'red')
-        console.log('suprise suprise it didnt work')
       }
     }
   }
