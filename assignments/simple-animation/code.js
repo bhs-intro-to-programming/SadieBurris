@@ -142,9 +142,11 @@ const gameOfLife2 = () => {
       if (newLife1(neighbors1(i, j)) === true) {
         deadOrNo2[j][i] === 1
         drawFilledRect(i, j, 1, 1, 'black')
-      } else {
+      } else if (newLife1(neighbors1(i, j)) === false){
         deadOrNo2[j][i] === 0
         drawFilledRect(i, j, 1, 1, 'white')
+      } else {
+        drawFilledRect(i, j, 1, 1, 'red')
       }
     }
   }
