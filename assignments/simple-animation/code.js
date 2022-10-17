@@ -59,11 +59,11 @@ const gameOfLifeStart = () => {
 }
 const neighbors2 = (i, j) => {
   let neighborsNum = 0
-  
+
   for (let countX = -1; countX < 2; countX++) {
     for (let countY = -1; countY < 2; countY++) {
       let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
-  let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
+      let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
       if (deadOrNo1[checkPosJ][checkPosI] === 1) {
         neighborsNum++
       }
@@ -73,11 +73,11 @@ const neighbors2 = (i, j) => {
 }
 const neighbors1 = (i, j) => {
   const neighborsNum = 0;
-  
+
   for (let countX = -1; countX < 2; countX++) {
     for (let countY = -1; countY < 2; countY++) {
       let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
-  let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
+      let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
       if (deadOrNo2[checkPosJ][checkPosI] === 1) {
         neighborsNum++
       }
