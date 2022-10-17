@@ -62,7 +62,6 @@ const gameOfLifeStart = () => {
 
 const neighbors2 = (i, j) => {
   let neighborsNum = 0
-
   for (let countX = -1; countX < 2; countX++) {
     for (let countY = -1; countY < 2; countY++) {
       let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
