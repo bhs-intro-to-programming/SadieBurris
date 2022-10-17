@@ -128,9 +128,12 @@ const gameOfLife1 = () => {
       if (newLife2(neighbors2(i, j)) === true) {
         deadOrNo1[j][i] === 1
         drawFilledRect(i, j, 1, 1, 'black')
-      } else {
+      } else if (newLife2(neighbors2(i, j)) === false){
         deadOrNo1[j][i] === 0
         drawFilledRect(i, j, 1, 1, 'white')
+      } else {
+        drawFilledRect(i, j, 1, 1, 'red')
+        console.log('suprise suprise it didnt work')
       }
     }
   }
@@ -147,6 +150,7 @@ const gameOfLife2 = () => {
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
         drawFilledRect(i, j, 1, 1, 'red')
+        console.log('suprise suprise it didnt work')
       }
     }
   }
