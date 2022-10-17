@@ -43,10 +43,10 @@ All other cells die
 const deadOrNo1 = []
 const deadOrNo2 = []
 const gameOfLifeStart = () => {
-  for (let j = 0; j < width; j++) {
+  for (let j = 0; j < height; j++) {
     deadOrNo1.push([])
     deadOrNo2.push([])
-    for (let i = 0; i < height; i++) {
+    for (let i = 0; i < width; i++) {
       let color = Math.random() > 0.9 ? 'black' : 'white'
       drawFilledRect(i, j, 1, 1, color)
       if (color === 'black') {
