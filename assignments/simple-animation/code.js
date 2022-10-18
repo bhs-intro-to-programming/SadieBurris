@@ -152,7 +152,7 @@ const gameOfLife1 = () => {
       }
     }
   }
-  //gameOfLife2();
+  gameOfLife2();
 }
 
 const gameOfLife = () => {
