@@ -157,9 +157,7 @@ const gameOfLife1 = () => {
 
 const gameOfLife = () => {
   gameOfLifeStart()
-  for (let rep = 0; rep < 100; rep++) {
-    gameOfLife1()
-  }
+  gameOfLife1()
 }
 
 //gameOfLife()
