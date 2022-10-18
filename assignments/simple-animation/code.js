@@ -160,4 +160,4 @@ const gameOfLife = () => {
   gameOfLife1()
 }
 
-//gameOfLife()
+gameOfLife()
