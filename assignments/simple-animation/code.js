@@ -122,7 +122,7 @@ const newLife2 = (nei, i, j) => {
   }
 }
 
-const gameOfLife1 = () => {
+const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
       if (newLife2(neighbors2(i, j), i, j) === true) {
@@ -136,9 +136,9 @@ const gameOfLife1 = () => {
       }
     }
   }
-  //gameOfLife2();
+  //gameOfLife1();
 }
-const gameOfLife2 = () => {
+const gameOfLife1 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
       if (newLife1(neighbors1(i, j), i, j) === true) {
@@ -152,7 +152,7 @@ const gameOfLife2 = () => {
       }
     }
   }
-  gameOfLife1();
+  gameOfLife2();
 }
 
 const gameOfLife = () => {
