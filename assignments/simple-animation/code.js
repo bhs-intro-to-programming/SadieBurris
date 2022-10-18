@@ -128,7 +128,7 @@ const gameOfLife2 = () => {
       if (newLife2(neighbors2(i, j), i, j) === true) {
         deadOrNo2[j][i] === 1
         drawFilledRect(i, j, 1, 1, 'black')
-      } else if (newLife2(neighbors2(i, j), i, j) === false){
+      } else if (newLife2(neighbors2(i, j), i, j) === false) {
         deadOrNo2[j][i] === 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
@@ -144,7 +144,7 @@ const gameOfLife1 = () => {
       if (newLife1(neighbors1(i, j), i, j) === true) {
         deadOrNo1[j][i] === 1
         drawFilledRect(i, j, 1, 1, 'black')
-      } else if (newLife1(neighbors1(i, j), i, j) === false){
+      } else if (newLife1(neighbors1(i, j), i, j) === false) {
         deadOrNo1[j][i] === 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
@@ -152,7 +152,7 @@ const gameOfLife1 = () => {
       }
     }
   }
-  gameOfLife2();
+  //gameOfLife2();
 }
 
 const gameOfLife = () => {
