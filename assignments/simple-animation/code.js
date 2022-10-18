@@ -157,7 +157,7 @@ const gameOfLife1 = () => {
 
 const gameOfLife = () => {
   gameOfLifeStart()
-  gameOfLife1()
+  //gameOfLife1()
 }
 
 gameOfLife()
