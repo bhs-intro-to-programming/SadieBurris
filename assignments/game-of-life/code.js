@@ -119,4 +119,4 @@ const gameOfLife = () => {
   gameOfLife1()
 }
 
-animate(gameOfLife())
+animate(gameOfLife)
