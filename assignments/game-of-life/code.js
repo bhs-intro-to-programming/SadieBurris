@@ -65,13 +65,13 @@ const newLife1 = (nei, i, j) => {
 }
 const newLife2 = (nei, i, j) => {
   if (deadOrNo1[j][i] === 1) {
-    if (nei === 3 || nei === 4) {
+    if (nei === 1 || nei === 2) {
       return true
     } else {
       return false
     }
   } else if (deadOrNo1[j][i] === 0) {
-    if (nei === 3 || nei === 6) {
+    if (nei === 1) {
       return true
     } else {
       return false
