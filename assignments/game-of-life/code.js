@@ -81,42 +81,42 @@ const newLife2 = (nei, i, j) => {
   }
 }
 
-const gameOfLife1 = () => {
-  for (let j = 0; j < height; j++) {
-    for (let i = 0; i < width; i++) {
-      if (newLife2(neighbors2(i, j), i, j) === true) {
-        deadOrNo1[j][i] === 1
-        drawFilledRect(i, j, 1, 1, 'black')
-      } else if (newLife2(neighbors2(i, j), i, j) === false) {
-        deadOrNo1[j][i] === 0
-        drawFilledRect(i, j, 1, 1, 'white')
-      } else {
-        drawFilledRect(i, j, 1, 1, 'red')
-      }
-    }
-  }
-  //gameOfLife2();
-}
 const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      if (newLife1(neighbors1(i, j), i, j) === true) {
-        deadOrNo2[j][i] === 1
+      if (newLife2(neighbors2(i, j), i, j) === true) {
+        deadOrNo2[j][i] = 1
         drawFilledRect(i, j, 1, 1, 'black')
-      } else if (newLife1(neighbors1(i, j), i, j) === false) {
-        deadOrNo2[j][i] === 0
+      } else if (newLife2(neighbors2(i, j), i, j) === false) {
+        deadOrNo2[j][i] = 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
         drawFilledRect(i, j, 1, 1, 'red')
       }
     }
   }
+  //gameOfLife1();
+}
+const gameOfLife1 = () => {
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      if (newLife1(neighbors1(i, j), i, j) === true) {
+        deadOrNo1[j][i] = 1
+        drawFilledRect(i, j, 1, 1, 'black')
+      } else if (newLife1(neighbors1(i, j), i, j) === false) {
+        deadOrNo1[j][i] = 0
+        drawFilledRect(i, j, 1, 1, 'white')
+      } else {
+        drawFilledRect(i, j, 1, 1, 'red')
+      }
+    }
+  }
+  gameOfLife2();
 }
 
 const gameOfLife = () => {
   gameOfLifeStart()
   gameOfLife1()
-  gameOfLife2()
 }
 
 animate(gameOfLife())
