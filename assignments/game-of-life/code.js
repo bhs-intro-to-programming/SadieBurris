@@ -111,12 +111,13 @@ const gameOfLife1 = () => {
       }
     }
   }
-  gameOfLife2();
+  //gameOfLife2();
 }
 
 const gameOfLife = () => {
-  gameOfLifeStart()
   gameOfLife1()
+  gameOfLife2()
 }
 
+gameOfLifeStart()
 animate(gameOfLife)
