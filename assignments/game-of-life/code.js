@@ -114,9 +114,15 @@ const gameOfLife1 = () => {
   //gameOfLife2();
 }
 
+let dualSwitcher = 1;
 const gameOfLife = () => {
-  gameOfLife1()
-  gameOfLife2()
+  if (dualSwitcher === 1) {
+    gameOfLife1()
+    dualSwitcher = 2
+  } else {
+    gameOfLife2()
+    dualSwitcher = 1
+  }
 }
 
 gameOfLifeStart()
