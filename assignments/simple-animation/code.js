@@ -95,7 +95,7 @@ const newLife1 = (nei, i, j) => {
       return false
     }
   } else if (deadOrNo2[j][i] === 0) {
-    if (nei === 3) {
+    if (nei === 3 || nei === 6) {
       return true
     } else {
       return false
