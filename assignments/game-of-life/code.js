@@ -62,7 +62,7 @@ const gameOfLifeFrame = () => {
         arr[i][j] = 1
         drawFilledRect(i, j, 1, 1, 'black')
       } else if (newLife(neighbors(i, j), i, j) === false) {
-        arr[i][j] = 2
+        arr[i][j] = 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
         drawFilledRect(i, j, 1, 1, 'red')
