@@ -118,7 +118,6 @@ const gameOfLife1 = () => {
   //gameOfLife2();
 }
 
-let dualSwitcher = 1;
 const gameOfLife = () => {
   if (dualSwitcher === 1) {
     gameOfLife1()
