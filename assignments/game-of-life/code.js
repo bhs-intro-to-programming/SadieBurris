@@ -57,7 +57,7 @@ const newLife = (nei, i, j) => {
 const gameOfLife = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      let arr = dualSwitcher === 1 ? deadOrNo1[i][j] : deadOrNo2[i][j]
+      const arr = dualSwitcher === 1 ? deadOrNo1[i][j] : deadOrNo2[i][j]
       if (newLife(neighbors(i, j), i, j) === true) {
         arr = 1
         drawFilledRect(i, j, 1, 1, 'black')
