@@ -36,7 +36,7 @@ const neighbors = (i, j) => {
 }
 
 const newLife1 = (nei, i, j) => {
-  let arr = dualSwitcher === 1 ? deadOrNo2[j][i] : deadOrNo1[j][i]
+  const arr = dualSwitcher === 1 ? deadOrNo2[j][i] : deadOrNo1[j][i]
   if (arr === 1) {
     if (nei === 3 || nei === 4) {
       return true
