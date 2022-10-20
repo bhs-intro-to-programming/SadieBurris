@@ -58,10 +58,10 @@ const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
       if (newLife(neighbors(i, j), i, j) === true) {
-        deadOrNo2[i][j] = 1
+        deadOrNo2[j][i] = 1
         drawFilledRect(i, j, 1, 1, 'black')
       } else if (newLife(neighbors(i, j), i, j) === false) {
-        deadOrNo2[i][j] = 0
+        deadOrNo2[j][i] = 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
         drawFilledRect(i, j, 1, 1, 'red')
