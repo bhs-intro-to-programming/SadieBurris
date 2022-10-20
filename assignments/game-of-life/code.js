@@ -1,4 +1,3 @@
-
 const deadOrNo1 = []
 const deadOrNo2 = []
 let dualSwitcher = 1;
