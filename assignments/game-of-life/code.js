@@ -1,6 +1,7 @@
 
 const deadOrNo1 = []
 const deadOrNo2 = []
+let dualSwitcher = 1;
 const gameOfLifeStart = () => {
   for (let j = 0; j < height; j++) {
     deadOrNo1.push([])
@@ -19,19 +20,21 @@ const gameOfLifeStart = () => {
   }
 }
 
-const neighbors2 = (i, j) => {
+const neighbors = (i, j) => {
   let neighborsNum = 0
   for (let countX = -1; countX < 2; countX++) {
     for (let countY = -1; countY < 2; countY++) {
       let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
       let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
-      if (deadOrNo1[checkPosJ][checkPosI] === 1) {
+      const arr = dualSwitcher === 1 ? deadOrNo1[checkPosJ][checkPosI] : deadOrNo2[checkPosJ][checkPosI]
+      if (arr === 1) {
         neighborsNum++
       }
     }
   }
   return neighborsNum
 }
+/*
 const neighbors1 = (i, j) => {
   let neighborsNum = 0;
   for (let countX = -1; countX < 2; countX++) {
@@ -45,6 +48,7 @@ const neighbors1 = (i, j) => {
   }
   return neighborsNum
 }
+*/
 
 const newLife1 = (nei, i, j) => {
   if (deadOrNo2[j][i] === 1) {
@@ -84,10 +88,10 @@ const newLife2 = (nei, i, j) => {
 const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      if (newLife2(neighbors2(i, j), i, j) === true) {
+      if (newLife2(neighbors(i, j), i, j) === true) {
         deadOrNo2[j][i] = 1
         drawFilledRect(i, j, 1, 1, 'black')
-      } else if (newLife2(neighbors2(i, j), i, j) === false) {
+      } else if (newLife2(neighbors(i, j), i, j) === false) {
         deadOrNo2[j][i] = 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
@@ -100,10 +104,10 @@ const gameOfLife2 = () => {
 const gameOfLife1 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      if (newLife1(neighbors1(i, j), i, j) === true) {
+      if (newLife1(neighbors(i, j), i, j) === true) {
         deadOrNo1[j][i] = 1
         drawFilledRect(i, j, 1, 1, 'black')
-      } else if (newLife1(neighbors1(i, j), i, j) === false) {
+      } else if (newLife1(neighbors(i, j), i, j) === false) {
         deadOrNo1[j][i] = 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
