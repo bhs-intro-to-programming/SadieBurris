@@ -49,8 +49,6 @@ const newLife = (nei, i, j) => {
     } else {
       return false
     }
-  } else {
-    return 'something is wrong'
   }
 }
 
@@ -64,8 +62,6 @@ const gameOfLifeFrame = () => {
       } else if (newLife(neighbors(i, j), i, j) === false) {
         arr[j][i] = 0
         drawFilledRect(i, j, 1, 1, 'white')
-      } else {
-        drawFilledRect(i, j, 1, 1, 'red')
       }
     }
   }
