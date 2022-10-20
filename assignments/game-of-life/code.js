@@ -53,6 +53,7 @@ const newLife1 = (nei, i, j) => {
     return 'something is wrong'
   }
 }
+/*
 const newLife2 = (nei, i, j) => {
   if (deadOrNo1[j][i] === 1) {
     if (nei === 3 || nei === 4) {
@@ -70,6 +71,7 @@ const newLife2 = (nei, i, j) => {
     return 'something is wrong'
   }
 }
+*/
 
 const gameOfLife2 = () => {
   for (let j = 0; j < height; j++) {
