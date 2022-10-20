@@ -90,10 +90,10 @@ const gameOfLife1 = () => {
 }
 */
 
-const gameOfLife = () => {
+const gameOfLifePlay = () => {
   let dualSwitcher = dualSwitcher === 1 ? 2 : 1
   gameOfLife()
 }
 
 gameOfLifeStart()
-animate(gameOfLife)
+animate(gameOfLifePlay)
