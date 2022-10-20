@@ -91,7 +91,7 @@ const gameOfLife1 = () => {
 */
 
 const gameOfLifePlay = () => {
-  let dualSwitcher = dualSwitcher === 1 ? 2 : 1
+  dualSwitcher = dualSwitcher === 1 ? 2 : 1
   gameOfLifePlay()
 }
 
