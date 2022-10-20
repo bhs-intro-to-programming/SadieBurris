@@ -34,30 +34,16 @@ const neighbors = (i, j) => {
   }
   return neighborsNum
 }
-/*
-const neighbors1 = (i, j) => {
-  let neighborsNum = 0;
-  for (let countX = -1; countX < 2; countX++) {
-    for (let countY = -1; countY < 2; countY++) {
-      let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
-      let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
-      if (deadOrNo2[checkPosJ][checkPosI] === 1) {
-        neighborsNum++
-      }
-    }
-  }
-  return neighborsNum
-}
-*/
 
 const newLife1 = (nei, i, j) => {
-  if (deadOrNo2[j][i] === 1) {
+  let arr = dualSwitcher === 1 ? deadOrNo2[j][i] : deadOrNo1[j][i]
+  if (arr === 1) {
     if (nei === 3 || nei === 4) {
       return true
     } else {
       return false
     }
-  } else if (deadOrNo2[j][i] === 0) {
+  } else if (arr === 0) {
     if (nei === 3) {
       return true
     } else {
