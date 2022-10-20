@@ -54,15 +54,15 @@ const newLife = (nei, i, j) => {
   }
 }
 
-const gameOfLife = () => {
+const gameOfLifeFrame = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
-      const arr = dualSwitcher === 1 ? deadOrNo1[i][j] : deadOrNo2[i][j]
+      const arr = dualSwitcher === 1 ? deadOrNo1 : deadOrNo2
       if (newLife(neighbors(i, j), i, j) === true) {
-        arr = 1
+        arr[i][j] = 1
         drawFilledRect(i, j, 1, 1, 'black')
       } else if (newLife(neighbors(i, j), i, j) === false) {
-        arr = 0
+        arr[i][j] = 2
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
         drawFilledRect(i, j, 1, 1, 'red')
@@ -90,10 +90,10 @@ const gameOfLife1 = () => {
 }
 */
 
-const gameOfLifePlay = () => {
-  gameOfLife()
+const gameOfLife = () => {
+  gameOfLifeFrame()
   dualSwitcher = dualSwitcher === 1 ? 2 : 1
 }
 
 gameOfLifeStart()
-animate(gameOfLifePlay)
+animate(gameOfLife)
