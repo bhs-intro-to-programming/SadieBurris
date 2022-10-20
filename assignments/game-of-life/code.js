@@ -53,34 +53,16 @@ const newLife = (nei, i, j) => {
     return 'something is wrong'
   }
 }
-/*
-const newLife2 = (nei, i, j) => {
-  if (deadOrNo1[j][i] === 1) {
-    if (nei === 3 || nei === 4) {
-      return true
-    } else {
-      return false
-    }
-  } else if (deadOrNo1[j][i] === 0) {
-    if (nei === 3) {
-      return true
-    } else {
-      return false
-    }
-  } else {
-    return 'something is wrong'
-  }
-}
-*/
 
-const gameOfLife2 = () => {
+const gameOfLife = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
+      let arr = dualSwitcher === 1 ? deadOrNo1[i][j] : deadOrNo2[i][j]
       if (newLife(neighbors(i, j), i, j) === true) {
-        deadOrNo2[j][i] = 1
+        arr = 1
         drawFilledRect(i, j, 1, 1, 'black')
       } else if (newLife(neighbors(i, j), i, j) === false) {
-        deadOrNo2[j][i] = 0
+        arr = 0
         drawFilledRect(i, j, 1, 1, 'white')
       } else {
         drawFilledRect(i, j, 1, 1, 'red')
@@ -89,6 +71,7 @@ const gameOfLife2 = () => {
   }
   //gameOfLife1();
 }
+/*
 const gameOfLife1 = () => {
   for (let j = 0; j < height; j++) {
     for (let i = 0; i < width; i++) {
@@ -105,15 +88,11 @@ const gameOfLife1 = () => {
   }
   //gameOfLife2();
 }
+*/
 
 const gameOfLife = () => {
-  if (dualSwitcher === 1) {
-    gameOfLife1()
-    dualSwitcher = 2
-  } else {
-    gameOfLife2()
-    dualSwitcher = 1
-  }
+  let dualSwitcher = dualSwitcher === 1 ? 2 : 1
+  gameOfLife
 }
 
 gameOfLifeStart()
