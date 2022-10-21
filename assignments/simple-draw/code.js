@@ -69,8 +69,8 @@ const sir = (x, y, wid, depth) => {
   }
 }
 
-//sir(1/4 * width, 1/2 * height, width * 1/2, 10);
-
+sir(1/4 * width, 1/2 * height, width * 1/2, 10);
+/*
 const add1 = (num1, num2) => num1 + num2 * 1 / 3;
 const add2 = (num1, num2) => num1 + num2 * 4 / 3;
 const sub = (num1, num2) => num1 - num2 * 2 / 3;
@@ -90,3 +90,4 @@ const carp = (x, y, widX, widY) => {
 
 
 //carp(width / 3, height / 3, width / 3, height / 3);
+*/
