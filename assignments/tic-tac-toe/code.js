@@ -13,6 +13,7 @@ registerOnclick((x, y) => {
   const yLocation = y > height * 2/3 ? height * 2/3 + swby : y > height * 1/3 ? height / 3 + swby : swby
   drawText(dualSwitcher, xLocation, yLocation, 'black', symbolSize);
   dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
+  
 });
 
 const playerLocations = [[],[],[]]
