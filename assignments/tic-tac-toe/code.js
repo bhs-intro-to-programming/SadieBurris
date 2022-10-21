@@ -7,7 +7,7 @@
 
 registerOnclick((x, y) => {
   const swbx = (width / 3 - Math.min(width, height) * 0.3) / 2
-  const swby = (width / 3 - Math.min(width, height) * 0.3) / 2
+  const swby = (height / 3 - Math.min(width, height) * 0.3) / 2
   let xLocation = x > width * 2/3 ? width * 2/3 + swbx : x > width * 1/3 ? width / 3 + swbx : swbx
   let yLocation = y > height * 2/3 ? height * 2/3 + swby : y > height * 1/3 ? height / 3 + swby : swby
   drawText('X', xLocation, yLocation, 'black', Math.min(width, height) * 0.3);
