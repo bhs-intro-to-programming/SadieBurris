@@ -5,18 +5,19 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 let dualSwitcher = 'X'
+const playerLocations = [[],[],[]]
+
 registerOnclick((x, y) => {
-  const symbolSize = Math.min(width, height) * 0.3
-  const swbx = (width / 3 - symbolSize) / 2
-  const swby = (height / 3 - symbolSize) / 2 + symbolSize
+  const ss = Math.min(width, height) * 0.3
+  const swbx = (width / 3 - ss) / 2
+  const swby = (height / 3 - ss) / 2
   const xLocation = x > width * 2/3 ? width * 2/3 + swbx : x > width * 1/3 ? width / 3 + swbx : swbx
-  const yLocation = y > height * 2/3 ? height * 2/3 + swby : y > height * 1/3 ? height / 3 + swby : swby
-  drawText(dualSwitcher, xLocation, yLocation, 'black', symbolSize);
+  const yLocation = y > height * 2/3 ? height * 2/3 + swby + ss : y > height * 1/3 ? height / 3 + swby + ss : swby + ss
+  drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
   dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
-  
+  playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] = dualSwitcher
 });
 
-const playerLocations = [[],[],[]]
 
 const drawTicTacToeBoard = () => {
   //no I dont want to make a function out of it sorry
