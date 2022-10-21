@@ -16,6 +16,7 @@ registerOnclick((x, y) => {
   drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
   playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] = dualSwitcher
   dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
+  //cant place if already placed
 });
 
 
