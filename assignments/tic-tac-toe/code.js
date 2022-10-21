@@ -11,7 +11,7 @@ registerOnclick((x, y) => {
   const swby = (height / 3 - symbolSize) / 2 + symbolSize
   let xLocation = x > width * 2/3 ? width * 2/3 + swbx : x > width * 1/3 ? width / 3 + swbx : swbx
   let yLocation = y > height * 2/3 ? height * 2/3 + swby : y > height * 1/3 ? height / 3 + swby : swby
-  drawText('X', xLocation, yLocation, 'black', symbolSize * 0.3);
+  drawText('X', xLocation, yLocation, 'black', symbolSize);
 });
 
 const playerLocations = [[],[],[]]
