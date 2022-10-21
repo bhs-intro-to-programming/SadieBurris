@@ -9,3 +9,11 @@ registerOnclick((x, y) => {
   drawText('X', x, y, 'black', Math.min(width, height) * 0.3);
 });
 
+const drawTicTacToeBoard = () => {
+  //no I dont want to make a function out of it sorry
+  drawLine(width / 3, 0, width / 3, height)
+  drawLine(width * 2/3, 0, width * 2/3, height)
+  drawLine(0, height / 3, width, height / 3)
+  drawLine(0, height * 2/3, width, height * 2/3)
+}
+drawTicTacToeBoard()
