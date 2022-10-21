@@ -19,5 +19,5 @@
   "true",
   "The sum of the numbers from 0 to numbers.length - 1.",
   "Produces a new array containing all the words in words in uppercase.",
-  "assuming words is defined, this function will return an array the length of the imputed array (or string) containing the value (of words) that is in the same place of the last value in the array (or string) xs"
+  "This function will return a new array the same length as the imputed one, but every object in the array is the last value of the imputed one"
 ]
