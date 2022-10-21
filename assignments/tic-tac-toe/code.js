@@ -4,14 +4,15 @@
 // of the equals sign in our normal `const foo = ...` function definition. This
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
-
+let dualSwitcher = 'X'
 registerOnclick((x, y) => {
   const symbolSize = Math.min(width, height) * 0.3
   const swbx = (width / 3 - symbolSize) / 2
   const swby = (height / 3 - symbolSize) / 2 + symbolSize
   const xLocation = x > width * 2/3 ? width * 2/3 + swbx : x > width * 1/3 ? width / 3 + swbx : swbx
   const yLocation = y > height * 2/3 ? height * 2/3 + swby : y > height * 1/3 ? height / 3 + swby : swby
-  drawText('X', xLocation, yLocation, 'black', symbolSize);
+  drawText(dualSwitcher, xLocation, yLocation, 'black', symbolSize);
+  dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
 });
 
 const playerLocations = [[],[],[]]
