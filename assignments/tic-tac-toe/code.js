@@ -6,19 +6,20 @@
 // weeks but for now you can just adapt this code.
 let dualSwitcher = 'X'
 const playerLocations = [
-['','',''],
-['','',''],
-['','','']]
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']]
+
+const ss = Math.min(width, height) * 0.3
+const swbx = (width / 3 - ss) / 2
+const swby = (height / 3 - ss) / 2
 
 registerOnclick((x, y) => {
-  const ss = Math.min(width, height) * 0.3
-  const swbx = (width / 3 - ss) / 2
-  const swby = (height / 3 - ss) / 2
-  const xLocation = x > width * 2/3 ? width * 2/3 + swbx : x > width * 1/3 ? width / 3 + swbx : swbx
-  const yLocation = y > height * 2/3 ? height * 2/3 + swby + ss : y > height * 1/3 ? height / 3 + swby + ss : swby + ss
+  const xLocation = x > width * 2 / 3 ? width * 2 / 3 + swbx : x > width * 1 / 3 ? width / 3 + swbx : swbx
+  const yLocation = y > height * 2 / 3 ? height * 2 / 3 + swby + ss : y > height * 1 / 3 ? height / 3 + swby + ss : swby + ss
   if (playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] === '') {
-  drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
-  dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
+    drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
+    dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
   }
 });
 
@@ -26,9 +27,9 @@ registerOnclick((x, y) => {
 const drawTicTacToeBoard = () => {
   //no I dont want to make a function out of it sorry
   drawLine(width / 3, 0, width / 3, height)
-  drawLine(width * 2/3, 0, width * 2/3, height)
+  drawLine(width * 2 / 3, 0, width * 2 / 3, height)
   drawLine(0, height / 3, width, height / 3)
-  drawLine(0, height * 2/3, width, height * 2/3)
+  drawLine(0, height * 2 / 3, width, height * 2 / 3)
 }
 
 drawTicTacToeBoard()
