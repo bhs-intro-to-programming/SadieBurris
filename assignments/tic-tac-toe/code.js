@@ -32,7 +32,7 @@ registerOnclick((x, y) => {
       console.log('You Won!')
     } else if ((playerLocations[0][i] && playerLocations[1][i] && playerLocations[2][i]) === ('X' || 'O')) {
       console.log('You Won!')
-    }
+    } else if 
   }
 });
 
