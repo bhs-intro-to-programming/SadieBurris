@@ -29,7 +29,7 @@ registerOnclick((x, y) => {
   }*/
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
-      if ((playerLocations[j][0] && playerLocations[j][1] && playerLocations[j][2] === ('X' || 'O')) {
+      if ((playerLocations[j][0] && playerLocations[j][1] && playerLocations[j][2]) === ('X' || 'O')) {
         console.log('You Won!')
       }
     }
