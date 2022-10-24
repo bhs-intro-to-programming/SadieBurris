@@ -16,9 +16,8 @@ registerOnclick((x, y) => {
   const swby = (height / 3 - ss) / 2
   const xLocation = x > width * 2/3 ? width * 2/3 + swbx : x > width * 1/3 ? width / 3 + swbx : swbx
   const yLocation = y > height * 2/3 ? height * 2/3 + swby + ss : y > height * 1/3 ? height / 3 + swby + ss : swby + ss
-  if (playerLocations[y][x] === '') {
+  if (playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] === '') {
   drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
-  playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] = dualSwitcher
   dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
   }
 });
