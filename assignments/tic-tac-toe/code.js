@@ -24,7 +24,7 @@ registerOnclick((x, y) => {
   } else {
     console.log('already claimed!')
   }
-  if ((playerLocations[0][0] && playerLocations[1][1] && playerLocations[2][2]) === 'X') {
+  if ((playerLocations[0][0] && playerLocations[1][1] && playerLocations[2][2])) === 'X') {
     console.log('You Won!')
   }
 };
