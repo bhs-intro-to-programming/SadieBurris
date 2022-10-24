@@ -20,6 +20,8 @@ registerOnclick((x, y) => {
   if (playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] === '') {
     drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
     dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
+  } else {
+    console.log('already claimed!')
   }
 });
 
