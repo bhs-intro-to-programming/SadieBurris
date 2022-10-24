@@ -6,9 +6,9 @@ const gameOfLifeStart = () => {
     deadOrNo1.push([])
     deadOrNo2.push([])
     for (let i = 0; i < width; i++) {
-      let color = Math.random() > 0.9 ? 'black' : 'white'
+      let color = Math.random() > 0.9 ? 'green' : 'black'
       drawFilledRect(i, j, 1, 1, color)
-      if (color === 'black') {
+      if (color === 'green') {
         deadOrNo2[j].push(1);
         deadOrNo1[j].push(1);
       } else {
@@ -57,10 +57,10 @@ const gameOfLifeFrame = () => {
       const arr = dualSwitcher === 1 ? deadOrNo1 : deadOrNo2
       if (newLife(neighbors(i, j), i, j) === true) {
         arr[j][i] = 1
-        drawFilledRect(i, j, 1, 1, 'black')
+        drawFilledRect(i, j, 1, 1, 'green')
       } else if (newLife(neighbors(i, j), i, j) === false) {
         arr[j][i] = 0
-        drawFilledRect(i, j, 1, 1, 'white')
+        drawFilledRect(i, j, 1, 1, 'black')
       }
     }
   }
