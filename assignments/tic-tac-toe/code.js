@@ -5,7 +5,10 @@
 // is called an anonymous function. We'll discuss this in more detail in a few
 // weeks but for now you can just adapt this code.
 let dualSwitcher = 'X'
-const playerLocations = [[],[],[]]
+const playerLocations = [
+['','',''],
+['','',''],
+['','','']]
 
 registerOnclick((x, y) => {
   const ss = Math.min(width, height) * 0.3
@@ -13,7 +16,7 @@ registerOnclick((x, y) => {
   const swby = (height / 3 - ss) / 2
   const xLocation = x > width * 2/3 ? width * 2/3 + swbx : x > width * 1/3 ? width / 3 + swbx : swbx
   const yLocation = y > height * 2/3 ? height * 2/3 + swby + ss : y > height * 1/3 ? height / 3 + swby + ss : swby + ss
-  if (playerLocations[y][x] === ) {
+  if (playerLocations[y][x] === '') {
   drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
   playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] = dualSwitcher
   dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
