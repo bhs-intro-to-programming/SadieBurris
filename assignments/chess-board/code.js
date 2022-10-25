@@ -52,7 +52,7 @@ const drawPieces = () => {
 
 drawPieces()
 
-const whitePawnRules = (x, y) => {
+const blackPawnRules = (x, y) => {
   if ((locations[y + 1][x - 1] && locations[y + 1][x + 1]) === N) {
     drawFilledRect(offset + x * sqrWidth, (y + 1) * sqrWidth, sqrWidth, sqrWidth, 'red')
   } else if (locations[y + 1][x - 1] === N) {
