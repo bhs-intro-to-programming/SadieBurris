@@ -24,10 +24,11 @@ const locations = [
   [WR, WKN, WB, WQ, WK, WB, WKN, WR],
 ]
 
+const checkWidth = Math.min(width, height);
+const offset = (width - checkWidth) / 2
+const sqrWidth = checkWidth / 8;
+
 const drawChessBoard = () => {
-  const checkWidth = Math.min(width, height);
-  const offset = (width - checkWidth) / 2
-  const sqrWidth = checkWidth / 8;
   for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
       let color = (i % 2 === 1 && j % 2 === 0) || (i % 2 === 0 && j % 2 === 1) ? 'black' : 'gray';
@@ -53,7 +54,7 @@ drawPieces()
 
 const whitePawnRules = (x, y) => {
   if ((locations[y + 1][x - 1] && locations[y + 1][x + 1]) === N) {
-    return (x, y + 1)
+    drawFilledRect()
   } else {
     return 'help'
   }
