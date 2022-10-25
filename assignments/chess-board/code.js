@@ -14,14 +14,14 @@ const N = '';
 
 
 const locations = [
+  [WR, WKN, WB, WK, WQ, WB, WKN, WR],
+  [WP, WP, WP, WP, WP, WP, WP, WP],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
   [BR, BKN, BB, BQ, BK, BB, BKN, BR],
   [BP, BP, BP, BP, BP, BP, BP, BP],
-  [N, N, N, N, N, N, N, N],
-  [N, N, N, N, N, N, N, N],
-  [N, N, N, N, N, N, N, N],
-  [N, N, N, N, N, N, N, N],
-  [WP, WP, WP, WP, WP, WP, WP, WP],
-  [WR, WKN, WB, WQ, WK, WB, WKN, WR],
 ]
 
 const checkWidth = Math.min(width, height);
