@@ -14,7 +14,7 @@ const N = '';
 
 
 const locations = [
-  [BR, BKN, BB, BK, BQ, BB, BKN, BR],
+  [BR, BKN, BB, BQ, BK, BB, BKN, BR],
   [BP, BP, BP, BP, BP, BP, BP, BP],
   [N, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
