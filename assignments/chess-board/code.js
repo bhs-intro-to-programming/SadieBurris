@@ -75,3 +75,7 @@ const whitePawnRules = (x, y) => {
     drawFilledRect(offset + (x + 1) * sqrWidth, (y - 1) * sqrWidth, sqrWidth, sqrWidth, 'red')
   }
 }
+
+registerOnclick(
+  //which location is it? apply rules
+)
