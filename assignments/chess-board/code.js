@@ -15,8 +15,8 @@ const N = '';
 
 const locations = [
   [WR, WKN, WB, WK, WQ, WB, WKN, WR],
-  [WP, WP, WP, WP, WP, WP, WP, WP],
-  [N, N, N, N, N, N, N, N],
+  [N, WP, WP, WP, WP, WP, WP, WP],
+  [WP, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
