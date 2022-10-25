@@ -1,27 +1,27 @@
-const WK = '♔';
-const WQ = '♕';
-const WR = '♖';
-const WB = '♗';
-const WKN = '♘';
-const WP = '♙';
-const BK = '♚';
-const BQ = '♛';
-const BR = '♜';
-const BB = '♝';
-const BKN = '♞';
-const BP = '♟';
+const BK = '♔';
+const BQ = '♕';
+const BR = '♖';
+const BB = '♗';
+const BKN = '♘';
+const BP = '♙';
+const WK = '♚';
+const WQ = '♛';
+const WR = '♜';
+const WB = '♝';
+const WKN = '♞';
+const WP = '♟';
 const N = '';
 
 
 const locations = [
-  [WR, WKN, WB, WK, WQ, WB, WKN, WR],
-  [N, WP, WP, WP, WP, WP, WP, WP],
-  [WP, N, N, N, N, N, N, N],
-  [N, N, N, N, N, N, N, N],
-  [N, N, N, N, N, N, N, N],
-  [N, N, N, N, N, N, N, N],
-  [BR, BKN, BB, BQ, BK, BB, BKN, BR],
+  [BR, BKN, BB, BK, BQ, BB, BKN, BR],
   [BP, BP, BP, BP, BP, BP, BP, BP],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, N, N, N, N],
+  [WP, WP, WP, WP, WP, WP, WP, WP],
+  [WR, WKN, WB, WQ, WK, WB, WKN, WR],
 ]
 
 const checkWidth = Math.min(width, height);
