@@ -54,5 +54,7 @@ drawPieces()
 const whitePawnRules = (x, y) => {
   if ((locations[y + 1][x - 1] && locations[y + 1][x + 1]) === 'N') {
     return (x, y - 1)
+  } else {
+    return 'help'
   }
 }
