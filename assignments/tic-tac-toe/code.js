@@ -24,15 +24,15 @@ registerOnclick((x, y) => {
   } else {
     console.log('already claimed!')
   }
-  
+
   for (let i = 0; i < 3; i++) {
     if ((playerLocations[i][0] && playerLocations[i][1] && playerLocations[i][2]) === ('X' || 'O')) {
       console.log('You Won!')
-    } else if ((playerLocations[0][i] && playerLocations[1][i] && playerLocations[2][i]) === ('X' || 'O')) {
+    } else if ((playerLocations[0][i] && playerLocations[1][i] && playerLocations[2][i]) === 'X' || 'O') {
       console.log('You Won!')
-    } else if ((playerLocations[0][0] && playerLocations[1][1] && playerLocations[2][2]) === ('X' || 'O')) {
+    } else if ((playerLocations[0][0] && playerLocations[1][1] && playerLocations[2][2]) === 'X' || 'O') {
       console.log('You Won!')
-    } else if ((playerLocations[0][2] && playerLocations[1][1] && playerLocations[2][0]) === ('X' || 'O')) {
+    } else if ((playerLocations[0][2] && playerLocations[1][1] && playerLocations[2][0]) === 'X' || 'O') {
       console.log('You Won!')
     }
   }
