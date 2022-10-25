@@ -20,21 +20,20 @@ registerOnclick((x, y) => {
   if (playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] === 'N') {
     drawText(dualSwitcher, xLocation, yLocation, 'black', ss);
     playerLocations[Math.floor(y / (height / 3))][Math.floor(x / (width / 3))] = dualSwitcher
+    for (let i = 0; i < 3; i++) {
+    if ((playerLocations[i][0] && playerLocations[i][1] && playerLocations[i][2]) === ('X' || 'O')) {
+      console.log('You Won!')
+    } else if ((playerLocations[0][i] && playerLocations[1][i] && playerLocations[2][i]) === dualSwitcher) {
+      console.log('You Won!')
+    } else if ((playerLocations[0][0] && playerLocations[1][1] && playerLocations[2][2]) === dualSwitcher) {
+      console.log('You Won!')
+    } else if ((playerLocations[0][2] && playerLocations[1][1] && playerLocations[2][0]) === dualSwitcher) {
+      console.log('You Won!')
+    }
+  }
     dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
   } else {
     console.log('already claimed!')
-  }
-
-  for (let i = 0; i < 3; i++) {
-    if ((playerLocations[i][0] && playerLocations[i][1] && playerLocations[i][2]) === ('X' || 'O')) {
-      console.log('You Won!')
-    } else if ((playerLocations[0][i] && playerLocations[1][i] && playerLocations[2][i]) === 'X' || 'O') {
-      console.log('You Won!')
-    } else if ((playerLocations[0][0] && playerLocations[1][1] && playerLocations[2][2]) === 'X' || 'O') {
-      console.log('You Won!')
-    } else if ((playerLocations[0][2] && playerLocations[1][1] && playerLocations[2][0]) === 'X' || 'O') {
-      console.log('You Won!')
-    }
   }
 });
 
