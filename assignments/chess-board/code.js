@@ -66,13 +66,13 @@ const blackPawnRules = (x, y) => {
 
 const whitePawnRules = (x, y) => {
   if (locations[y - 1][x - 1] === N && locations[y - 1][x + 1] === N) {
-    drawFilledRect(offset + x * sqrWidth, (y - 1) * sqrWidth, 10, 10, 'red')
+    drawFilledRect(offset + x * sqrWidth, (y - 1) * sqrWidth, 4, 4, 'red')
   }
   if (locations[y - 1][x - 1] !== N) {
-    drawFilledRect(offset + (x - 1) * sqrWidth, (y - 1) * sqrWidth, 10, 10, 'red')
+    drawFilledRect(offset + (x - 1) * sqrWidth, (y - 1) * sqrWidth, 4, 4, 'red')
   }
   if (locations[y - 1][x + 1] !== N) {
-    drawFilledRect(offset + (x + 1) * sqrWidth, (y - 1) * sqrWidth, 10, 10, 'red')
+    drawFilledRect(offset + (x + 1) * sqrWidth, (y - 1) * sqrWidth, 4, 4, 'red')
   }
 }
 
