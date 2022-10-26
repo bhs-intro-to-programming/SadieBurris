@@ -1,6 +1,7 @@
 const deadOrNo1 = []
 const deadOrNo2 = []
 let dualSwitcher = 1;
+
 const gameOfLifeStart = () => {
   for (let j = 0; j < height; j++) {
     deadOrNo1.push([])
