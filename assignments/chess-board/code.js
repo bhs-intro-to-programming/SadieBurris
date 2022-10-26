@@ -76,13 +76,11 @@ const whitePawnRules = (x, y) => {
   }
 }
 
+//yeah no I cant code rn sorry my future self
+
 const bishopRules = (x, y) => {
   for (let i = 0; i < 8; i++) {
-    if(locations[y][i] === N) {
-      drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
-    } else {
-      i = 8
-    }
+    //const yUp = locations[i][x] 
   }
 }
 
