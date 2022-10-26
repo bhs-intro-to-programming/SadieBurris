@@ -54,13 +54,13 @@ drawPieces()
 
 const blackPawnRules = (x, y) => {
   if (locations[y + 1][x - 1] === N && locations[y + 1][x + 1] === N) {
-    drawFilledRect(offset + x * sqrWidth, (y + 1) * sqrWidth, sqrWidth, sqrWidth, 'red')
+    drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   }
   if (locations[y + 1][x - 1] !== N) {
-    drawFilledRect(offset + (x - 1) * sqrWidth, (y + 1) * sqrWidth, sqrWidth, sqrWidth, 'red')
+    drawFilledRect(offset + (x - 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   }
   if (locations[y + 1][x + 1] !== N) {
-    drawFilledRect(offset + (x + 1) * sqrWidth, (y + 1) * sqrWidth, sqrWidth, sqrWidth, 'red')
+    drawFilledRect(offset + (x + 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   }
 }
 
