@@ -72,7 +72,15 @@ const whitePawnRules = (x, y) => {
     drawFilledRect(offset + (x - 1) * sqrWidth, (y - 1) * sqrWidth, sqrWidth, sqrWidth, 'red')
   }
   if (locations[y - 1][x + 1] !== N) {
-    drawFilledRect(offset + (x + 1) * sqrWidth, (y - 1) * sqrWidth, sqrWidth, sqrWidth, 'red')
+    drawFilledRect(offset + (x + 1) * sqrWidth, (y - 1) * sqrWidth, 10, 10, 'red')
+  }
+}
+
+const bishopRules = (x, y) => {
+  for (let i = 0; i < 8; i++) {
+    if(locations[y][i] === N) {
+      drawFilledRect(offset + x * sqrWidth, y * sqrWidth, sqrWidth, sqrWidth, 'red')
+    }
   }
 }
 
