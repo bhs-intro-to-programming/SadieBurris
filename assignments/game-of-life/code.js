@@ -6,7 +6,7 @@ const gameOfLifeStart = () => {
     deadOrNo1.push([])
     deadOrNo2.push([])
     for (let i = 0; i < width; i++) {
-      let color = Math.random() > 0.95 ? 'green' : 'black'
+      let color = Math.random() > 0.91 ? 'green' : 'black'
       drawFilledRect(i, j, 1, 1, color)
       if (color === 'green') {
         deadOrNo2[j].push(1);
