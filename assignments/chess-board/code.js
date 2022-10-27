@@ -81,9 +81,9 @@ const whitePawnRules = (x, y) => {
 const bishopRules = (x, y) => {
   for (let i = y; i < 8; i++) {
     if (locations[i][x] === N || locations[i][x] === BB) {
-      drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, i * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+      drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
-      i = 6
+      i = 8
     }
   }
 }
