@@ -17,7 +17,7 @@ const locations = [
   [BR, BKN, N, BQ, BK, BB, BKN, BR],
   [BP, BP, BP, BP, BP, BP, BP, BP],
   [N, N, N, N, N, N, N, N],
-  [N, N, BP, N, N, BB, N, N],
+  [N, N, BP, N, BB, N, BP, N],
   [N, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
   [WP, WP, WP, WP, WP, WP, WP, WP],
@@ -95,7 +95,7 @@ const bishopRules = (x, y) => {
   }
   for (let i = x; i < 8; i++) {
     if (locations[y][i] === N || locations[y][i] === BB) {
-      drawFilledRect(offset + i * sqrWidth + (sqrWidth - 4) / 2, (y + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+      drawFilledRect(offset + i * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
       i = 8
     }
