@@ -78,7 +78,7 @@ const whitePawnRules = (x, y) => {
 
 //yeah no I cant code rn sorry my future self
 
-const bishopRules = (x, y) => {
+const rookRules = (x, y) => {
   for (let i = y; i < 8; i++) {
     if (locations[i][x] === N || locations[i][x] === BB) {
       drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
