@@ -112,4 +112,5 @@ const rookRules = (x, y) => {
 
 const knightRules = (x, y) => {
   drawFilledRect(offset + (x - 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 2) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+  drawFilledRect(offset + (x + 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 2) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
 }
