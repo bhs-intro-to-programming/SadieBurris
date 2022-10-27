@@ -82,21 +82,21 @@ const whitePawnRules = (x, y) => {
 
 const rookRules = (x, y) => {
   for (let i = y; i < 8; i++) {
-    if (locations[i][x] === N || locations[i][x] === BB) {
+    if (locations[i][x] === N /*|| locations[i][x] === (BB || WB)*/) {
       drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
       i = 8
     }
   }
   for (let i = y; i > 0; i--) {
-    if (locations[i][x] === N || locations[i][x] === BB) {
+    if (locations[i][x] === N || locations[i][x] === (BB || WB)) {
       drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
       i = 0
     }
   }
   for (let i = x; i < 8; i++) {
-    if (locations[y][i] === N || locations[y][i] === BB) {
+    if (locations[y][i] === N || locations[y][i] === (BB || WB)) {
       drawFilledRect(offset + (i + 1) * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
       i = 8
@@ -124,4 +124,36 @@ const knightRules = (x, y) => {
   drawFilledRect(offset + (x - 2) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   drawFilledRect(0,0, offset, height, 'white')
   drawFilledRect(width - offset, 0, offset, height, 'white')
+}
+
+const bishopRules = (x, y) => {
+  for (let i = 0; i + x || i + y < 8; i++) {
+    if (locations[i + y][x + x] === N || locations[i][x] === BB) {
+      drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+    } else {
+      i = 8
+    }
+  }
+  for (let i = y; i > 0; i--) {
+    if (locations[i][x] === N || locations[i][x] === BB) {
+      drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+    } else {
+      i = 0
+    }
+  }
+  for (let i = x; i < 8; i++) {
+    if (locations[y][i] === N || locations[y][i] === BB) {
+      drawFilledRect(offset + (i + 1) * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+    } else {
+      i = 8
+    }
+  }
+  for (let i = x; i > 0; i--) {
+    if (locations[y][i] === N || locations[y][i] === BB) {
+      drawFilledRect(offset + (i - 1) * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+    } else {
+      i = 0
+    }
+  }
+  //yeah the code is long deal with it
 }
