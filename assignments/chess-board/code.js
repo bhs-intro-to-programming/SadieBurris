@@ -129,33 +129,11 @@ const knightRules = (x, y) => {
 }
 
 const bishopRules = (x, y) => {
-  for (let i = 0; i + x || i + y < 8; i++) {
-    if (locations[i + y][x + x] === N || locations[i][x] === BB) {
-      drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+  for (let i = 0; (i + x || i + y) < 8; i++) {
+    if (locations[i + y][i + x] === N) {
+      drawFilledRect(offset + (x + i) * sqrWidth + (sqrWidth - 4) / 2, (y + i) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
       i = 8
     }
   }
-  for (let i = y; i > 0; i--) {
-    if (locations[i][x] === N || locations[i][x] === BB) {
-      drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (i - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
-    } else {
-      i = 0
-    }
-  }
-  for (let i = x; i < 8; i++) {
-    if (locations[y][i] === N || locations[y][i] === BB) {
-      drawFilledRect(offset + (i + 1) * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
-    } else {
-      i = 8
-    }
-  }
-  for (let i = x; i > 0; i--) {
-    if (locations[y][i] === N || locations[y][i] === BB) {
-      drawFilledRect(offset + (i - 1) * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
-    } else {
-      i = 0
-    }
-  }
-  //yeah the code is long deal with it
 }
