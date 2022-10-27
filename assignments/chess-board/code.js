@@ -109,6 +109,8 @@ const rookRules = (x, y) => {
       i = 0
     }
   }
+  drawFilledRect(0,0, offset, height, 'white')
+  drawFilledRect(width - offset, 0, offset, height, 'white')
   //yeah the code is long deal with it
 }
 
