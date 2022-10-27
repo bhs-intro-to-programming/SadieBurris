@@ -136,4 +136,5 @@ const bishopRules = (x, y) => {
       i = 8
     }
   }
+  //in progress
 }
