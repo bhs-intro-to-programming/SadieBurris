@@ -121,4 +121,5 @@ const knightRules = (x, y) => {
   drawFilledRect(offset + (x - 2) * sqrWidth + (sqrWidth - 4) / 2, (y + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   drawFilledRect(offset + (x - 2) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   drawFilledRect(0,0, offset, height, 'white')
+  drawFilledRect(width - offset, 0, offset, height, 'white')
 }
