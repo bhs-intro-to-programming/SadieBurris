@@ -18,7 +18,7 @@ const locations = [
   [BP, BP, BP, BP, BP, BP, BP, BP],
   [N, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
-  [N, N, N, N, BKN, N, N, N],
+  [BKN, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
   [WP, WP, WP, WP, WP, WP, WP, WP],
   [WR, WKN, WB, WQ, WK, WB, WKN, WR],
