@@ -35,6 +35,8 @@ const drawChessBoard = () => {
       drawFilledRect(offset + j * sqrWidth, i * sqrWidth, sqrWidth, sqrWidth, color);
     }
   }
+  drawFilledRect(0,0, offset, height, 'white')
+  drawFilledRect(width - offset, 0, offset, height, 'white')
 }
 
 drawChessBoard()
