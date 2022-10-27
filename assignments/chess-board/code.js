@@ -102,7 +102,7 @@ const bishopRules = (x, y) => {
   }
   for (let i = y; i > 0; i--) {
     if (locations[y][i] === N || locations[y][i] === BB) {
-      drawFilledRect(offset + i * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+      drawFilledRect(offset + (i - 1) * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
       i = 0
     }
