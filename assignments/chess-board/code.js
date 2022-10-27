@@ -51,7 +51,7 @@ const drawPieces = () => {
 }
 
 drawPieces()
- //Fix dual rules BUT DO IT LATER procrastination :)
+//Fix dual rules BUT DO IT LATER procrastination :)
 const blackPawnRules = (x, y) => {
   if (locations[y + 1][x - 1] === N && locations[y + 1][x + 1] === N) {
     drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
@@ -84,6 +84,14 @@ const bishopRules = (x, y) => {
   }
 }
 
+
+/*
+if(locations[y][i] === N) {
+  drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, y * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+} else {
+  i = 8
+  }
+/*
 registerOnclick(
   //which location is it? apply rules
 )
