@@ -14,11 +14,11 @@ const N = '';
 
 
 const locations = [
-  [BR, BKN, BB, BQ, BK, BB, BKN, BR],
+  [BR, N, BB, BQ, BK, BB, BKN, BR],
   [BP, BP, BP, BP, BP, BP, BP, BP],
   [N, N, N, N, N, N, N, N],
   [N, N, N, N, N, N, N, N],
-  [N, N, N, N, N, N, N, N],
+  [N, N, N, N, BKN, N, N, N],
   [N, N, N, N, N, N, N, N],
   [WP, WP, WP, WP, WP, WP, WP, WP],
   [WR, WKN, WB, WQ, WK, WB, WKN, WR],
@@ -110,4 +110,6 @@ const rookRules = (x, y) => {
   //yeah the code is long deal with it
 }
 
-
+const knightRules = (x, y) => {
+  drawFilledRect(offset + (x - 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 2) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+}
