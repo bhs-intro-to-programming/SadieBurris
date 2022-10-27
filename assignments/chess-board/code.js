@@ -99,3 +99,4 @@ if(locations[y][i] === N) {
 registerOnclick(
   //which location is it? apply rules
 )
+*/
