@@ -136,5 +136,26 @@ const bishopRules = (x, y) => {
       i = 8
     }
   }
+  for (let i = 0; (i + x || i + y) < 8; i++) {
+    if (locations[i - y][i - x] === N) {
+      drawFilledRect(offset + (x - i + 1) * sqrWidth + (sqrWidth - 4) / 2, (y + i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+    } else {
+      i = 8
+    }
+  }
+  for (let i = 0; (i + x || i + y) < 8; i++) {
+    if (locations[i + y][i + x] === N) {
+      drawFilledRect(offset + (x + i + 1) * sqrWidth + (sqrWidth - 4) / 2, (y + i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+    } else {
+      i = 8
+    }
+  }
+  for (let i = 0; (i + x || i + y) < 8; i++) {
+    if (locations[i + y][i + x] === N) {
+      drawFilledRect(offset + (x + i + 1) * sqrWidth + (sqrWidth - 4) / 2, (y + i + 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
+    } else {
+      i = 8
+    }
+  }
   //in progress
 }
