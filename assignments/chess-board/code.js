@@ -130,7 +130,7 @@ const knightRules = (x, y) => {
 
 const bishopRules = (x, y) => {
   for (let i = 1; (i + x || i + y) < 8; i++) {
-    if (locations[i + y][i + x] === (N || BB || WB)) {
+    if (locations[i + y][i + x] === N) {
       drawFilledRect(offset + (x + i) * sqrWidth + (sqrWidth - 4) / 2, (y + i) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
     } else {
       i = 8
