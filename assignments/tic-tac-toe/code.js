@@ -23,6 +23,8 @@ registerOnclick((x, y) => {
         console.log('Winning doesnt work yet')
       } else if ((playerLocations[0][2] && playerLocations[1][1] && playerLocations[2][0]) === dualSwitcher) {
         console.log('Winning doesnt work yet')
+      } else {
+        console.log('testing testing')
       }
     }
     dualSwitcher = dualSwitcher === 'X' ? 'O' : 'X'
