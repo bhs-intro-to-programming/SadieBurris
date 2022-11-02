@@ -1,6 +1,5 @@
 let next = []
 let current = []
-let dualSwitcher = 1;
 
 const gameOfLifeStart = () => {
   for (let j = 0; j < height; j++) {
