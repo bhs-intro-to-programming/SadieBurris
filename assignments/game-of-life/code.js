@@ -38,21 +38,6 @@ const neighbors = (i, j) => {
 const newLife = (nei, i, j) => {
   const arr = dualSwitcher === 1 ? deadOrNo2[j][i] : deadOrNo1[j][i]
   return arr === 1 && (nei === 3 || nei === 4) || arr === 0 && nei === 3
-  /*
-  if (arr === 1) {
-    if (nei === 3 || nei === 4) {
-      return true
-    } else {
-      return false
-    }
-  } else if (arr === 0) {
-    if (nei === 3) {
-      return true
-    } else {
-      return false
-    }
-  }
-  */
 }
 
 const gameOfLifeFrame = () => {
