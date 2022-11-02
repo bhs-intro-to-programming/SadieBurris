@@ -24,9 +24,9 @@ const neighbors = (i, j) => {
   let neighborsNum = 0
   for (let countX = -1; countX < 2; countX++) {
     for (let countY = -1; countY < 2; countY++) {
-      const arr = dualSwitcher === 1 ? deadOrNo2[checkPosJ][checkPosI] : deadOrNo1[checkPosJ][checkPosI]
       let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
       let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
+      const arr = dualSwitcher === 1 ? deadOrNo2[checkPosJ][checkPosI] : deadOrNo1[checkPosJ][checkPosI]
       if (arr === 1) {
         neighborsNum++
       }
