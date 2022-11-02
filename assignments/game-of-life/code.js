@@ -55,7 +55,7 @@ const gameOfLifeFrame = () => {
 }
 
 const gameOfLife = () => {
-  gameOfLifeFrame()
+  gameOfLifeFrame();
   [current, next] = [next, current]
 }
 
