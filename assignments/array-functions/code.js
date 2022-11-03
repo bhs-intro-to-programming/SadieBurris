@@ -1,19 +1,10 @@
 const countTens = (ar) => (ar.filter(num => num === 10)).length
-/*{
-  let count = 0;
-  for (let i = 0; i < ar.length; i++) {
-    if (ar[i] === 10) {
-      count++
-    }
-  }
-  return count;
-}
-*/
 
 const sum = (ar) => ar.reduce((pre, cur) => pre + cur, 0)
 
 
-const evens = (ar) => {
+const evens = (ar) => ar.filter(num => num % 2 === 0)
+/*{
   const newAr = []
   for (let i = 0; i < ar.length; i++) {
     if (ar[i] % 2 === 0) {
@@ -22,6 +13,7 @@ const evens = (ar) => {
   }
   return newAr
 }
+*/
 
 const anyOverOneHundred = (ar) => {
   for (let i = 0; i < ar.length; i++) {
