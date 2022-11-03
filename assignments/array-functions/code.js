@@ -1,4 +1,5 @@
-const countTens = (ar) => {
+const countTens = (ar) => (ar.filter(num => num === 10)).length
+/*{
   let count = 0;
   for (let i = 0; i < ar.length; i++) {
     if (ar[i] === 10) {
@@ -7,16 +8,10 @@ const countTens = (ar) => {
   }
   return count;
 }
+*/
 
 const sum = (ar) => ar.reduce((pre, cur) => pre + cur, 0)
-/*{
-  let count = 0;
-  for (let i = 0; i < ar.length; i++) {
-    count = count + ar[i]
-  }
-  return count;
-}
-*/
+
 
 const evens = (ar) => {
   const newAr = []
