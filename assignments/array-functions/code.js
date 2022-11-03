@@ -8,13 +8,15 @@ const countTens = (ar) => {
   return count;
 }
 
-const sum = (ar) => {
+const sum = (ar) => ar.reduce((pre, cur) => pre + cur, 0)
+/*{
   let count = 0;
   for (let i = 0; i < ar.length; i++) {
     count = count + ar[i]
   }
   return count;
 }
+*/
 
 const evens = (ar) => {
   const newAr = []
