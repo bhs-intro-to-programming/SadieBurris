@@ -1,5 +1,5 @@
 const edgeSize = (width - height) / 2
-const b = Array(8)
+const b = Array(9)
 
 const drawBoard = () => {
   for (let i = 0; i < 10; i++) {
