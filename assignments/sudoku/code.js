@@ -10,8 +10,7 @@ const drawBoard1st = () => {
 }
 
 registerOnclick((x, y) => {
-  console.log(Math.floor((x - edgeSize) / (height / 9)))
-  console.log(Math.floor(y / (height / 9)))
+  b[Math.floor(y / (height / 9))][Math.floor((x - edgeSize) / (height / 9))] = 'X'
 })
 
 drawBoard1st()
