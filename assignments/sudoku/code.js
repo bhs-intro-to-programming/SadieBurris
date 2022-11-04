@@ -13,7 +13,7 @@ registerOnclick((x, y) => {
   const exe = Math.floor((x - edgeSize) / (height / 9))
   const wiy = Math.floor(y / (height / 9))
   b[wiy][exe] = 'X'
-  drawText('X', edgeSize + exe * (height / 9) + height / 18, 100, 'black', 10)
+  drawText('X', edgeSize + exe * (height / 9) + height / 18, 100, 'black', height / 9)
 })
 
 drawBoard1st()
