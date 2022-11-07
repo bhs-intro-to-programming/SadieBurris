@@ -23,3 +23,11 @@ const newHighScore = (high, ar) => {
   return newScore
   //return to later plz its too long
 }
+const summarizeBooks = (ar) => {
+  const ob = {titles : [], pages : 0}
+  for (let i = 0; i < ar.length; i++) {
+    ob.titles.push(ar[i].title)
+    ob.pages += ar[i].pages
+  }
+  return ob
+}
