@@ -12,3 +12,4 @@ const midpoint = (point1, point2) => {
   const result = {x: (point1.x + point2.x) / 2, y: (point1.y + point2.y) / 2}
   return result
 }
+const sumSalaries = (ar) => ar.reduce((pre, cur) => cur.salary + pre, 0) 
