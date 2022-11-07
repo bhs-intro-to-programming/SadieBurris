@@ -17,7 +17,7 @@ const newHighScore = (high, ar) => {
   for (let i = 0; i < ar.length; i++) {
     let newScore = high
     if (ar[i].score > high) {
-      high = ar[i].score
+      newScore = ar[i].score
     }
   }
   return newScore
