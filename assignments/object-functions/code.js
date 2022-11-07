@@ -3,3 +3,7 @@ const point = (num1, num2) => {
   const ob = {x : num1, y : num2}
   return ob
 }
+const emptyObject = () => {
+  const ob = {}
+  return ob
+}
