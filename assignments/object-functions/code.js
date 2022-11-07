@@ -16,10 +16,10 @@ const sumSalaries = (ar) => ar.reduce((pre, cur) => cur.salary + pre, 0)
 const newHighScore = (high, ar) => {
   for (let i = 0; i < ar.length; i++) {
     let newScore = high
-    if (ar[i].score > high) {
+    if (ar[i].score > newScore) {
       newScore = ar[i].score
     }
   }
   return newScore
-  //return to later plz its too long noooo
+  //return to later plz its too long
 }
