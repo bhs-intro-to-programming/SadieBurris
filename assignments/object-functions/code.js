@@ -22,6 +22,6 @@ const newHighScore = (high, ar) => {
       }
     }
   }
-  return high
+  return newScore
   //return to later plz its too long noooo
 }
