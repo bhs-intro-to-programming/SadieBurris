@@ -1,0 +1,1 @@
+const getX = (ob) => ob.x
