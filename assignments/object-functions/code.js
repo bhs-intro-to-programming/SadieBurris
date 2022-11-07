@@ -7,3 +7,4 @@ const emptyObject = () => {
   const ob = {}
   return ob
 }
+const distance = (point1, point2) => Math.sqr(Math.abs(point1.x - point2.x) ** 2 + Math.abs(point1.y - point2.y) ** 2)
