@@ -16,6 +16,8 @@ registerOnclick((x, y) => {
     const wiy = Math.floor(y / (height / 9))
     b[wiy][exe] = 'X'
     drawText('X', edgeSize + exe * (height / 9) + height / 64, wiy * (height / 9) + height * 7 / 64, 'black', height / 9)
+  } else if (x < edgeSize && y < 20) {
+    let selected = Math.floor(x / (edgeSize / 10))
   }
 })
 
