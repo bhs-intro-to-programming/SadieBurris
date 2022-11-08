@@ -11,7 +11,6 @@ const newHighScore = (high, ar) => {
     }
   }
   return high
-  //return to later plz its too long
 }
 const summarizeBooks = (ar) => {
   const ob = { titles: [], pages: 0 }
