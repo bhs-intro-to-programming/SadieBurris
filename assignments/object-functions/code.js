@@ -1,8 +1,5 @@
 const getX = (ob) => ob.x
-const point = (num1, num2) => {
-  const ob = { x: num1, y: num2 }
-  return ob
-}
+const point = (num1, num2) => ({ x: num1, y: num2 })
 const emptyObject = () => {
   const ob = {}
   return ob
@@ -24,7 +21,7 @@ const newHighScore = (high, ar) => {
   //return to later plz its too long
 }
 const summarizeBooks = (ar) => {
-  const ob = {titles : [], pages : 0}
+  const ob = { titles: [], pages: 0 }
   for (let i = 0; i < ar.length; i++) {
     ob.titles.push(ar[i].title)
     ob.pages += ar[i].pages
