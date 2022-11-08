@@ -6,7 +6,7 @@ const midpoint = (point1, point2) => ({ x: (point1.x + point2.x) / 2, y: (point1
 const sumSalaries = (ar) => ar.reduce((pre, cur) => cur.salary + pre, 0)
 const newHighScore = (high, ar) => {
   for (let i = 0; i < ar.length; i++) {
-    if (ar[i].score > newScore) {
+    if (ar[i].score > high) {
       high = ar[i].score
     }
   }
