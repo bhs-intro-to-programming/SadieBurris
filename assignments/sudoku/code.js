@@ -33,7 +33,7 @@ drawBoard1st()
 const lineNine = () => {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-      if (b[j][i].length === 10 && b[j][i][0] === '') {
+      if (b[j][i].length === 9 && b[j][i][0] === '') {
         console.log('yeah')
       }
     }
