@@ -1,5 +1,5 @@
 const edgeSize = (width - height) / 2
-const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(11).fill('')))
+const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let selected = 0;
 
 const drawBoard1st = () => {
@@ -19,16 +19,19 @@ registerOnclick((x, y) => {
     const row = Math.floor(y / (height / 9))
     b[row][col][0] = selected
     drawText(selected, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 7 / 64, 'black', height / 9)
+    for (let i = 0; i < 9; i++) {
+      b[row][i].push(selected)
+      b[i][col].push(selected)
+    }
   }
 })
 
 drawBoard1st()
-/*
-const squareNine = (bx, by) => {
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
 
+const lineNine = () => {
+  for (let i = 0; i < 9; i++) {
+    if (b[i][i].length === 10) {
+      console.log('banana')
     }
   }
 }
-*/
