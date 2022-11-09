@@ -15,10 +15,10 @@ registerOnclick((x, y) => {
   if (x < edgeSize && y < 20) {
     selected = Math.floor(x / (edgeSize / 10))
   } else if (x > edgeSize && x < width - edgeSize) {
-    const exe = Math.floor((x - edgeSize) / (height / 9))
-    const wiy = Math.floor(y / (height / 9))
-    b[wiy][exe] = selected
-    drawText(selected, edgeSize + exe * (height / 9) + height / 64, wiy * (height / 9) + height * 7 / 64, 'black', height / 9)
+    const col = Math.floor((x - edgeSize) / (height / 9))
+    const row = Math.floor(y / (height / 9))
+    b[row][col] = selected
+    drawText(selected, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 7 / 64, 'black', height / 9)
   }
 })
 
