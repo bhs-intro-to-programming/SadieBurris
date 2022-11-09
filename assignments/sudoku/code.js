@@ -1,6 +1,6 @@
 const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
-let selected = 0;
+let selected = 1;
 
 const drawBoard1st = () => {
   for (let i = 0; i < 10; i++) {
@@ -15,7 +15,7 @@ const drawBoard1st = () => {
 
 registerOnclick((x, y) => {
   if (x < edgeSize && y < 20) {
-    selected = Math.floor(x / (edgeSize / 10))
+    selected = Math.floor(x / (edgeSize / 10)) - 1
   } else if (x > edgeSize && x < width - edgeSize) {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
