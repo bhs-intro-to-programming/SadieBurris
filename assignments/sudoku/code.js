@@ -15,7 +15,7 @@ const drawBoard1st = () => {
 
 registerOnclick((x, y) => {
   if (x < edgeSize && y < 20) {
-    selected = Math.floor(x / (edgeSize / 10)) - 1
+    selected = Math.floor(x / (edgeSize / 10)) + 1
   } else if (x > edgeSize && x < width - edgeSize) {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
