@@ -20,7 +20,7 @@ registerOnclick((x, y) => {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
     b[row][col][0] = selected
-    drawText(selected, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 7 / 64, 'black', height / 9)
+    drawText(selected, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 5 / 64, 'black', height / 9)
     for (let i = 0; i < 9; i++) {
       b[row][i].push(selected)
       b[i][col].push(selected)
@@ -36,7 +36,7 @@ const lineNine = () => {
       if (b[j][i].length === 9 && b[j][i][0] === '') {
         for (let p = 1; p < 10; p++){
           if (b[j][i].indexOf(p) === -1) {
-            drawText(p, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 7 / 64, 'gray', height / 9)
+            drawText(p, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 5 / 64, 'gray', height / 9)
             b[j][i][0] = p
           }
         }
