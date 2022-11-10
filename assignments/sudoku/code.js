@@ -34,10 +34,11 @@ const lineNine = () => {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       if (b[j][i].length === 9 && b[j][i][0] === '') {
-        drawText('T', edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 7 / 64, 'gray', height / 9)
+        
         for (let p = 1; p < 10; p++){
           if (b[j][i].indexOf(p) === -1) {
-            b[j][i] === p
+            drawText(p, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 7 / 64, 'gray', height / 9)
+            b[j][i] = p
           }
         }
       }
