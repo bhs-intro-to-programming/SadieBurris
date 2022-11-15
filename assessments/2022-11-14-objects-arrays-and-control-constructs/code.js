@@ -20,16 +20,15 @@ const updateWins = (players) => {
 const bigWinners = (players) => players.filter((o) => o.wins > 10)
 
 const fillTimesTable = (table) => {
-  for(let i = 1; i < table.lenght; i++) {
-    for(let j = 1; j < table.lenght; j++) {
+  for(let i = 1; i < table.length; i++) {
+    for(let j = 1; j < table.length; j++) {
       table[j - 1][i - 1] = j * i
     }
   }
   return table
 };
 
-const sums = (n) => {
-};
+const sums = (n) => Array(n + 1).map((num) => num % 2 === 1 ? num * 2 : num - 1 * 2 + num)
 
 const rule110 = (cells) => {
 };
