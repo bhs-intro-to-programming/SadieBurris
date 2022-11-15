@@ -7,8 +7,7 @@ const higherPaid = (e1, e2) => e1.salary > e2.salary ? e1 : e2
 
 const isSamePoint = (p1, p2) => (p1.x === p2.x) && (p1.y === p2.y)
 
-const totalWithTip = (bill, tipPercentage) => {
-};
+const totalWithTip = (bill, tipPercentage) => ({subtotal: bill, tip: tipPercentage * bill, total: bill * (tipPercentage + 1)})
 
 const isWinner = (player) => {
 };
