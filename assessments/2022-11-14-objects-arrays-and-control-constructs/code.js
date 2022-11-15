@@ -12,8 +12,9 @@ const totalWithTip = (bill, tipPercentage) => ({subtotal: bill, tip: tipPercenta
 const isWinner = (player) => player.score > 100
 
 const updateWins = (players) => {
-  //sry I forgot the one that isnt map or reduce
-
+  for(let i = 0; i < players.length; i++) {
+    isWinner(players[i]) ? wins++ : wins
+  }
 };
 
 const bigWinners = (players) => players.filter((o) => o.wins > 10)
