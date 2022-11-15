@@ -9,8 +9,7 @@ const isSamePoint = (p1, p2) => (p1.x === p2.x) && (p1.y === p2.y)
 
 const totalWithTip = (bill, tipPercentage) => ({subtotal: bill, tip: tipPercentage * bill, total: bill * (tipPercentage + 1)})
 
-const isWinner = (player) => {
-};
+const isWinner = (player) => player.score > 100
 
 const updateWins = (players) => {
 };
