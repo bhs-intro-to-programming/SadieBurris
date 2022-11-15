@@ -28,7 +28,11 @@ const fillTimesTable = (table) => {
   return table
 };
 
-const sums = (n) => Array(n + 1).map((num) => num % 2 === 1 ? num * 2 : num - 1 * 2 + num)
+const sums = (n) => {
+  for (i = 0; i < num; i ++) {
+    ar.push(i % 2 === 0? (i - 1) * 2 + i: i * 2)
+  }
+}
 
 const rule110 = (cells) => {
 };
