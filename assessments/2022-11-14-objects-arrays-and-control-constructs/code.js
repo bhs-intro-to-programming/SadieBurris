@@ -15,6 +15,7 @@ const updateWins = (players) => {
   for(let i = 0; i < players.length; i++) {
     isWinner(players[i]) ? players[i].wins++ : players[i].wins
   }
+  return players
 };
 
 const bigWinners = (players) => players.filter((o) => o.wins > 10)
