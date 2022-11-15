@@ -30,7 +30,7 @@ const fillTimesTable = (table) => {
 
 const sums = (n) => {
   const ar = []
-  for (let i = 0; i < n; i ++) {
+  for (let i = 1; i < n; i ++) {
     ar.push(i % 2 === 0? (i - 1) * 2 + i: i * 2)
   }
   return ar
