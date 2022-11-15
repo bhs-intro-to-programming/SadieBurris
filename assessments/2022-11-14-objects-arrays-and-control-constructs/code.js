@@ -12,12 +12,18 @@ const totalWithTip = (bill, tipPercentage) => ({subtotal: bill, tip: tipPercenta
 const isWinner = (player) => player.score > 100
 
 const updateWins = (players) => {
+  //sry I forgot the one that isnt map or reduce
+
 };
 
-const bigWinners = (players) => {
-};
+const bigWinners = (players) => {}
 
 const fillTimesTable = (table) => {
+  for(let i = 1; i < table.lenght; i++) {
+    for(let j = 1; j < table.lenght; j++) {
+      table[j - 1][i - 1] = j * i
+    }
+  }
 };
 
 const sums = (n) => {
