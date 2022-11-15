@@ -3,8 +3,7 @@
 
 const area = (rect) => rect.width * rect.height
 
-const higherPaid = (e1, e2) => {
-};
+const higherPaid = (e1, e2) => e1.salary > e2.salary ? e1 : e2
 
 const isSamePoint = (p1, p2) => {
 };
