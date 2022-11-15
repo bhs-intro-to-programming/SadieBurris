@@ -16,7 +16,7 @@ const updateWins = (players) => {
 
 };
 
-const bigWinners = (players) => {}
+const bigWinners = (players) => players.filter((o) => o.wins > 10)
 
 const fillTimesTable = (table) => {
   for(let i = 1; i < table.lenght; i++) {
