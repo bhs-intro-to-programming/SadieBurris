@@ -7,12 +7,12 @@ const higherPaid = (e1, e2) => e1.salary > e2.salary ? e1 : e2
 
 const isSamePoint = (p1, p2) => (p1.x === p2.x) && (p1.y === p2.y)
 
-const totalWithTip = (bill, tipPercentage) => ({subtotal: bill, tip: tipPercentage * bill, total: bill * (tipPercentage + 1)})
+const totalWithTip = (bill, tipPercentage) => ({ subtotal: bill, tip: tipPercentage * bill, total: bill * (tipPercentage + 1) })
 
 const isWinner = (player) => player.score > 100
 
 const updateWins = (players) => {
-  for(let i = 0; i < players.length; i++) {
+  for (let i = 0; i < players.length; i++) {
     isWinner(players[i]) ? players[i].wins++ : players[i].wins
   }
 };
@@ -20,8 +20,8 @@ const updateWins = (players) => {
 const bigWinners = (players) => players.filter((o) => o.wins > 10)
 
 const fillTimesTable = (table) => {
-  for(let i = 1; i < table.length; i++) {
-    for(let j = 1; j < table.length; j++) {
+  for (let i = 1; i < table.length; i++) {
+    for (let j = 1; j < table.length; j++) {
       table[j - 1][i - 1] = j * i
     }
   }
@@ -30,8 +30,8 @@ const fillTimesTable = (table) => {
 
 const sums = (n) => {
   const ar = []
-  for (let i = 1; i < n; i ++) {
-    ar.push(i % 2 === 0? (i - 1) * 2 + i: i * 2)
+  for (let i = 0; i < n; i++) {
+    ar.push(i % 2 === 0 ? (i - 1) * 2 + i : i * 2)
   }
   return ar
 }
