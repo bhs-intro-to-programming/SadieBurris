@@ -33,6 +33,7 @@ const sums = (n) => {
   for (let i = 0; i < n; i ++) {
     ar.push(i % 2 === 0? (i - 1) * 2 + i: i * 2)
   }
+  return ar
 }
 
 const rule110 = (cells) => {
