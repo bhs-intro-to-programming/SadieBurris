@@ -7,13 +7,13 @@ const higherPaid = (e1, e2) => e1.salary > e2.salary ? e1 : e2
 
 const isSamePoint = (p1, p2) => (p1.x === p2.x) && (p1.y === p2.y)
 
-const totalWithTip = (bill, tipPercentage) => ({ subtotal: bill, tip: tipPercentage * bill, total: bill * (tipPercentage + 1) })
+const totalWithTip = (bill, tipPercentage) => ({ subtotal: bill.subtotal, tip: tipPercentage * bill.subtotal, total: bill.subtotal * (tipPercentage + 1) })
 
 const isWinner = (player) => player.score > 100
 
 const updateWins = (players) => {
   for (let i = 0; i < players.length; i++) {
-    isWinner(players[i]) ? players[i].wins++ : players[i].wins
+    if (isWinner(players[i])) players[i].wins++;
   }
 };
 
@@ -25,7 +25,6 @@ const fillTimesTable = (table) => {
       table[j - 1][i - 1] = j * i
     }
   }
-  return table
 };
 
 const sums = (n) => {
