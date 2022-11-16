@@ -35,4 +35,4 @@ const sums = (n) => {
   return ar
 }
 
-const rule110 = (cells) => cells.map(num => ((cells[num - 1] === 1) && (cells[num] === cells[num + 1])) || ((cells[num - 1] && cells[num] && cells[num + 1]) === 0) ? 0 : 1)
+const rule110 = (cells) => cells.map(num => (((cells[num - 1] === 1) && (cells[num] === cells[num + 1])) || ((cells[num - 1] && cells[num] && cells[num + 1]) === 0) ? 0 : 1)
