@@ -12,11 +12,9 @@ const totalWithTip = (sT, percentage) => ({ subtotal: sT.subtotal, tip: percenta
 const isWinner = (player) => player.score > 100
 
 const updateWins = (players) => {
-  return players.map(i => isWinner(players[i]) ? players[i].wins++ : players[i])
-  /*for (let i = 0; i < players.length; i++) {
+  for (let i = 0; i < players.length; i++) {
     if (isWinner(players[i])) players[i].wins++;
   }
-  */
 };
 
 const bigWinners = (players) => players.filter((o) => o.wins > 10)
