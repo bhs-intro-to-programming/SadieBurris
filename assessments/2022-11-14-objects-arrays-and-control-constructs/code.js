@@ -36,5 +36,7 @@ const sums = (n) => {
 }
 
 const rule110 = (cells) => {
-  cells.map((num) => ((cells[num - 1] === 1) && cells[num] === cells[num + 1]) || ((cells[num - 1] && cells[num] && cells[num + 1]) === 0) ? 0 : 1)
+  const newCells = []
+  cells.map((num) => ((cells[num - 1] === 1) && cells[num] === cells[num + 1]) || ((cells[num - 1] && cells[num] && cells[num + 1]) === 0) ? newCells.push(0) : newCells.push(1))
+  return newCells
 };
