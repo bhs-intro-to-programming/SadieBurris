@@ -40,8 +40,8 @@ const lineNine = () => {
             drawText(p, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
             b[j][i][0] = p
             for (let l = 0; l < 9; l++) {
-              b[row][l][p] = p
-              b[l][col][p] = p
+              b[i][l][p] = p
+              b[l][j][p] = p
             }
           }
         }
