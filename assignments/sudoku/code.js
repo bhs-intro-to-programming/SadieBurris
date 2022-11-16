@@ -20,10 +20,11 @@ registerOnclick((x, y) => {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
     b[row][col][0] = selected
+    b[row][col][selected] = selected
     drawText(selected, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
     for (let i = 0; i < 9; i++) {
-      b[row][i].push(selected)
-      b[i][col].push(selected)
+      b[row][i][selected] = selected
+      b[i][col][selected] = selected
     }
   }
 })
@@ -38,9 +39,9 @@ const lineNine = () => {
           if (b[j][i].indexOf(p) === -1) {
             drawText(p, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
             b[j][i][0] = p
-            for (let i = 0; i < 9; i++) {
-              b[row][i].push(selected)
-              b[i][col].push(selected)
+            for (let l = 0; l < 9; l++) {
+              b[row][l][p] = p
+              b[l][col][p] = p
             }
           }
         }
@@ -49,10 +50,14 @@ const lineNine = () => {
   }
 }
 
+/*
 squareNine = () => {
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       //you get the point future me 0_0
+      //yes I do past self :)
+
     }
   }
 }
+*/
