@@ -2,7 +2,7 @@ const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let selected = 1;
 let indilen = 0
-let index
+let index = 1
 
 const drawBoard1st = () => {
   for (let i = 0; i < 10; i++) {
