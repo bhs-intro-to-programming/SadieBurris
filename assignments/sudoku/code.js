@@ -43,11 +43,11 @@ const lineNine = () => {
         }
       }
       if (h === 2) {
-        drawText(c, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
-        b[j][i][0] = c
+        drawText(index, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
+        b[j][i][0] = index
         for (let l = 0; l < 9; l++) {
-          b[i][l][p] = c
-          b[l][j][p] = c
+          b[i][l][p] = index
+          b[l][j][p] = index
         }
       }
     }
