@@ -38,7 +38,7 @@ const lineNine = () => {
       for(let c = 1; c < 10; c++) {
         if (b[j][i].indexOf(c) === -1) h++
       }
-      if ((h === 1) && b[j][i][0] === '') {
+      if (h === 2) {
         for (let p = 1; p < 10; p++) {
           if (b[j][i].indexOf(p) === -1) {
             drawText(p, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
