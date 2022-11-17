@@ -1,7 +1,7 @@
 const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let selected = 1;
-let h = 0
+let indilen = 0
 let index
 
 const drawBoard1st = () => {
@@ -37,12 +37,12 @@ const lineNine = () => {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       for (let c = 1; c < 10; c++) {
-        if (b[j][i].indexOf(c) === -1) {
-          h++
+        if (b[j][i][c] !== c) {
+          indilen++
           index = c
         }
       }
-      if (h === 2) {
+      if (indilen === 8 && b[j][i][0] === '') {
         drawText(index, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
         b[j][i][0] = index
         for (let l = 0; l < 9; l++) {
@@ -50,7 +50,7 @@ const lineNine = () => {
           b[l][j][index] = index
         }
       }
-      h = 0
+      indilen = 0
     }
   }
 }
