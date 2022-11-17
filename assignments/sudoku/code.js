@@ -50,8 +50,8 @@ const lineNine = () => {
           b[l][j][index] = index
         }
       }
+      h = 0
     }
-    h = 0
   }
 }
 
