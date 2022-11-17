@@ -35,20 +35,21 @@ drawBoard1st()
 const lineNine = () => {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
-      for(let c = 1; c < 10; c++) {
-        if (b[j][i].indexOf(c) === -1) h++
+      for (let c = 1; c < 10; c++) {
+        if (b[j][i].indexOf(c) === -1) {
+          h++
+          let index = c
+        }
       }
       if (h === 2) {
-        for (let p = 1; p < 10; p++) {
-          if (b[j][i].indexOf(p) === -1) {
-            drawText(p, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
-            b[j][i][0] = p
-            for (let l = 0; l < 9; l++) {
-              b[i][l][p] = p
-              b[l][j][p] = p
-            }
-          }
+
+        drawText(c, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
+        b[j][i][0] = c
+        for (let l = 0; l < 9; l++) {
+          b[i][l][p] = c
+          b[l][j][p] = c
         }
+
       }
     }
   }
