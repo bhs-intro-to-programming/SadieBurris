@@ -2,6 +2,7 @@ const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let selected = 1;
 let h = 0
+let index
 
 const drawBoard1st = () => {
   for (let i = 0; i < 10; i++) {
@@ -38,7 +39,7 @@ const lineNine = () => {
       for (let c = 1; c < 10; c++) {
         if (b[j][i].indexOf(c) === -1) {
           h++
-          let index = c
+          index = c
         }
       }
       if (h === 2) {
