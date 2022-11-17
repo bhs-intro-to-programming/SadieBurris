@@ -37,7 +37,7 @@ const lineNine = () => {
   for (let i = 0; i < 9; i++) {
     for (let j = 0; j < 9; j++) {
       for (let c = 1; c < 10; c++) {
-        if (b[j][i][c] !== c) {
+        if (b[j][i][c] === c) {
           indilen++
           index = c
         }
