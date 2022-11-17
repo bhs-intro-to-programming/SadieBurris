@@ -51,6 +51,7 @@ const lineNine = () => {
         }
       }
     }
+    h = 0
   }
 }
 
