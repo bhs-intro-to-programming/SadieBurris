@@ -1,7 +1,5 @@
 const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
-const col = Math.floor((x - edgeSize) / (height / 9))
-const row = Math.floor(y / (height / 9))
 let selected = 1;
 let indilen = 0
 let index = 1
@@ -21,6 +19,8 @@ registerOnclick((x, y) => {
   if (x < edgeSize && y < 20) {
     selected = Math.floor(x / (edgeSize / 10)) + 1
   } else if (x > edgeSize && x < width - edgeSize) {
+    const col = Math.floor((x - edgeSize) / (height / 9))
+    const row = Math.floor(y / (height / 9))
     b[row][col][0] = selected
     b[row][col][selected] = selected
     drawText(selected, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
