@@ -39,8 +39,7 @@ const lineNine = () => {
       for (let c = 1; c < 10; c++) {
         if (b[j][i][c] === c) {
           indilen++
-          //index = c
-        }
+        } else index = c
       }
       if (indilen === 8 && b[j][i][0] === '') {
         drawText(index, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
