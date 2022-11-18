@@ -54,8 +54,8 @@ const lineNine = () => {
           b[l][i][index] = index
         }
         for (let a = 0; a < 3; a++) {
-          for (let b = 0; b < 3; b++) {
-            b[Math.floor(j / 3) * 3 + b][Math.floor(i / 3) * 3 + a][index] = index
+          for (let o = 0; o < 3; o++) {
+            b[Math.floor(j / 3) * 3 + o][Math.floor(i / 3) * 3 + a][index] = index
           }
         }
       }
