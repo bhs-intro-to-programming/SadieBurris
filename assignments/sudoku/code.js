@@ -45,8 +45,8 @@ const lineNine = () => {
         drawText(index, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
         b[j][i][0] = index
         for (let l = 0; l < 9; l++) {
-          b[i][l][index] = index
-          b[l][j][index] = index
+          b[j][l][index] = index
+          b[l][i][index] = index
         }
       }
       indilen = 0
