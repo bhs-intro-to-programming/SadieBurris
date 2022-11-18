@@ -27,7 +27,11 @@ registerOnclick((x, y) => {
     for (let i = 0; i < 9; i++) {
       b[row][i][selected] = selected
       b[i][col][selected] = selected
-      //add the square nine thingy
+    }
+    for(let i = 0; i < 3; i++) {
+      for(let j = 0; j < 3; j++) {
+        b[Math.floor(row / 3) * 3 + j][Math.floor(col / 3) * 3 + i][selected] = selected
+      }
     }
   }
 })
