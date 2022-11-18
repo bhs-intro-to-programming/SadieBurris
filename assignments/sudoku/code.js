@@ -28,8 +28,8 @@ registerOnclick((x, y) => {
       b[row][i][selected] = selected
       b[i][col][selected] = selected
     }
-    for(let i = 0; i < 3; i++) {
-      for(let j = 0; j < 3; j++) {
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
         b[Math.floor(row / 3) * 3 + j][Math.floor(col / 3) * 3 + i][selected] = selected
       }
     }
@@ -53,19 +53,13 @@ const lineNine = () => {
           b[j][l][index] = index
           b[l][i][index] = index
         }
+        for (let a = 0; a < 3; a++) {
+          for (let b = 0; b < 3; b++) {
+            b[Math.floor(j / 3) * 3 + b][Math.floor(i / 3) * 3 + a][selected] = selected
+          }
+        }
       }
       indilen = 0
     }
   }
 }
-
-/*
-squareNine = () => {
-  for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      //hold on a sec
-
-    }
-  }
-}
-*/
