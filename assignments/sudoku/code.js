@@ -55,7 +55,7 @@ const lineNine = () => {
         }
         for (let a = 0; a < 3; a++) {
           for (let b = 0; b < 3; b++) {
-            b[Math.floor(j / 3) * 3 + b][Math.floor(i / 3) * 3 + a][selected] = selected
+            b[Math.floor(j / 3) * 3 + b][Math.floor(i / 3) * 3 + a][index] = index
           }
         }
       }
