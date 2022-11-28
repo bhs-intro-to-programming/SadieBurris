@@ -14,6 +14,7 @@ const drawBoard = () => {
 }
 
 const updateBoard = (row, col) => {
+  b[row][col][0] = index
   for (let l = 0; l < 9; l++) {
     b[row][l][index] = index
     b[l][col][index] = index
@@ -31,7 +32,6 @@ registerOnclick((x, y) => {
   } else if (x > edgeSize && x < width - edgeSize) {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
-    b[row][col][0] = index
     drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
     updateBoard(row, col)
   }
@@ -41,14 +41,13 @@ const solveBoard = () => {
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
       let optionsFilled = 0
-      for (let c = 1; c < 10; c++) {
-        if (b[row][col][c] === c) {
+      for (let currentCheck = 1; currentCheck < 10; currentCheck++) {
+        if (b[row][col][currentCheck] === currentCheck) {
           optionsFilled++
-        } else index = c
+        } else index = currentCheck
       }
       if (optionsFilled === 8 && b[row][col][0] === '') {
         drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'gray', height / 9)
-        b[row][col][0] = index
         updateBoard(row, col)
       }
     }
