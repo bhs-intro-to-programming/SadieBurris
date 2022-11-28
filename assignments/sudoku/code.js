@@ -1,7 +1,6 @@
 const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let index = 1;
-let optionsFilled = 0;
 
 const drawBoard = () => {
   for (let i = 0; i < 10; i++) {
@@ -41,6 +40,7 @@ registerOnclick((x, y) => {
 const solveBoard = () => {
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
+      let optionsFilled = 0
       for (let c = 1; c < 10; c++) {
         if (b[row][col][c] === c) {
           optionsFilled++
@@ -51,7 +51,6 @@ const solveBoard = () => {
         b[row][col][0] = index
         updateBoard(row, col)
       }
-      optionsFilled = 0
     }
   }
 }
