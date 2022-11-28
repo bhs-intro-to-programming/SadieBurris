@@ -14,6 +14,18 @@ const drawBoard = () => {
   }
 }
 
+const updateBoard = (row, col) => {
+  for (let l = 0; l < 9; l++) {
+    b[row][l][index] = index
+    b[l][col][index] = index
+  }
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      b[Math.floor(row / 3) * 3 + j][Math.floor(col / 3) * 3 + i][index] = index
+    }
+  }
+}
+
 registerOnclick((x, y) => {
   if (x < edgeSize && y < 20) {
     index = Math.floor(x / (edgeSize / 10)) + 1
@@ -23,15 +35,7 @@ registerOnclick((x, y) => {
     b[row][col][0] = index
     b[row][col][index] = index
     drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
-    for (let i = 0; i < 9; i++) {
-      b[row][i][index] = index
-      b[i][col][index] = index
-    }
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-        b[Math.floor(row / 3) * 3 + j][Math.floor(col / 3) * 3 + i][index] = index
-      }
-    }
+    updateBoard(row, col)
   }
 })
 
@@ -48,15 +52,7 @@ const lineNine = () => {
       if (indilen === 8 && b[row][col][0] === '') {
         drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'gray', height / 9)
         b[row][col][0] = index
-        for (let l = 0; l < 9; l++) {
-          b[row][l][index] = index
-          b[l][col][index] = index
-        }
-        for (let a = 0; a < 3; a++) {
-          for (let o = 0; o < 3; o++) {
-            b[Math.floor(row / 3) * 3 + o][Math.floor(col / 3) * 3 + a][index] = index
-          }
-        }
+        updateBoard(row, col)
       }
       indilen = 0
     }
