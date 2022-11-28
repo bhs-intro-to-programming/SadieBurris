@@ -3,7 +3,7 @@ const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill(''))
 let index = 1;
 let indilen = 0;
 
-const drawBoard1st = () => {
+const drawBoard = () => {
   for (let i = 0; i < 10; i++) {
     const thick = i % 3 === 0 ? 3 : 1
     drawLine(edgeSize, height / 9 * i, width - edgeSize, height / 9 * i, 'black', thick)
@@ -35,26 +35,26 @@ registerOnclick((x, y) => {
   }
 })
 
-drawBoard1st()
+drawBoard()
 
 const lineNine = () => {
-  for (let i = 0; i < 9; i++) {
-    for (let j = 0; j < 9; j++) {
+  for (let row = 0; row < 9; row++) {
+    for (let col = 0; col < 9; col++) {
       for (let c = 1; c < 10; c++) {
-        if (b[j][i][c] === c) {
+        if (b[row][col][c] === c) {
           indilen++
         } else index = c
       }
-      if (indilen === 8 && b[j][i][0] === '') {
-        drawText(index, edgeSize + i * (height / 9) + height / 64, j * (height / 9) + height * 6 / 64, 'gray', height / 9)
-        b[j][i][0] = index
+      if (indilen === 8 && b[row][col][0] === '') {
+        drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'gray', height / 9)
+        b[row][col][0] = index
         for (let l = 0; l < 9; l++) {
-          b[j][l][index] = index
-          b[l][i][index] = index
+          b[row][l][index] = index
+          b[l][col][index] = index
         }
         for (let a = 0; a < 3; a++) {
           for (let o = 0; o < 3; o++) {
-            b[Math.floor(j / 3) * 3 + o][Math.floor(i / 3) * 3 + a][index] = index
+            b[Math.floor(row / 3) * 3 + o][Math.floor(col / 3) * 3 + a][index] = index
           }
         }
       }
