@@ -1,6 +1,7 @@
 const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let index = 1;
+let filledSpaces = 0
 
 const drawBoard = () => {
   for (let i = 0; i < 10; i++) {
@@ -24,6 +25,7 @@ const updateBoard = (row, col) => {
       b[Math.floor(row / 3) * 3 + j][Math.floor(col / 3) * 3 + i][index] = index
     }
   }
+  filledSpaces++
 }
 
 registerOnclick((x, y) => {
@@ -34,6 +36,10 @@ registerOnclick((x, y) => {
     const row = Math.floor(y / (height / 9))
     drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
     updateBoard(row, col)
+  } else if (x > edgeSize + height) {
+    while(filledSpaces < 81) {
+      solveBoard
+    }
   }
 })
 
