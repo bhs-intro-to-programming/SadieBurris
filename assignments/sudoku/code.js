@@ -33,7 +33,6 @@ registerOnclick((x, y) => {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
     b[row][col][0] = index
-    b[row][col][index] = index
     drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
     updateBoard(row, col)
   }
@@ -41,7 +40,7 @@ registerOnclick((x, y) => {
 
 drawBoard()
 
-const lineNine = () => {
+const solveBoard = () => {
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
       for (let c = 1; c < 10; c++) {
