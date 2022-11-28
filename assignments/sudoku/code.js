@@ -38,7 +38,7 @@ registerOnclick((x, y) => {
     updateBoard(row, col)
   } else if (x > edgeSize + height) {
     while (filledSpaces < 81) {
-      solveBoard
+      solveBoard()
     }
   }
 })
