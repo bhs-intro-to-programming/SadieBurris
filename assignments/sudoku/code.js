@@ -37,7 +37,7 @@ registerOnclick((x, y) => {
     drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
     updateBoard(row, col)
   } else if (x > edgeSize + height) {
-    while(filledSpaces < 81) {
+    while (filledSpaces < 81) {
       solveBoard
     }
   }
