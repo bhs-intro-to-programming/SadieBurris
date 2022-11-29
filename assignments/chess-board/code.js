@@ -54,31 +54,18 @@ const drawPieces = () => {
 
 drawPieces()
 //Fix dual rules BUT DO IT LATER procrastination :)
-const blackPawnRules = (x, y) => {
-  if (locations[y + 1][x - 1] === N && locations[y + 1][x + 1] === N) {
+const pawnRules = (x, y, color) => {
+  let direction = color === 'black' ? y + 1 : y - 1
+  if (locations[direction][x - 1] === N && locations[y + 1][x + 1] === N) {
     drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   }
-  if (locations[y + 1][x - 1] !== N) {
+  if (locations[direction][x - 1] !== N) {
     drawFilledRect(offset + (x - 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   }
-  if (locations[y + 1][x + 1] !== N) {
+  if (locations[direction][x + 1] !== N) {
     drawFilledRect(offset + (x + 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
   }
 }
-
-const whitePawnRules = (x, y) => {
-  if (locations[y - 1][x - 1] === N && locations[y - 1][x + 1] === N) {
-    drawFilledRect(offset + x * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
-  }
-  if (locations[y - 1][x - 1] !== N) {
-    drawFilledRect(offset + (x - 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
-  }
-  if (locations[y - 1][x + 1] !== N) {
-    drawFilledRect(offset + (x + 1) * sqrWidth + (sqrWidth - 4) / 2, (y - 1) * sqrWidth + (sqrWidth - 4) / 2, 4, 4, 'red')
-  }
-}
-
-//yeah no I cant code rn sorry my future self
 
 const rookRules = (x, y) => {
   for (let i = y; i < 8; i++) {
