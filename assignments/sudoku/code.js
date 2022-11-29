@@ -12,6 +12,7 @@ const drawBoard = () => {
       drawText(i + 1, edgeSize / 10 * i, 20, 'black', 20)
     }
   }
+  drawText('Solve', edgeSize + height + 50, 100, 'black', 50)
 }
 
 const updateBoard = (row, col) => {
