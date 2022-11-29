@@ -64,3 +64,11 @@ const solveBoard = () => {
 
 drawBoard()
 */
+
+//Maze Solver
+
+//each piece has the direction/s it can move in, for each choice it branches off
+//after going through a piece, its marked as completed so no infinite loops
+//after a click, a line is made thick and the directions are removed from corrisponding arrays
+//commenting is a good way to avoid coding
+//I'm......... tired
