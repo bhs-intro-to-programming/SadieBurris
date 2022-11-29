@@ -1,3 +1,4 @@
+/*
 const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let index = 1;
@@ -62,3 +63,4 @@ const solveBoard = () => {
 }
 
 drawBoard()
+*/
