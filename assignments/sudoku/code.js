@@ -70,5 +70,6 @@ drawBoard()
 //each piece has the direction/s it can move in, for each choice it branches off
 //after going through a piece, its marked as completed so no infinite loops
 //after a click, a line is made thick and the directions are removed from corrisponding arrays
+//each branch keeps track of its path in a different array, so at the end it can be drawn on the board
 //commenting is a good way to avoid coding
 //I'm......... tired
