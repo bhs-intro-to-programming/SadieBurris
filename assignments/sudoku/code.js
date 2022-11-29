@@ -12,7 +12,7 @@ const drawBoard = () => {
       drawText(i + 1, edgeSize / 10 * i, 20, 'black', 20)
     }
   }
-  drawText('Solve', edgeSize + height + 50, 20, 'black', 25)
+  drawText('Solve', edgeSize + height + 50, 30, 'black', 25)
 }
 
 const updateBoard = (row, col) => {
