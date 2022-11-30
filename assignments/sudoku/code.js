@@ -77,7 +77,6 @@ drawBoard()
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
 
 const drawAndEnter = () => {
-  //stupid idea but I dont want to delete it
   drawFilledRect(edgeSize, 0, height, height, 'black')
 }
 
