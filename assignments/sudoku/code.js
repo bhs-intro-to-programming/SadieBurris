@@ -83,13 +83,15 @@ const drawOrigonalBoard = () => {
 }
 
 registerOnclick((x, y) => {
-  const col = Math.floor((x - edgeSize) / (height / 9))
-  const row = Math.floor(y / (height / 9))
-  b[row][col][0] = true
-  drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
-  //make a function BUT LATER
-  b[row - 1][col][3] = true
-  b[row][col + 1][4] = true
-  b[row + 1][col][1] = true
-  b[row][col - 1][2] = true
+  if (x > edgeSize && x < width - edgeSize) {
+    const col = Math.floor((x - edgeSize) / (height / 9))
+    const row = Math.floor(y / (height / 9))
+    b[row][col][0] = true
+    drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
+    //make a function BUT LATER
+    b[row - 1][col][3] = true
+    b[row][col + 1][4] = true
+    b[row + 1][col][1] = true
+    b[row][col - 1][2] = true
+  }
 })
