@@ -80,6 +80,12 @@ const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(fals
 
 const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize, 0, height, height, 'black')
+  drawFilledRect(edgeSize - height / 9, 0, height / 9, height / 9, 'red')
+  drawFilledRect(width - edgeSize, height * 8/9, height / 9, height / 9, 'red')
+}
+
+const solveBranch = () => {
+
 }
 
 registerOnclick((x, y) => {
