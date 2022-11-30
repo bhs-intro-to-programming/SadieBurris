@@ -1,5 +1,5 @@
-/*
 const edgeSize = (width - height) / 2
+/*
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let index = 1;
 let filledSpaces = 0
@@ -73,3 +73,20 @@ drawBoard()
 //each branch keeps track of its path in a different array, so at the end it can be drawn on the board
 //commenting is a good way to avoid coding
 //I'm......... tired
+
+const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
+
+const drawAndEnter = () => {
+  //stupid idea but I dont want to delete it
+  //drawFilledRect(edgeSize, 0, height, height, 'black')
+}
+
+registerOnclick((x, y) => {
+  const col = Math.floor((x - edgeSize) / (height / 9))
+  const row = Math.floor(y / (height / 9))
+  b[row][col][0] = true
+  drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
+  for(let i = 0; i < 4; i++) {
+    //circular array change
+  }
+})
