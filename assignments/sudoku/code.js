@@ -87,7 +87,9 @@ registerOnclick((x, y) => {
   const row = Math.floor(y / (height / 9))
   b[row][col][0] = true
   drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
-  for(let i = 0; i < 4; i++) {
-    //circular array change
-  }
+  //make a function BUT LATER
+  b[row - 1][col][3] = true
+  b[row][col + 1][4] = true
+  b[row + 1][col][1] = true
+  b[row][col - 1][2] = true
 })
