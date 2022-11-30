@@ -74,9 +74,11 @@ drawBoard()
 //commenting is a good way to avoid coding
 //I'm......... tired
 
+
+//clockwise rotation
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
 
-const drawAndEnter = () => {
+const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize, 0, height, height, 'black')
 }
 
