@@ -106,12 +106,12 @@ registerOnclick((x, y) => {
   if (x > edgeSize && x < width - edgeSize) {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
-    const directionsRows = [[row - 1], [row], [row + 1], [row]]
-    const directionsCols = [[col], [col + 1], [col], [col - 1]]
+    const directionsRows = [row - 1, row, row + 1, row]
+    const directionsCols = [col, col + 1, col, col - 1]
     b[row][col][0] = true
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
     for (let i = 0; i < 4; i++) {
-      b[directionsRows[i]][directionsCols[i]][(i + 2 % 4) + 1]
+      b[directionsRows[i]][directionsCols[i]][(i + 2 % 4) + 1] = true
     }
   }
 })
