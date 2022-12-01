@@ -100,6 +100,8 @@ const solveBranch = (row, col, curPath) => {
   }
 }
 
+drawOrigionalBoard()
+
 registerOnclick((x, y) => {
   if (x > edgeSize && x < width - edgeSize) {
     const directionsRows = [row - 1, row, row + 1, row]
