@@ -100,7 +100,7 @@ const solveBranch = (row, col, curPath) => {
   }
 }
 
-drawOrigionalBoard()
+drawOrigonalBoard()
 
 registerOnclick((x, y) => {
   if (x > edgeSize && x < width - edgeSize) {
