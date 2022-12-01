@@ -77,15 +77,27 @@ drawBoard()
 
 //clockwise rotation
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
+const path = []
+const directionsRows = [row - 1, row, row + 1, row]
+const directionsCols = [col, col + 1, col, col - 1]
 
 const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize, 0, height, height, 'black')
   drawFilledRect(edgeSize - height / 9, 0, height / 9, height / 9, 'red')
-  drawFilledRect(width - edgeSize, height * 8/9, height / 9, height / 9, 'red')
+  drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
 }
 
-const solveBranch = () => {
-
+const solveBranch = (row, col, curPath) => {
+  curPath.push([row, col])
+  if (row === 8 && col === 8) {
+    console.log('intermediate')
+  } else {
+    for (let i = 0; i < 4; i++) {
+      if (b[row][col][i] === true) {
+        solveBranch(directionsRows[i], directionsCols[i], curPath)
+      }
+    }
+  }
 }
 
 registerOnclick((x, y) => {
@@ -95,9 +107,8 @@ registerOnclick((x, y) => {
     b[row][col][0] = true
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
     //make a function BUT LATER
-    b[row - 1][col][3] = true
-    b[row][col + 1][4] = true
-    b[row + 1][col][1] = true
-    b[row][col - 1][2] = true
+    for (let i = 0; i < 4; i++) {
+      b[directionsRows[i][directionsCols[i]//hold on a sec]
+    }
   }
 })
