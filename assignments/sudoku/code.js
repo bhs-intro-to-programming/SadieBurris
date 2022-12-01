@@ -78,8 +78,8 @@ drawBoard()
 //clockwise rotation
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
 const path = []
-const directionsRows = [row - 1, row, row + 1, row]
-const directionsCols = [col, col + 1, col, col - 1]
+const directionsRows = []
+const directionsCols = []
 
 const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize, 0, height, height, 'black')
@@ -102,6 +102,8 @@ const solveBranch = (row, col, curPath) => {
 
 registerOnclick((x, y) => {
   if (x > edgeSize && x < width - edgeSize) {
+    const directionsRows = [row - 1, row, row + 1, row]
+    const directionsCols = [col, col + 1, col, col - 1]
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
     b[row][col][0] = true
