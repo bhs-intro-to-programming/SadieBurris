@@ -1,4 +1,53 @@
 const edgeSize = (width - height) / 2
+const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
+const path = []
+const directionsRows = []
+const directionsCols = []
+
+const drawOrigonalBoard = () => {
+  drawFilledRect(edgeSize, 0, height, height, 'black')
+  drawFilledRect(edgeSize - height / 9, 0, height / 9, height / 9, 'red')
+  drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
+}
+
+const defineDirections = (row, col) => {
+  const directionsRows = [[row - 1], [row], [row + 1], [row]]
+  const directionsCols = [[col], [col + 1], [col], [col - 1]]
+}
+
+const solveBranch = (row, col, curPath) => {
+  curPath.push([row, col])
+  defineDirections(row, col)
+  if (row === 8 && col === 8) {
+    return curPath
+  } else {
+    for (let i = 0; i < 4; i++) {
+      if (b[row][col][i + 1] === true) {
+        return curPath
+        //solveBranch(directionsRows[i], directionsCols[i], curPath)
+      }
+    }
+  }
+}
+
+drawOrigonalBoard()
+
+registerOnclick((x, y) => {
+  if (x > edgeSize && x < width - edgeSize) {
+    const col = Math.floor((x - edgeSize) / (height / 9))
+    const row = Math.floor(y / (height / 9))
+    defineDirections(row, col)
+    b[row][col][0] = true
+    drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
+    for (let i = 0; i < 4; i++) {
+      if (directionsRows[i] !== -1 || directionsCols[i] !== -1) {
+        b[directionsRows[i]][directionsCols[i]][(i + 2 % 4) + 1] = true
+      }
+    }
+  }
+})
+
+
 /*
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(1).fill('')))
 let index = 1;
@@ -64,62 +113,3 @@ const solveBoard = () => {
 
 drawBoard()
 */
-
-//Maze Solver
-
-//each piece has the direction/s it can move in, for each choice it branches off
-//after going through a piece, its marked as completed so no infinite loops
-//after a click, a line is made thick and the directions are removed from corrisponding arrays
-//each branch keeps track of its path in a different array, so at the end it can be drawn on the board
-//commenting is a good way to avoid coding
-//I'm......... tired
-
-
-//clockwise rotation
-const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
-const path = []
-const directionsRows = []
-const directionsCols = []
-
-const drawOrigonalBoard = () => {
-  drawFilledRect(edgeSize, 0, height, height, 'black')
-  drawFilledRect(edgeSize - height / 9, 0, height / 9, height / 9, 'red')
-  drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
-}
-
-const defineDirections = (row, col) => {
-  const directionsRows = [[row - 1], [row], [row + 1], [row]]
-  const directionsCols = [[col], [col + 1], [col], [col - 1]]
-}
-
-const solveBranch = (row, col, curPath) => {
-  curPath.push([row, col])
-  defineDirections(row, col)
-  if (row === 8 && col === 8) {
-    return curPath
-  } else {
-    for (let i = 0; i < 4; i++) {
-      if (b[row][col][i + 1] === true) {
-        return curPath
-        //solveBranch(directionsRows[i], directionsCols[i], curPath)
-      }
-    }
-  }
-}
-
-drawOrigonalBoard()
-
-registerOnclick((x, y) => {
-  if (x > edgeSize && x < width - edgeSize) {
-    const col = Math.floor((x - edgeSize) / (height / 9))
-    const row = Math.floor(y / (height / 9))
-    defineDirections(row, col)
-    b[row][col][0] = true
-    drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
-    for (let i = 0; i < 4; i++) {
-      if (directionsRows[i] === -1 || directionsCols[i] === -1) {
-        b[directionsRows[i]][directionsCols[i]][(i + 2 % 4) + 1] = true
-      }
-    }
-  }
-})
