@@ -90,7 +90,7 @@ const drawOrigonalBoard = () => {
 const solveBranch = (row, col, curPath) => {
   curPath.push([row, col])
   if (row === 8 && col === 8) {
-    return solved
+    return curPath
   } else {
     for (let i = 0; i < 4; i++) {
       if (b[row][col][i + 1] === true) {
