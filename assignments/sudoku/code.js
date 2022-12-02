@@ -1,3 +1,5 @@
+//Im in pain
+
 const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
 const directionsRows = []
