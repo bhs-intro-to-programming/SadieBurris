@@ -36,7 +36,7 @@ registerOnclick((x, y) => {
     b[row][col][0] = true
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
     for (let i = 0; i < 4; i++) {
-      if (directionsRows[i] !== -1 || directionsCols[i] !== -1) {
+      if (directionsRows[i] !== -1 && directionsCols[i] !== -1) {
         b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]]//[defineDirections[0][i + 4]] = true
       }
     }
