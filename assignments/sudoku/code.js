@@ -111,7 +111,9 @@ registerOnclick((x, y) => {
     b[row][col][0] = true
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
     for (let i = 0; i < 4; i++) {
-      b[directionsRows[i]][directionsCols[i]][(i + 2 % 4) + 1] = true
+      if (b[directionsRows[i]][directionsCols[i]] !== undefined) {
+        b[directionsRows[i]][directionsCols[i]][(i + 2 % 4) + 1] = true
+      }
     }
   }
 })
