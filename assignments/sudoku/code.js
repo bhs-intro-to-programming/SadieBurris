@@ -32,7 +32,6 @@ registerOnclick((x, y) => {
   if (x > edgeSize && x < width - edgeSize) {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
-    defineDirections(row, col)
     b[row][col][0] = true
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
     for (let i = 0; i < 4; i++) {
