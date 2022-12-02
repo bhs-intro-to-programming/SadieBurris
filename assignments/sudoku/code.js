@@ -11,8 +11,8 @@ const drawOrigonalBoard = () => {
 }
 
 const defineDirections = (row, col) => {
-  const directionsRows = [[row - 1], [row], [row + 1], [row], [3], [4], [1], [2]]
-  const directionsCols = [[col], [col + 1], [col], [col - 1]]
+  const directionsRows = [row - 1, row, row + 1, row, 3, 4, 1, 2]
+  const directionsCols = [col, col + 1, col, col - 1]
 }
 
 const solveBranch = (row, col, curPath) => {
