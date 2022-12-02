@@ -87,8 +87,14 @@ const drawOrigonalBoard = () => {
   drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
 }
 
+const defineDirections = (row, col) => {
+  const directionsRows = [[row - 1], [row], [row + 1], [row]]
+  const directionsCols = [[col], [col + 1], [col], [col - 1]]
+}
+
 const solveBranch = (row, col, curPath) => {
   curPath.push([row, col])
+  defineDirections(row, col)
   if (row === 8 && col === 8) {
     return curPath
   } else {
@@ -106,8 +112,7 @@ registerOnclick((x, y) => {
   if (x > edgeSize && x < width - edgeSize) {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
-    const directionsRows = [[row - 1], [row], [row + 1], [row]]
-    const directionsCols = [[col], [col + 1], [col], [col - 1]]
+    defineDirections(row, col)
     b[row][col][0] = true
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
     for (let i = 0; i < 4; i++) {
