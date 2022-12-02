@@ -41,7 +41,7 @@ registerOnclick((x, y) => {
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
     for (let i = 0; i < 4; i++) {
       if (directionsRows[i] !== -1 || directionsCols[i] !== -1) {
-        b[directionsRows[i]][directionsCols[i]]//[directionsRows[i + 4]] = true
+        b[directionsRows[i]][directionsCols[i]][directionsRows[i + 4]] = true
       }
     }
   }
