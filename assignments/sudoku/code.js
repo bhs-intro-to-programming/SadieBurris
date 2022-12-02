@@ -100,7 +100,7 @@ const solveBranch = (row, col, curPath) => {
   } else {
     for (let i = 0; i < 4; i++) {
       if (b[row][col][i + 1] === true) {
-        solveBranch(directionsRows[i], directionsCols[i], curPath)
+        //solveBranch(directionsRows[i], directionsCols[i], curPath)
       }
     }
   }
