@@ -117,5 +117,3 @@ registerOnclick((x, y) => {
     }
   }
 })
-
-//trying to set off the screen on line 114
