@@ -5,6 +5,7 @@ const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(2).fill(fals
 const directionsRows = []
 const directionsCols = []
 const defineDirections = (row, col) => [[row - 1, row, row + 1, row, 3, 4, 1, 2], [col, col + 1, col, col - 1]]
+const newLoc = (row, col) => b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]]
 
 const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize, 0, height, height, 'black')
@@ -18,9 +19,9 @@ const solveBranch = (row, col, curPath) => {
     return curPath
   } else {
     for (let i = 0; i < 4; i++) {
-      if (b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][0] === true && b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][1] === false) {
+      if (newLoc(row, col)[0] === true && newLoc(row, col)[1] === false) {
         solveBranch(defineRow, defineCol, curPath)
-        b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][1] = true
+        newLoc(row, col)[1] = true
       }
     }
   }
