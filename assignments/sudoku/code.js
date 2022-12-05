@@ -1,9 +1,12 @@
 //Im in pain
 
 const edgeSize = (width - height) / 2
-const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(5).fill(false)))
+const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(2).fill(false)))
 const directionsRows = []
 const directionsCols = []
+const defineRow = [defineDirections(row, col)[0][i]]
+const defineCol = [defineDirections(row, col)[1][i]]
+
 
 const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize, 0, height, height, 'black')
@@ -19,7 +22,7 @@ const solveBranch = (row, col, curPath) => {
     return curPath
   } else {
     for (let i = 0; i < 4; i++) {
-      if (b[row][col][i + 1] === true) {
+      if (b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][0] === true && b[row][col][1] === false) {
         solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], curPath)
       }
     }
