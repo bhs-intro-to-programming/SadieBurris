@@ -15,8 +15,6 @@ const drawOrigonalBoard = () => {
   drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
 }
 
-const defineDirections = (row, col) => [[row - 1, row, row + 1, row, 3, 4, 1, 2], [col, col + 1, col, col - 1]]
-
 const solveBranch = (row, col, curPath) => {
   curPath.push([row, col])
   if (row === 8 && col === 8) {
