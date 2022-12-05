@@ -21,7 +21,7 @@ const solveBranch = (row, col, curPath) => {
     for (let i = 0; i < 4; i++) {
       if (newLoc(row, col, i)[0] === true && newLoc(row, col, i)[1] === false) {
         solveBranch(newLoc(row, col, i), newLoc(row, col, i), curPath)
-        newLoc(row, col, i)[1] = true
+        b[row][col][1] = true
       }
     }
   }
