@@ -20,6 +20,7 @@ const solveBranch = (row, col, curPath) => {
     for (let i = 0; i < 4; i++) {
       if (b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][0] === true && b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][1] === false) {
         solveBranch(defineRow, defineCol, curPath)
+        b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][1] = true
       }
     }
   }
