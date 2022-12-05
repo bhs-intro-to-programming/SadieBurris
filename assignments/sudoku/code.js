@@ -4,6 +4,7 @@ const edgeSize = (width - height) / 2
 const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(2).fill(false)))
 const directionsRows = []
 const directionsCols = []
+const defineDirections = (row, col) => [[row - 1, row, row + 1, row, 3, 4, 1, 2], [col, col + 1, col, col - 1]]
 const defineRow = [defineDirections(row, col)[0][i]]
 const defineCol = [defineDirections(row, col)[1][i]]
 
@@ -23,7 +24,7 @@ const solveBranch = (row, col, curPath) => {
   } else {
     for (let i = 0; i < 4; i++) {
       if (b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]][0] === true && b[row][col][1] === false) {
-        solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], curPath)
+        solveBranch(defineRow, defineCol, curPath)
       }
     }
   }
