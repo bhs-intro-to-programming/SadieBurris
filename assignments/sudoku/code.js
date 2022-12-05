@@ -19,9 +19,11 @@ const solveBranch = (row, col, curPath) => {
     return curPath
   } else {
     for (let i = 0; i < 4; i++) {
-      if (newLoc(row, col, i)[0] === true && newLoc(row, col, i)[1] === false) {
-        solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], curPath)
-        b[row][col][1] = true
+      if (defineDirections(row, col)[0][i] !== -1 && defineDirections(row, col)[0][i] !== 9 && defineDirections(row, col)[1][i] !== -1 && defineDirections(row, col)[1][i] !== 9) {
+        if (newLoc(row, col, i)[0] === true && newLoc(row, col, i)[1] === false) {
+          solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], curPath)
+          b[row][col][1] = true
+        }
       }
     }
   }
