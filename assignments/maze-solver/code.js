@@ -13,7 +13,7 @@ const drawOrigonalBoard = () => {
 
 const solveBranch = (row, col, curPath) => {
   curPath.push([row, col])
-  if (curPath.substring(curPath.length - 2)) {
+  if (row === 8 && col === 8) {
     return curPath
   } else {
     for (let i = 0; i < 4; i++) {
@@ -21,7 +21,7 @@ const solveBranch = (row, col, curPath) => {
         if (newLoc(row, col, i)[0] === true && newLoc(row, col, i)[1] === false) {
           //fix later
           b[row][col][1] = true
-          console.log(curPath)
+          curPath.substring(curPath.length - 2)
           solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], curPath)
         }
       }
