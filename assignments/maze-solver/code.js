@@ -16,7 +16,7 @@ const solveBranch = (row, col, curPath) => {
   console.log(curPath)
   if (row === 8 && col === 8) {
     for(let i = 0; i < curPath.length / 2; i++) {
-      console.log('hi')
+      drawLine(curPath[i * 2 * (height / 9)] + edgeSize + height / 18, curPath[(i * 2 + 1) * (height / 9)] + height / 18, curPath[(i * 2 + 3) * (height / 9)] + edgeSize + height / 18, curPath[(i * 2 + 4) * (height / 9)] + height / 18)
     }
   } else {
     for (let i = 0; i < 4; i++) {
