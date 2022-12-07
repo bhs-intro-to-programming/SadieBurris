@@ -15,7 +15,9 @@ const solveBranch = (row, col, curPath) => {
   curPath.push([row, col])
   console.log(curPath)
   if (row === 8 && col === 8) {
-    drawText('testing', 20, 20, 'red', 20)
+    for(let i = 0; i < curPath.length / 2; i++) {
+      console.log('banana')
+    }
   } else {
     for (let i = 0; i < 4; i++) {
       if (defineDirections(row, col)[0][i] !== -1 && defineDirections(row, col)[0][i] !== 9 && defineDirections(row, col)[1][i] !== -1 && defineDirections(row, col)[1][i] !== 9) {
