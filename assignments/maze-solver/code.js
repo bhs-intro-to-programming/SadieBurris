@@ -1,5 +1,5 @@
 const edgeSize = (width - height) / 2
-const b = Array(9).fill().map(() => Array(9).fill().map(() => Array(2).fill(false)))
+const b = Array(11).fill().map(() => Array(11).fill().map(() => Array(2).fill(false)))
 const directionsRows = []
 const directionsCols = []
 const defineDirections = (row, col) => [[row - 1, row, row + 1, row, 3, 4, 1, 2], [col, col + 1, col, col - 1]]
