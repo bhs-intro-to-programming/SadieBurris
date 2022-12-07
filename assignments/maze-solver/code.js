@@ -15,7 +15,7 @@ const solveBranch = (row, col, curPath) => {
   curPath.push([row, col])
   console.log(curPath)
   if (row === 8 && col === 8) {
-    for(let i = 0; i < curPath.length / 2; i++) {
+    for(let i = 0; i < curPath.length; i++) {
       console.log('banana')
     }
   } else {
