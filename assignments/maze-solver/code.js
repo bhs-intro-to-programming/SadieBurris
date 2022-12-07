@@ -18,7 +18,7 @@ const solveBranch = (row, col, curPath) => {
     curPath.push(8, 9)
     console.log(curPath)
     for (let i = 0; i < curPath.length / 2; i++) {
-      console.log(curPath[i * 2 * (height / 9)] + edgeSize + height / 18)
+      console.log(curPath[i * 2 * (height / 9)])
       drawLine(curPath[i * 2 * (height / 9)] + edgeSize + height / 18, curPath[(i * 2 + 1) * (height / 9)] + height / 18, curPath[(i * 2 + 3) * (height / 9)] + edgeSize + height / 18, curPath[(i * 2 + 4) * (height / 9)] + height / 18, 'red', 4)
     }
   } else {
