@@ -10,7 +10,7 @@ const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize - height / 9, 0, height / 9, height / 9, 'red')
   drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
 }
-
+//drawsFailedAttempts as well
 const solveBranch = (row, col, oldRow, oldCol, curPath) => {
   b[oldRow][oldCol][1] = true
   curPath.push(row, col)
