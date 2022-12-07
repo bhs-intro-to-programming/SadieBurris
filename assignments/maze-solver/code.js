@@ -12,11 +12,11 @@ const drawOrigonalBoard = () => {
 }
 
 const solveBranch = (row, col, curPath) => {
-  curPath.push([row, col])
+  curPath.push(row, col)
   console.log(curPath)
   if (row === 8 && col === 8) {
     for(let i = 0; i < curPath.length; i++) {
-      console.log('banana')
+      drawLine()
     }
   } else {
     for (let i = 0; i < 4; i++) {
