@@ -11,7 +11,8 @@ const drawOrigonalBoard = () => {
   drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
 }
 
-const solveBranch = (row, col, curPath) => {
+const solveBranch = (row, col, oldRow, oldCol, curPath) => {
+  b[oldRow][oldCol][1] = true
   curPath.push(row, col)
   console.log(curPath)
   if (row === 8 && col === 8) {
@@ -24,11 +25,12 @@ const solveBranch = (row, col, curPath) => {
     for (let i = 0; i < 4; i++) {
       if (defineDirections(row, col)[0][i] !== -1 && defineDirections(row, col)[0][i] !== 9 && defineDirections(row, col)[1][i] !== -1 && defineDirections(row, col)[1][i] !== 9) {
         if (newLoc(row, col, i)[0] === true && newLoc(row, col, i)[1] === false) {
-          solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], curPath)
+          //make it do it later
+          b[row][col][1] = true
+          solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], row, col, curPath)
         }
       }
     }
-    b[row][col][1] = true
   }
 }
 
