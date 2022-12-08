@@ -11,7 +11,7 @@ const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize - height / 9, 0, height / 9, height / 9, 'red')
   drawFilledRect(width - edgeSize, height * 8 / 9, height / 9, height / 9, 'red')
 }
-//drawsFailedAttempts as well
+//drawsFailedAttempts as well bc arrays are mutible the one time I wish they werent
 const solveBranch = (row, col, oldRow, oldCol, curPath) => {
   b[oldRow][oldCol][1] = true
   curPath.push(row, col)
