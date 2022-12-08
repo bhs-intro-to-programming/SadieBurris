@@ -11,7 +11,7 @@ const drawStart = () => {
 
 registerOnKeyDown((key) => {
   const num = Math.random() < 0.7 ? 2 : 4
-  const placement = {ArrowRight : [[Math.floor(Math.random() * 4)][0]], ArrowLeft : [[Math.floor(Math.random() * 4)][3]], ArrowUp : [[3][Math.floor(Math.random() * 4)]], ArrowDown : [[0][Math.floor(Math.random() * 4)]]}
+  const placement = {ArrowRight : [[Math.floor(Math.random() * 4)],[0]], ArrowLeft : [[Math.floor(Math.random() * 4)],[3]], ArrowUp : [[3],[Math.floor(Math.random() * 4)]], ArrowDown : [[0],[Math.floor(Math.random() * 4)]]}
   console.log(key, num, placement.key)
 })
 
