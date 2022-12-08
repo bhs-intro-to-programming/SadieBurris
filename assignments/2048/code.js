@@ -1,5 +1,4 @@
 const buffer = (width - height) / 2
-const num = 2
 const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill('')))
 
 const drawStart = () => {
@@ -11,6 +10,7 @@ const drawStart = () => {
 }
 
 registerOnKeyDown((key) => {
+  const num = Math.random() < 0.8 ? 2 : 4
   console.log(num, key)
 })
 
