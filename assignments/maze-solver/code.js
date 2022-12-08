@@ -1,3 +1,4 @@
+//I forgot arrays are mutible like the one time I dont want them to be
 const edgeSize = (width - height) / 2
 const b = Array(11).fill().map(() => Array(11).fill().map(() => Array(2).fill(false)))
 const directionsRows = []
@@ -13,11 +14,10 @@ const drawOrigonalBoard = () => {
 //drawsFailedAttempts as well
 const solveBranch = (row, col, oldRow, oldCol, curPath) => {
   b[oldRow][oldCol][1] = true
-  curPath = curPath * 100 + row * 10 + col
   //curPath.push(row, col)
   console.log(curPath)
   if (row === 8 && col === 8) {
-    curPath = curPath * 100 + 89
+    curPath.push(8,9)
     console.log(curPath)
     for (let i = 0; i < curPath.length / 2; i++) {
       drawLine(curPath[i * 2 + 1] * (height / 9) + edgeSize + height / 18, curPath[i * 2] * (height / 9) + height / 18, curPath[i * 2 + 3] * (height / 9) + edgeSize + height / 18, curPath[i * 2 + 2] * (height / 9) + height / 18, 'red', 4)
