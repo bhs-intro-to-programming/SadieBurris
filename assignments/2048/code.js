@@ -8,4 +8,10 @@ const drawStart = () => {
     }
   }
 }
+
+registerOnKeyDown((key) => {
+  const num = Math.random < 0.8 ? 2 : 4
+  console.log(num)
+})
+
 drawStart()
