@@ -11,7 +11,7 @@ const drawStart = () => {
 }
 
 registerOnKeyDown((key) => {
-  console.log(num)
+  console.log(num, key)
 })
 
 drawStart()
