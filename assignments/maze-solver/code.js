@@ -13,7 +13,8 @@ const drawOrigonalBoard = () => {
 //drawsFailedAttempts as well
 const solveBranch = (row, col, oldRow, oldCol, curPath) => {
   b[oldRow][oldCol][1] = true
-  curPath.push(row, col)
+  curPath = curPath * 100 + row * 10 + col
+  //curPath.push(row, col)
   console.log(curPath)
   if (row === 8 && col === 8) {
     curPath.push(8, 9)
