@@ -10,7 +10,7 @@ const drawStart = () => {
 }
 
 registerOnKeyDown((key) => {
-  const num = Math.random() < 0.6 ? 2 : 4
+  const num = Math.random() < 0.7 ? 2 : 4
   console.log(num, key)
 })
 
