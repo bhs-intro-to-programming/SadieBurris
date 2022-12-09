@@ -15,7 +15,7 @@ const locPlaced = (num, row, col) => {
     if (b[row][col + i] !== undefined) {
       result[1]++
     }
-
+    if (b[row])
   }
   return [num, toRight, toLeft, toTop, toBottom]
 }
