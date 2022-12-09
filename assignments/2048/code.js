@@ -19,8 +19,14 @@ const locPlaced = (num, row, col) => {
     if (b[row][col - i] !== undefined) {
       result[2]++
     }
+    if (b[row - 1][col] !== undefined) {
+      result[3]++
+    }
+    if (b[row + 1][col] !== undefined) {
+      result[4]++
+    }
   }
-  return [num, toRight, toLeft, toTop, toBottom]
+  return result
 }
 
 registerOnKeyDown((key) => {
