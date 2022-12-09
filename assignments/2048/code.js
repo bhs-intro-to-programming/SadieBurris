@@ -1,5 +1,5 @@
 const buffer = (width - height) / 2
-const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill(empty)))
+const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill('empty')))
 
 const drawStart = () => {
   for (let row = 0; row < 4; row++) {
