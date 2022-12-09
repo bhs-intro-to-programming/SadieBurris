@@ -14,6 +14,7 @@ registerOnKeyDown((key) => {
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 1 : key === 'ArrowUp' ? 2 : key === 'ArrowDown' ? 3 : 'error'
   const placement = [[[Math.floor(Math.random() * 4)], [0]], [[Math.floor(Math.random() * 4)], [3]], [[3], [Math.floor(Math.random() * 4)]], [[0], [Math.floor(Math.random() * 4)]]]
   console.log(key, num, placement[keyToNum])
+  drawText(num, buffer + placement[keyToNum] * (height / 4), 100, 'black', 20)
 })
 
 drawStart()
