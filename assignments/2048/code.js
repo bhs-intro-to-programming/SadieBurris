@@ -13,7 +13,7 @@ const drawStart = () => {
 registerOnKeyDown((key) => {
   const num = Math.random() < 0.7 ? 2 : 4
   const placement = [[[Math.floor(Math.random() * 4)], [0]], [[Math.floor(Math.random() * 4)], [3]], [[3], [Math.floor(Math.random() * 4)]], [[0], [Math.floor(Math.random() * 4)]]]
-  console.log(key, num, keyToNum.locate(key))
+  console.log(key, num, keyToNum(key))
 })
 
 drawStart()
