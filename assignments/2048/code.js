@@ -1,5 +1,5 @@
 const buffer = (width - height) / 2
-const keyToNum = (key) => [ArrowRight, ArrowLeft, ArrowUp, ArrowDown].locate(key)
+const keyToNum = (key) => ['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown'].locate(key)
 const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill('')))
 
 const drawStart = () => {
