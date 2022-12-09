@@ -13,16 +13,16 @@ const locPlaced = (num, row, col) => {
   //ill make it short later
   let result = [num, 0, 0, 0, 0]
   for (let i = 1; i < 4; i++) {
-    if (b[row][col + i] !== 'undefined') {
+    if (b[row][col + i] !== undefined) {
       result[1]++
     }
-    if (b[row][col - i] !== 'undefined') {
+    if (b[row][col - i] !== undefined) {
       result[2]++
     }
-    if (b[row - 1][col] !== 'undefined') {
+    if (b[row - 1][col] !== undefined) {
       result[3]++
     }
-    if (b[row + 1][col] !== 'undefined') {
+    if (b[row + 1][col] !== undefined) {
       result[4]++
     }
   }
