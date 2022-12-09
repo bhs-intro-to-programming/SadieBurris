@@ -12,7 +12,7 @@ const drawStart = () => {
 const locPlaced = (num, row, col) => {
   let result = [num, 0, 0, 0, 0]
   for (let i = 1; i < 4; i++) {
-    if (b[row][col + i] !== 'empty') {
+    if (b[row][col + i] !== undefined) {
       result[1]++
     }
 
