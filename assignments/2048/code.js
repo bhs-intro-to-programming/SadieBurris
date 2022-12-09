@@ -10,7 +10,7 @@ const drawStart = () => {
 }
 
 const numsFromEdge = (row, col) => {
-  if(b[row][col] !== empty)
+  //if(b[row][col] !== empty)
 }
 
 registerOnKeyDown((key) => {
