@@ -1,5 +1,5 @@
 const buffer = (width - height) / 2
-const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill('empty')))
+const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill()))
 
 const drawStart = () => {
   for (let row = 0; row < 4; row++) {
@@ -9,8 +9,15 @@ const drawStart = () => {
   }
 }
 
-const numsFromEdge = (row, col) => {
-  //if(b[row][col] !== empty)
+const locPlaced = (num, row, col) => {
+  let result = [num, 0, 0, 0, 0]
+  for (let i = 1; i < 4; i++) {
+    if (b[row][col + i] !== 'empty') {
+      result[1]++
+    }
+
+  }
+  return [num, toRight, toLeft, toTop, toBottom]
 }
 
 registerOnKeyDown((key) => {
