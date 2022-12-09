@@ -1,5 +1,4 @@
 const buffer = (width - height) / 2
-const keyToNum = key === ArrowRight ? 0 : key === ArrowLeft ? 1 : key === ArrowUp ? 2 : key === ArrowDown ? 3 : 'error'
 const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill('')))
 
 const drawStart = () => {
@@ -12,6 +11,7 @@ const drawStart = () => {
 
 registerOnKeyDown((key) => {
   const num = Math.random() < 0.7 ? 2 : 4
+  const keyToNum = key === ArrowRight ? 0 : key === ArrowLeft ? 1 : key === ArrowUp ? 2 : key === ArrowDown ? 3 : 'error'
   const placement = [[[Math.floor(Math.random() * 4)], [0]], [[Math.floor(Math.random() * 4)], [3]], [[3], [Math.floor(Math.random() * 4)]], [[0], [Math.floor(Math.random() * 4)]]]
   console.log(key, num, keyToNum(key))
 })
