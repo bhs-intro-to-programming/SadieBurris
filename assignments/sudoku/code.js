@@ -105,4 +105,4 @@ const hard = `
 `;
 
 drawBoard()
-setupPuzzle(easy);
+setupPuzzle(hard);
