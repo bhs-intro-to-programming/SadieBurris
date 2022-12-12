@@ -38,7 +38,7 @@ registerOnclick((x, y) => {
     const row = Math.floor(y / (height / 9))
     updateBoard(row, col, index, black)
   } else if (x > edgeSize + height) {
-    
+
     let rounds = 0; // Added this to avoid infinite loop if solver can't solve the puzzle
     while (filledSpaces < 81 && rounds++ < 100) {
       solveBoard()
@@ -49,11 +49,13 @@ registerOnclick((x, y) => {
 
 const solveBoard = () => {
   for (let row = 0; row < 9; row++) {
+    let numsUsed = ['filler', 10, 20, 30, 40, 50, 60, 70, 80, 90]
     for (let col = 0; col < 9; col++) {
       let optionsFilled = 0
       let number = 0
       for (let currentCheck = 1; currentCheck < 10; currentCheck++) {
         if (b[row][col][currentCheck] === currentCheck) {
+          numsUsed[currentCheck]++
           optionsFilled++
         } else {
           number = currentCheck
@@ -61,6 +63,10 @@ const solveBoard = () => {
       }
       if (optionsFilled === 8 && b[row][col][0] === '') {
         updateBoard(row, col, number, 'grey')
+      }
+      for (let i = 0; i < 10; i++) {
+        //if one of them was only used once in a row
+        if ()
       }
     }
   }
