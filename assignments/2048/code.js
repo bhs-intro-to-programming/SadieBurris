@@ -35,7 +35,7 @@ registerOnKeyDown((key) => {
   const placement = [[[Math.floor(Math.random() * 4)], [0]], [[Math.floor(Math.random() * 4)], [3]], [[3], [Math.floor(Math.random() * 4)]], [[0], [Math.floor(Math.random() * 4)]]]
   console.log(locPlaced(num, placement[keyToNum][0], placement[keyToNum][1]))
   drawText(num, buffer + placement[keyToNum][1] * (height / 4) + 20, placement[keyToNum][0] * (height / 4) + 50, 'black', 50)
-  b[placement[keyToNum][0]][placement[keyToNum][1]] = [num, 0, 0]
+  b[placement[keyToNum][0]][placement[keyToNum][1]] = locPlaced(num, placement[keyToNum][0], placement[keyToNum][1])
 })
 
 drawStart()
