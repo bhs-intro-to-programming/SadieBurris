@@ -15,17 +15,18 @@ const drawBoard = () => {
   drawText('Solve', edgeSize + height + 65, 30, 'black', 25)
 }
 
-const updateBoard = (row, col) => {
-  b[row][col][0] = index
+const updateBoard = (row, col, number, color) => {
+  b[row][col][0] = number
   for (let l = 0; l < 9; l++) {
-    b[row][l][index] = index
-    b[l][col][index] = index
+    b[row][l][number] = number
+    b[l][col][number] = number
   }
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
-      b[Math.floor(row / 3) * 3 + j][Math.floor(col / 3) * 3 + i][index] = index
+      b[Math.floor(row / 3) * 3 + j][Math.floor(col / 3) * 3 + i][number] = number
     }
   }
+  drawText(number, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, color, height / 9)
   filledSpaces++
 }
 
@@ -35,11 +36,13 @@ registerOnclick((x, y) => {
   } else if (x > edgeSize && x < width - edgeSize) {
     const col = Math.floor((x - edgeSize) / (height / 9))
     const row = Math.floor(y / (height / 9))
-    drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'black', height / 9)
-    updateBoard(row, col)
+    updateBoard(row, col, index, black)
   } else if (x > edgeSize + height) {
-    while (filledSpaces < 81) {
+    
+    let rounds = 0; // Added this to avoid infinite loop if solver can't solve the puzzle
+    while (filledSpaces < 81 && rounds++ < 100) {
       solveBoard()
+      console.log(filledSpaces); // Let's see how we're doing.
     }
   }
 })
@@ -48,17 +51,58 @@ const solveBoard = () => {
   for (let row = 0; row < 9; row++) {
     for (let col = 0; col < 9; col++) {
       let optionsFilled = 0
+      let number = 0
       for (let currentCheck = 1; currentCheck < 10; currentCheck++) {
         if (b[row][col][currentCheck] === currentCheck) {
           optionsFilled++
-        } else index = currentCheck
+        } else {
+          number = currentCheck
+        }
       }
       if (optionsFilled === 8 && b[row][col][0] === '') {
-        drawText(index, edgeSize + col * (height / 9) + height / 64, row * (height / 9) + height * 6 / 64, 'gray', height / 9)
-        updateBoard(row, col)
+        updateBoard(row, col, number, 'grey')
       }
     }
   }
 }
 
+const setupPuzzle = (puzzle) => {
+  puzzle.trim().split('\n').map(row => row.split(' ')).forEach((row, r) => {
+    row.forEach((s, c) => {
+      const n = Number(s);
+      if (!isNaN(n)) {
+        updateBoard(r, c, n, 'black');
+      }
+    });
+  });
+};
+
+// Easy sudoku from https://sudoku.com/easy/
+const easy = `
+6 . . 3 . 5 8 7 .
+. 8 . . 2 . . . .
+. . 7 8 9 . . 5 6
+. 6 . . 7 . 1 . .
+4 7 3 1 6 2 . . 8
+9 2 1 5 3 8 7 6 4
+. 5 . . . 3 . . 7
+2 3 . 6 . . 9 . .
+7 1 . . 5 4 . . 3
+`;
+
+// Hard sudoku from https://www.mirror.co.uk/news/weird-news/worlds-hardest-sudoku-can-you-242294
+// by way of https://norvig.com/sudoku.html
+const hard = `
+. . 5 3 . . . . .
+8 . . . . . . 2 .
+. 7 . . 1 . 5 . .
+4 . . . . 5 3 . .
+. 1 . . 7 . . . 6
+. . 3 2 . . . 8 .
+. 6 . 5 . . . . 9
+. . 4 . . . . 3 .
+. . . . . 9 7 . .
+`;
+
 drawBoard()
+setupPuzzle(easy);
