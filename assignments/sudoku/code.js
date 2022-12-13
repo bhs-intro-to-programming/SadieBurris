@@ -67,8 +67,7 @@ const solveBoard = () => {
       for (let i = 1; i < 10; i++) {
         //if one of them was only used once in a row
         if (numsUsed[i] % 10 === 1 && b[row][col][0] === '') {
-          b[row][col][0] === i
-          updateBoard(row, col, number, 'grey')
+          updateBoard(row, col, i, 'grey')
         }
       }
     }
