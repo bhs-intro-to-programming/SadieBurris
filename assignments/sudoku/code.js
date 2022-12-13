@@ -83,6 +83,13 @@ const solveBoard = () => {
   for (let col = 0; col < 9; col++) {
     foo(0, col, numsUsedCol, row, 1)
   }
+  for (let row = 0; row < 9; row++) {
+    for (let col = 0; col < 9; col++) {
+      if (b[row][col][10] === b[row][col][11]) {
+        updateBoard(row, col, b[row][col][10], 'grey')
+      }
+    }
+  }
 }
 
 const setupPuzzle = (puzzle) => {
