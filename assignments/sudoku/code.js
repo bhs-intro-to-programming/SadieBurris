@@ -47,15 +47,14 @@ registerOnclick((x, y) => {
   }
 })
 
-const solveBoard = () => {
-  for (let row = 0; row < 9; row++) {
-    let numsUsed = ['filler', 10, 20, 30, 40, 50, 60, 70, 80, 90]
-    for (let col = 0; col < 9; col++) {
+const foo = (row, col, arrayName, rOc) => {
+  let arrayName = ['filler', 10, 20, 30, 40, 50, 60, 70, 80, 90]
+    for (rOc = 0; rOc < 9; rOc++) {
       let optionsFilled = 0
       let number = 0
       for (let currentCheck = 1; currentCheck < 10; currentCheck++) {
         if (b[row][col][currentCheck] === currentCheck) {
-          numsUsed[currentCheck]++
+          arrayName[currentCheck]++
           optionsFilled++
         } else {
           number = currentCheck
@@ -66,11 +65,19 @@ const solveBoard = () => {
       }
       for (let i = 1; i < 10; i++) {
         //if one of them was only used once in a row
-        if (numsUsed[i] % 10 === 1 && b[row][col][0] === '') {
+        if (arrayName[i] % 10 === 1 && b[row][col][0] === '') {
           updateBoard(row, col, i, 'grey')
         }
       }
     }
+}
+
+const solveBoard = () => {
+  for (let row = 0; row < 9; row++) {
+    foo(row, 0, numsUsedRow, col)
+  }
+  for(let col = 0; col < 9; col++) {
+    foo(0, col, numsUsedCol, row)
   }
 }
 
