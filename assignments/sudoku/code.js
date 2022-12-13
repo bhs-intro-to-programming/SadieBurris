@@ -48,7 +48,7 @@ registerOnclick((x, y) => {
 })
 
 const foo = (row, col, arrayName, rOc) => {
-  let arrayName = ['filler', 10, 20, 30, 40, 50, 60, 70, 80, 90]
+  arrayName = ['filler', 10, 20, 30, 40, 50, 60, 70, 80, 90]
     for (rOc = 0; rOc < 9; rOc++) {
       let optionsFilled = 0
       let number = 0
