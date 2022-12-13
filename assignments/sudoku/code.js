@@ -64,9 +64,12 @@ const solveBoard = () => {
       if (optionsFilled === 8 && b[row][col][0] === '') {
         updateBoard(row, col, number, 'grey')
       }
-      for (let i = 0; i < 10; i++) {
+      for (let i = 1; i < 10; i++) {
         //if one of them was only used once in a row
-        if ()
+        if (numsUsed[i] % 10 === 1) {
+          b[row][col][0] === i
+          updateBoard(row, col, number, 'grey')
+        }
       }
     }
   }
