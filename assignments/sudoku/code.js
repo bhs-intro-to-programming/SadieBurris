@@ -75,6 +75,8 @@ const foo = (row, col, arrayName, rOc) => {
 const solveBoard = () => {
   let numsUsedRow
   let numsUsedCol
+  let row
+  let col
   for (let row = 0; row < 9; row++) {
     foo(row, 0, numsUsedRow, col)
   }
