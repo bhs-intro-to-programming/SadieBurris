@@ -1,4 +1,4 @@
-const buffer = (width - height) / 2
+/*const buffer = (width - height) / 2
 const b = Array(4).fill().map(() => Array(4).fill().map(() => Array(2).fill()))
 
 const drawStart = () => {
@@ -39,3 +39,21 @@ registerOnKeyDown((key) => {
 })
 
 drawStart()
+*/
+
+//Snake Game
+
+const startingX = (width - height) / 2
+
+const drawBoard = (numOfSquares) => {
+  const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
+  b[0][0] = 1
+  for (let row = 0; row < numOfSquares; row++) {
+    for (let col = 0; col < numOfSquares; col++) {
+      let color = b[row][col] === 0 ? 'black' : 'green'
+      drawFilledRect(startingX + col * (height / numOfSquares), row * (height / numOfSquares), height / numOfSquares, height / numOfSquares, color)
+    }
+  }
+}
+
+drawBoard(10)
