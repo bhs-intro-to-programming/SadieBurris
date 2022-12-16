@@ -52,7 +52,7 @@ const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row +
 let firstTime = true
 
 const appleEaten = () => {
-  b[Math.floor(Math.random * numOfSquares)][Math.floor(Math.random * numOfSquares)][1] === 1
+  b[Math.floor(Math.random * numOfSquares)][Math.floor(Math.random * numOfSquares)][1] = 1
 }
 
 const drawBoard = () => {
