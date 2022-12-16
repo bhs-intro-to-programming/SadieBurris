@@ -7,8 +7,10 @@ const startingX = (width - height) / 2
 let snakeLength = 1
 const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
 let firstTime = true
+let appleLoc
 
 const appleEaten = () => {
+  appleLoc = b[Math.floor(Math.random() * numOfSquares)][Math.floor(Math.random() * numOfSquares)]
   b[Math.floor(Math.random() * numOfSquares)][Math.floor(Math.random() * numOfSquares)][1] = 1
 }
 
@@ -39,6 +41,10 @@ registerOnKeyDown((key) => {
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 2 : key === 'ArrowUp' ? 4 : key === 'ArrowDown' ? 6 : 'error'
   head = [newSquare(head[0], head[1])[keyToNum], newSquare(head[0], head[1])[keyToNum + 1]]
   b[head[0]][head[1]][0] = snakeLength
+  if(b[head[0]][head[1]] === appleLoc) {
+    appleLoc[1] = 0
+    appleEaten()
+  }
   clear()
   drawBoard()
 })
