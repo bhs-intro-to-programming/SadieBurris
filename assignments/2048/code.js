@@ -43,7 +43,7 @@ registerOnKeyDown((key) => {
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 2 : key === 'ArrowUp' ? 4 : key === 'ArrowDown' ? 6 : 'error'
   head = [newSquare(head[0], head[1])[keyToNum], newSquare(head[0], head[1])[keyToNum + 1]]
   b[head[0]][head[1]][0] = snakeLength
-  if([[head[0]][head[1]]] === [[appleRow][appleCol]]) {
+  if(head[0] === appleRow && head[1] === appleCol) {
     console.log('yeah')
     appleEaten()
   }
