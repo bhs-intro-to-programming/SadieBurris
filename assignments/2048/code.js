@@ -63,5 +63,5 @@ drawBoard(10)
 
 registerOnKeyDown((key) => {
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 1 : key === 'ArrowUp' ? 2 : key === 'ArrowDown' ? 3 : 'error'
-  b[]
+
 })
