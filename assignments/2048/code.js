@@ -62,7 +62,7 @@ const drawBoard = () => {
   }
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
-      const color = b[row][col][0] === 0 ? 'black' : 'green'
+      const color = b[row][col][0] === 0 ? 'black' : b[row][col][1] === 1 ? 'red' : 'black'
       drawFilledRect(startingX + col * (height / numOfSquares), row * (height / numOfSquares), height / numOfSquares, height / numOfSquares, color)
     }
   }
