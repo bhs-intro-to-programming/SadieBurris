@@ -51,7 +51,7 @@ let snakeLength = 1
 const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
 let firstTime = true
 
-const drawBoard = (numOfSquares) => {
+const drawBoard = () => {
   if (firstTime === true) b[head[0]][head[1]] = 1
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
