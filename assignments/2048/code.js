@@ -57,6 +57,7 @@ const drawBoard = (numOfSquares) => {
       drawFilledRect(startingX + col * (height / numOfSquares), row * (height / numOfSquares), height / numOfSquares, height / numOfSquares, color)
     }
   }
+  firstTime = false
 }
 
 drawBoard(10)
