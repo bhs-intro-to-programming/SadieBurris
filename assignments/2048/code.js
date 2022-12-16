@@ -14,7 +14,7 @@ const appleEaten = () => {
 
 const drawBoard = () => {
   if (firstTime === true) {
-    b[head[0]][head[1]][0] = 1
+    b[head[0]][head[1]][0] = snakeLength
     appleEaten()
   }
   for (let row = 0; row < numOfSquares; row++) {
