@@ -45,6 +45,13 @@ registerOnKeyDown((key) => {
   b[head[0]][head[1]][0] = snakeLength
   if((head[0] === appleRow) && (head[1] === appleCol)) {
     b[appleRow][appleCol][1] = 0
+    for(let row = 0; row < numOfSquares; row++) {
+      for (let col = 0; col < numOfSquares; col++) {
+        if (b[row][col][0] > 0) {
+          b[row][col][0]++
+        }
+      }
+    }
     snakeLength++
     appleEaten()
   }
