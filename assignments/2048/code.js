@@ -51,11 +51,15 @@ let snakeLength = 1
 const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
 let firstTime = true
 
+const appleEaten = () => {
+
+}
+
 const drawBoard = () => {
   if (firstTime === true) b[head[0]][head[1]] = 1
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
-      const color = b[row][col] === 0 ? 'black' : 'green'
+      const color = b[row][col][0] === 0 ? 'black' : 'green'
       drawFilledRect(startingX + col * (height / numOfSquares), row * (height / numOfSquares), height / numOfSquares, height / numOfSquares, color)
     }
   }
@@ -64,15 +68,11 @@ const drawBoard = () => {
 
 drawBoard(10)
 
-const appleEaten = () => {
-
-}
-
 registerOnKeyDown((key) => {
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
-      if (b[row][col] == !0) {
-        b[row][col] -= 1
+      if (b[row][col][0] == !0) {
+        b[row][col][0] -= 1
       }
     }
   }
