@@ -64,6 +64,6 @@ const drawBoard = (numOfSquares) => {
 drawBoard(10)
 
 registerOnKeyDown((key) => {
-  const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 1 : key === 'ArrowUp' ? 2 : key === 'ArrowDown' ? 3 : 'error'
+  const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 2 : key === 'ArrowUp' ? 4 : key === 'ArrowDown' ? 6 : 'error'
   b[newSquare(keyToNum)][newSquare(keyToNum + 1)] = snakeLength
 })
