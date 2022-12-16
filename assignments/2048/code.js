@@ -45,7 +45,6 @@ drawStart()
 
 const startingX = (width - height) / 2
 let snakeLength
-const 
 const newSquare = (row, col) => ([row, col + 1, row, col - 1, row - 1, col, row + 1, col])
 
 const drawBoard = (numOfSquares) => {
