@@ -26,7 +26,7 @@ const drawBoard = () => {
   firstTime = false
 }
 
-drawBoard
+drawBoard()
 
 registerOnKeyDown((key) => {
   for (let row = 0; row < numOfSquares; row++) {
