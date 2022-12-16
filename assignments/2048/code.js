@@ -56,8 +56,10 @@ const appleEaten = () => {
 }
 
 const drawBoard = () => {
-  //appleEaten()
-  if (firstTime === true) b[head[0]][head[1]][0] = 1
+  if (firstTime === true) {
+    b[head[0]][head[1]][0] = 1
+    appleEaten()
+  }
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
       const color = b[row][col][0] === 0 ? 'black' : 'green'
