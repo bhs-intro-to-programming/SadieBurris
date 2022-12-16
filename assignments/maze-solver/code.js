@@ -52,9 +52,13 @@ const b = Array(10).fill().map(() => Array(10).fill(0))
 const startingX = (width - height) / 2
 
 const drawBoard = () => {
+  b[0][0] = 1
   for (let row = 0; row < 10; row++) {
     for (let col = 0; col < 10; col++) {
-      drawFilledRect(startingX + col * (height / 9), row * (height / 9), height / 9, height / 9, 'black')
+      let color = b[row][col] === 0 ? 'black' : 'green'
+      drawFilledRect(startingX + col * (height / 9), row * (height / 9), height / 9, height / 9, color)
     }
   }
 }
+
+drawBoard
