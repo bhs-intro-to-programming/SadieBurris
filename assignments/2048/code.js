@@ -77,5 +77,4 @@ registerOnKeyDown((key) => {
   b[head[0]][head[1]] = snakeLength
   console.log(key, keyToNum, head)
   drawBoard()
-
 })
