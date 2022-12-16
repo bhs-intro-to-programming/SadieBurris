@@ -56,7 +56,7 @@ const appleEaten = () => {
 }
 
 const drawBoard = () => {
-  appleEaten()
+  //appleEaten()
   if (firstTime === true) b[head[0]][head[1]][0] = 1
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
