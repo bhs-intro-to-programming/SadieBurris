@@ -45,7 +45,7 @@ drawStart()
 
 const numOfSquares = 10
 let head = [0, 0]
-const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
+const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0, 0))
 const startingX = (width - height) / 2
 let snakeLength = 1
 const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
@@ -64,6 +64,10 @@ const drawBoard = () => {
 
 drawBoard(10)
 
+const appleEaten = () => {
+
+}
+
 registerOnKeyDown((key) => {
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
@@ -75,7 +79,7 @@ registerOnKeyDown((key) => {
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 2 : key === 'ArrowUp' ? 4 : key === 'ArrowDown' ? 6 : 'error'
   head = [newSquare(head[0], head[1])[keyToNum], newSquare(head[0], head[1])[keyToNum + 1]]
   b[head[0]][head[1]] = snakeLength
-  console.log(key, keyToNum, head)
   clear()
   drawBoard()
 })
+
