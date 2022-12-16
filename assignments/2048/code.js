@@ -43,15 +43,14 @@ drawStart()
 
 //Snake Game
 
-const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 1 : key === 'ArrowUp' ? 2 : key === 'ArrowDown' ? 3 : 'error'
-
 const startingX = (width - height) / 2
-let snakeLength
+let snakeLength = 1
 const newSquare = (row, col) => ([row, col + 1, row, col - 1, row - 1, col, row + 1, col])
+let firstTime = true
 
 const drawBoard = (numOfSquares) => {
   const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
-  b[0][0] = 1
+  if (firstTime === true) b[0][0] = 1
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
       let color = b[row][col] === 0 ? 'black' : 'green'
@@ -63,5 +62,6 @@ const drawBoard = (numOfSquares) => {
 drawBoard(10)
 
 registerOnKeyDown((key) => {
-
+  const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 1 : key === 'ArrowUp' ? 2 : key === 'ArrowDown' ? 3 : 'error'
+  b[]
 })
