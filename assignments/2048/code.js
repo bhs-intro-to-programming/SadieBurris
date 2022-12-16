@@ -78,7 +78,7 @@ registerOnKeyDown((key) => {
   }
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 2 : key === 'ArrowUp' ? 4 : key === 'ArrowDown' ? 6 : 'error'
   head = [newSquare(head[0], head[1])[keyToNum], newSquare(head[0], head[1])[keyToNum + 1]]
-  b[head[0]][head[1]] = snakeLength
+  b[head[0]][head[1]][0] = snakeLength
   clear()
   drawBoard()
 })
