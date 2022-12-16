@@ -45,6 +45,7 @@ registerOnKeyDown((key) => {
   b[head[0]][head[1]][0] = snakeLength
   if((head[0] === appleRow) && (head[1] === appleCol)) {
     console.log('yeah')
+    b[appleRow][appleCol][1] = 0
     appleEaten()
   }
   clear()
