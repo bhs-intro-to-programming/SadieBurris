@@ -7,7 +7,8 @@ const startingX = (width - height) / 2
 let snakeLength = 1
 const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
 let firstTime = true
-let appleLoc
+let appleRow
+let appleCol
 
 const appleEaten = () => {
   let appleRow = [Math.floor(Math.random() * numOfSquares)]
