@@ -1,6 +1,6 @@
 //Snake Game
 
-const numOfSquares = 30
+const numOfSquares = 15
 let head = [0, 0]
 const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill().map(() => Array(2).fill(0)))
 const startingX = (width - height) / 2
