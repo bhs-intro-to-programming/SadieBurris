@@ -48,17 +48,17 @@ registerOnclick((x, y) => {
 
 //snake game
 
-const b = Array(10).fill().map(() => Array(10).fill(0))
 const startingX = (width - height) / 2
 
-const drawBoard = () => {
+const drawBoard = (numOfSquares) => {
+  const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
   b[0][0] = 1
-  for (let row = 0; row < 10; row++) {
-    for (let col = 0; col < 10; col++) {
+  for (let row = 0; row < numOfSquares; row++) {
+    for (let col = 0; col < numOfSquares; col++) {
       let color = b[row][col] === 0 ? 'black' : 'green'
-      drawFilledRect(startingX + col * (height / 9), row * (height / 9), height / 9, height / 9, color)
+      drawFilledRect(startingX + col * (height / numOfSquares), row * (height / numOfSquares), height / numOfSquares, height / numOfSquares, color)
     }
   }
 }
 
-drawBoard()
+drawBoard(10)
