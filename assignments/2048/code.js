@@ -42,6 +42,9 @@ registerOnKeyDown((key) => {
   }
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 2 : key === 'ArrowUp' ? 4 : key === 'ArrowDown' ? 6 : 'error'
   head = [newSquare(head[0], head[1])[keyToNum], newSquare(head[0], head[1])[keyToNum + 1]]
+  if(head[0] !== 0 || head[1] !== 0) {
+    console.log('you can keep playing... but you died soooo... probably dont')
+  }
   b[head[0]][head[1]][0] = snakeLength
   if((head[0] === appleRow) && (head[1] === appleCol)) {
     b[appleRow][appleCol][1] = 0
