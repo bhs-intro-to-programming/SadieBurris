@@ -11,8 +11,8 @@ let appleRow
 let appleCol
 
 const appleEaten = () => {
-  let appleRow = Math.floor(Math.random() * numOfSquares)
-  let appleCol = Math.floor(Math.random() * numOfSquares)
+  appleRow = Math.floor(Math.random() * numOfSquares)
+  appleCol = Math.floor(Math.random() * numOfSquares)
   b[appleRow][appleCol][1] = 1
 }
 
