@@ -44,6 +44,9 @@ drawStart()
 //Snake Game
 
 const startingX = (width - height) / 2
+let snakeLength
+const 
+const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
 
 const drawBoard = (numOfSquares) => {
   const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
@@ -57,3 +60,7 @@ const drawBoard = (numOfSquares) => {
 }
 
 drawBoard(10)
+
+registerOnKeyDown((key) => {
+
+})
