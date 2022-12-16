@@ -71,7 +71,7 @@ drawBoard(10)
 registerOnKeyDown((key) => {
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
-      if (b[row][col][0] == !0) {
+      if (b[row][col][0] ==! 0) {
         b[row][col][0] -= 1
       }
     }
