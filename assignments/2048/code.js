@@ -43,13 +43,14 @@ drawStart()
 
 //Snake Game
 
+const numOfSquares
+const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
 const startingX = (width - height) / 2
 let snakeLength = 1
 const newSquare = (row, col) => ([row, col + 1, row, col - 1, row - 1, col, row + 1, col])
 let firstTime = true
 
 const drawBoard = (numOfSquares) => {
-  const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
   if (firstTime === true) b[0][0] = 1
   for (let row = 0; row < numOfSquares; row++) {
     for (let col = 0; col < numOfSquares; col++) {
