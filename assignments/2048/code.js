@@ -45,7 +45,7 @@ drawStart()
 
 const numOfSquares = 10
 let head = [0, 0]
-const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0, 0))
+const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill().map(() => Array(2).fill(0)))
 const startingX = (width - height) / 2
 let snakeLength = 1
 const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
