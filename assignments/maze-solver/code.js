@@ -4,7 +4,7 @@ const b = Array(11).fill().map(() => Array(11).fill().map(() => Array(2).fill(fa
 const directionsRows = []
 const directionsCols = []
 const defineDirections = (row, col) => [[row - 1, row, row + 1, row, 3, 4, 1, 2], [col, col + 1, col, col - 1]]
-const newLoc = (row, col, i) => b[defineDirections(row, col)[0][i]][defineDirections(row, col)[1][i]]
+const newLoc = (row, col, row) => b[defineDirections(row, col)[0][row]][defineDirections(row, col)[1][row]]
 
 const drawOrigonalBoard = () => {
   drawFilledRect(edgeSize, 0, height, height, 'black')
@@ -19,14 +19,14 @@ const solveBranch = (row, col, oldRow, oldCol, curPath) => {
   if (row === 8 && col === 8) {
     curPath.push(8,9)
     console.log(curPath)
-    for (let i = 0; i < curPath.length / 2; i++) {
-      drawLine(curPath[i * 2 + 1] * (height / 9) + edgeSize + height / 18, curPath[i * 2] * (height / 9) + height / 18, curPath[i * 2 + 3] * (height / 9) + edgeSize + height / 18, curPath[i * 2 + 2] * (height / 9) + height / 18, 'red', 4)
+    for (let row = 0; row < curPath.length / 2; row++) {
+      drawLine(curPath[row * 2 + 1] * (height / 9) + edgeSize + height / 18, curPath[row * 2] * (height / 9) + height / 18, curPath[row * 2 + 3] * (height / 9) + edgeSize + height / 18, curPath[row * 2 + 2] * (height / 9) + height / 18, 'red', 4)
     }
   } else {
-    for (let i = 0; i < 4; i++) {
-      if (defineDirections(row, col)[0][i] !== -1 && defineDirections(row, col)[0][i] !== 9 && defineDirections(row, col)[1][i] !== -1 && defineDirections(row, col)[1][i] !== 9) {
-        if (newLoc(row, col, i)[0] === true && newLoc(row, col, i)[1] === false) {
-          solveBranch(defineDirections(row, col)[0][i], defineDirections(row, col)[1][i], row, col, curPath)
+    for (let row = 0; row < 4; row++) {
+      if (defineDirections(row, col)[0][row] !== -1 && defineDirections(row, col)[0][row] !== 9 && defineDirections(row, col)[1][row] !== -1 && defineDirections(row, col)[1][row] !== 9) {
+        if (newLoc(row, col, row)[0] === true && newLoc(row, col, row)[1] === false) {
+          solveBranch(defineDirections(row, col)[0][row], defineDirections(row, col)[1][row], row, col, curPath)
         }
       }
     }
@@ -48,3 +48,13 @@ registerOnclick((x, y) => {
 
 //snake game
 
+const b = Array(10).fill().map(() => Array(10).fill(0))
+const startingX = (width - height) / 2
+
+const drawBoard = () => {
+  for (let row = 0; row < 10; row++) {
+    for (let col = 0; col < 10; col++) {
+      drawFilledRect(startingX + col * (height / 9), row * (height / 9), height / 9, height / 9, 'black')
+    }
+  }
+}
