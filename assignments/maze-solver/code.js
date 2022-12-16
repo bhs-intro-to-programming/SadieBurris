@@ -61,4 +61,4 @@ const drawBoard = (numOfSquares) => {
   }
 }
 
-drawBoard(10)
+drawBoard(20)
