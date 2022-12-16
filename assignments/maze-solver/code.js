@@ -1,5 +1,5 @@
 //I forgot arrays are mutible like the one time I dont want them to be
-const edgeSize = (width - height) / 2
+/*const edgeSize = (width - height) / 2
 const b = Array(11).fill().map(() => Array(11).fill().map(() => Array(2).fill(false)))
 const directionsRows = []
 const directionsCols = []
@@ -43,3 +43,8 @@ registerOnclick((x, y) => {
     drawFilledRect(edgeSize + col * height / 9, row * height / 9, height / 9, height / 9, 'gray')
   }
 })
+*/
+
+
+//snake game
+
