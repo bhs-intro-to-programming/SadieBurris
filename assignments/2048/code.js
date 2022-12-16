@@ -43,7 +43,7 @@ drawStart()
 
 //Snake Game
 
-const numOfSquares = 1
+const numOfSquares = 10
 const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill(0))
 const startingX = (width - height) / 2
 let snakeLength = 1
