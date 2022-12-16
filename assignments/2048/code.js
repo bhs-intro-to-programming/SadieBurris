@@ -4,7 +4,7 @@ const numOfSquares = 10
 let head = [0, 0]
 const b = Array(numOfSquares).fill().map(() => Array(numOfSquares).fill().map(() => Array(2).fill(0)))
 const startingX = (width - height) / 2
-let snakeLength = 2
+let snakeLength = 1
 const newSquare = (row, col) => [row, col + 1, row, col - 1, row - 1, col, row + 1, col]
 let firstTime = true
 let appleRow
@@ -45,6 +45,7 @@ registerOnKeyDown((key) => {
   b[head[0]][head[1]][0] = snakeLength
   if((head[0] === appleRow) && (head[1] === appleCol)) {
     b[appleRow][appleCol][1] = 0
+    snakeLength++
     appleEaten()
   }
   clear()
