@@ -10,8 +10,8 @@ let firstTime = true
 let appleLoc
 
 const appleEaten = () => {
-  appleRow = [Math.floor(Math.random() * numOfSquares)]
-  appleCol = [Math.floor(Math.random() * numOfSquares)]
+  let appleRow = [Math.floor(Math.random() * numOfSquares)]
+  let appleCol = [Math.floor(Math.random() * numOfSquares)]
   b[appleRow][appleCol][1] = 1
 }
 
