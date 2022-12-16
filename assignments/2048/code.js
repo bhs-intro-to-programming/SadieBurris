@@ -42,7 +42,7 @@ registerOnKeyDown((key) => {
   }
   const keyToNum = key === 'ArrowRight' ? 0 : key === 'ArrowLeft' ? 2 : key === 'ArrowUp' ? 4 : key === 'ArrowDown' ? 6 : 'error'
   head = [newSquare(head[0], head[1])[keyToNum], newSquare(head[0], head[1])[keyToNum + 1]]
-  if(b[head[0]][head[1]][0] !== 0) {
+  if(b[head[0]][head[1]][0] !== 0 || b[head[0][head[1] === undefined) {
     console.log('you can keep playing... but you died soooo... probably dont')
   }
   b[head[0]][head[1]][0] = snakeLength
