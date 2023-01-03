@@ -1,42 +1,163 @@
-// This is an example of a function definition. This function is called by the
-// underlying animation framework thanks to the call to animate below. This
-// function is responsible for drawing one frame of the animation. You can
-// change the code in here using the same functions you had in the simple
-// drawing exercise to draw shapes. The argument to this function, time, is the
-// number of milliseconds (one millionth of a second) since the program started.
-const drawFrame = (time) => {
+/*
+let x = Math.random();
+let start = now();
+//let x = 100;
+
+const drawMovingThing = () => {
+  let y = ((now() - start)/3);
+  let currentX = x + ((now() - start)/5);
   clear();
-  drawFilledCircle((time / 3) % width, height / 2, 25, 'blue');
-  drawFallingTriangle(width / 2, time);
+  drawFilledRect(0, 0, 500, 500, 'blue');
+  drawFilledCircle(currentX, y, 5, 'white');
+  if (currentX >= width || y >= height) {
+      x = Math.random() * width;
+      start = now();
+  };
 };
 
-// This is a function that we define to make it easier to draw a triangle. You
-// may want to experiment with writing your own functions using this one as a
-// model to draw other shapes.
-const drawTriangle = (x1, y1, x2, y2, x3, y3, color, width = 1) => {
-  drawLine(x1, y1, x2, y2, color, width);
-  drawLine(x2, y2, x3, y3, color, width);
-  drawLine(x3, y3, x1, y1, color, width);
+animate(drawMovingThing);
+*/
+
+/*
+const drawBouncingThing = (time) => {
+  var xLocation = time % (width * 2);
+  clear()
+  if(xLocation <= width) {
+    drawFilledCircle(xLocation, 200, 5, 'blue');
+  } else if(xLocation >= width) {
+    drawFilledCircle(width - (xLocation - width), 200, 5, 'blue');
+  }
 };
 
-// This draws a falling trangle of a particular shape whose bottom point is
-// positioned at x and whose y is a function of time.
-const drawFallingTriangle = (x, time) => {
-  // Figure out the x values relative to the passed in x
-  let x1 = x - 50;
-  let x2 = x;
-  let x3 = x + 50;
+animate(drawBouncingThing);
+*/
 
-  // Figure out the y values as a function of time.
-  let y1 = (time / 4) % height;
-  let y2 = y1 + 37;
-  let y3 = y1 - 13;
 
-  // Actually draw the triangle.
-  drawTriangle(x1, y1, x2, y2, x3, y3, 'pink', 3);
-};
+/*
+RULES!!
+Living cells with 2 or 3 living neighbors live on
+Any dead cell with exactly 3 living neighbors is born
+All other cells die
+*/
 
-// Leave this code here or the animation won't run. Also don't change the name
-// of drawFrame either here or where it is defined. (Or, if you must, change it
-// the same way in both places.)
-animate(drawFrame);
+const deadOrNo1 = []
+const deadOrNo2 = []
+const gameOfLifeStart = () => {
+  for (let j = 0; j < height; j++) {
+    deadOrNo1.push([])
+    deadOrNo2.push([])
+    for (let i = 0; i < width; i++) {
+      let color = Math.random() > 0.9 ? 'black' : 'white'
+      drawFilledRect(i, j, 1, 1, color)
+      if (color === 'black') {
+        deadOrNo2[j].push(1);
+        deadOrNo1[j].push(1);
+      } else {
+        deadOrNo2[j].push(0);
+        deadOrNo1[j].push(0);
+      }
+    }
+  }
+}
+
+const neighbors2 = (i, j) => {
+  let neighborsNum = 0
+  for (let countX = -1; countX < 2; countX++) {
+    for (let countY = -1; countY < 2; countY++) {
+      let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
+      let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
+      if (deadOrNo1[checkPosJ][checkPosI] === 1) {
+        neighborsNum++
+      }
+    }
+  }
+  return neighborsNum
+}
+const neighbors1 = (i, j) => {
+  let neighborsNum = 0;
+  for (let countX = -1; countX < 2; countX++) {
+    for (let countY = -1; countY < 2; countY++) {
+      let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
+      let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
+      if (deadOrNo2[checkPosJ][checkPosI] === 1) {
+        neighborsNum++
+      }
+    }
+  }
+  return neighborsNum
+}
+
+const newLife1 = (nei, i, j) => {
+  if (deadOrNo2[j][i] === 1) {
+    if (nei === 3 || nei === 4) {
+      return true
+    } else {
+      return false
+    }
+  } else if (deadOrNo2[j][i] === 0) {
+    if (nei === (3 || 6)) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return 'something is wrong'
+  }
+}
+const newLife2 = (nei, i, j) => {
+  if (deadOrNo1[j][i] === 1) {
+    if (nei === 3 || nei === 4) {
+      return true
+    } else {
+      return false
+    }
+  } else if (deadOrNo1[j][i] === 0) {
+    if (nei === (3 || 6)) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return 'something is wrong'
+  }
+}
+
+const gameOfLife2 = () => {
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      if (newLife2(neighbors2(i, j), i, j) === true) {
+        deadOrNo2[j][i] = 1
+        drawFilledRect(i, j, 1, 1, 'black')
+      } else if (newLife2(neighbors2(i, j), i, j) === false) {
+        deadOrNo2[j][i] = 0
+        drawFilledRect(i, j, 1, 1, 'white')
+      } else {
+        drawFilledRect(i, j, 1, 1, 'red')
+      }
+    }
+  }
+  //gameOfLife1();
+}
+const gameOfLife1 = () => {
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      if (newLife1(neighbors1(i, j), i, j) === true) {
+        deadOrNo1[j][i] = 1
+        drawFilledRect(i, j, 1, 1, 'black')
+      } else if (newLife1(neighbors1(i, j), i, j) === false) {
+        deadOrNo1[j][i] = 0
+        drawFilledRect(i, j, 1, 1, 'white')
+      } else {
+        drawFilledRect(i, j, 1, 1, 'red')
+      }
+    }
+  }
+  gameOfLife2();
+}
+
+const gameOfLife = () => {
+  gameOfLifeStart()
+  gameOfLife1()
+}
+
+gameOfLife()
