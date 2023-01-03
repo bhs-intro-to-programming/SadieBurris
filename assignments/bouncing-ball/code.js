@@ -1,32 +1,141 @@
 // Change these to change the physics of our world.
+/*
 let bounce = 0.7;
 let gravity = 0.001;
 let ballSize = 15;
+let start = now()
 
-// The framework will draw the background for us. It also provides three
-// functions we can use:
-//
-// drawShadow(size, darkness) - draws an elliptical shadow on the ground below
-// the ball at the given size and darkness.
-//
-// drawBall(height, size) - draws the ball at the given height and size.
-//
-// now() - returns the number of milliseconds since the program started.
+const drawFrame = (time) => {
+   drawBall(time/15, ballSize)
+    if (now() - start/15 <= 100) {
+      start = now();
+    }
+};
 
-// Implement this in terms of drawShadow(), drawBall() and the functions below.
-// May also need to define a variable to keep track of when each bounce starts
-// as the time value that is passed in is just the current time, i.e. the same
-// thing we would get from calling now().
-const drawFrame = (time) => {};
-
-// Compute the height in pixels at time t after the ball hit the ground
-const height = (t) => 0;
-
-// Compute the shade of the shadow. 0 is black; 255 is white.
-const shadowDarkness = (h) => 0;
-
-// Compute the size of the shadow.
-const shadowSize = (h) => 0;
 
 // Call the animate function from the framework.
 animate(drawFrame);
+*/
+
+
+const deadOrNo1 = []
+const deadOrNo2 = []
+const gameOfLifeStart = () => {
+  for (let j = 0; j < height; j++) {
+    deadOrNo1.push([])
+    deadOrNo2.push([])
+    for (let i = 0; i < width; i++) {
+      let color = Math.random() > 0.9 ? 'black' : 'white'
+      drawFilledRect(i, j, 1, 1, color)
+      if (color === 'black') {
+        deadOrNo2[j].push(1);
+        deadOrNo1[j].push(1);
+      } else {
+        deadOrNo2[j].push(0);
+        deadOrNo1[j].push(0);
+      }
+    }
+  }
+}
+
+const neighbors2 = (i, j) => {
+  let neighborsNum = 0
+  for (let countX = -1; countX < 2; countX++) {
+    for (let countY = -1; countY < 2; countY++) {
+      let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
+      let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
+      if (deadOrNo1[checkPosJ][checkPosI] === 1) {
+        neighborsNum++
+      }
+    }
+  }
+  return neighborsNum
+}
+const neighbors1 = (i, j) => {
+  let neighborsNum = 0;
+  for (let countX = -1; countX < 2; countX++) {
+    for (let countY = -1; countY < 2; countY++) {
+      let checkPosJ = j + countY === -1 ? height - 1 : j + countY === height ? 0 : j + countY
+      let checkPosI = i + countX === -1 ? width - 1 : i + countX === width ? 0 : i + countX
+      if (deadOrNo2[checkPosJ][checkPosI] === 1) {
+        neighborsNum++
+      }
+    }
+  }
+  return neighborsNum
+}
+
+const newLife1 = (nei, i, j) => {
+  if (deadOrNo2[j][i] === 1) {
+    if (nei === 3 || nei === 4) {
+      return true
+    } else {
+      return false
+    }
+  } else if (deadOrNo2[j][i] === 0) {
+    if (nei === 3 || nei === 6) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return 'something is wrong'
+  }
+}
+const newLife2 = (nei, i, j) => {
+  if (deadOrNo1[j][i] === 1) {
+    if (nei === 3 || nei === 4) {
+      return true
+    } else {
+      return false
+    }
+  } else if (deadOrNo1[j][i] === 0) {
+    if (nei === 3 || nei === 6) {
+      return true
+    } else {
+      return false
+    }
+  } else {
+    return 'something is wrong'
+  }
+}
+
+const gameOfLife2 = () => {
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      if (newLife2(neighbors2(i, j), i, j) === true) {
+        deadOrNo2[j][i] = 1
+        drawFilledRect(i, j, 1, 1, 'black')
+      } else if (newLife2(neighbors2(i, j), i, j) === false) {
+        deadOrNo2[j][i] = 0
+        drawFilledRect(i, j, 1, 1, 'white')
+      } else {
+        drawFilledRect(i, j, 1, 1, 'red')
+      }
+    }
+  }
+  //gameOfLife1();
+}
+const gameOfLife1 = () => {
+  for (let j = 0; j < height; j++) {
+    for (let i = 0; i < width; i++) {
+      if (newLife1(neighbors1(i, j), i, j) === true) {
+        deadOrNo1[j][i] = 1
+        drawFilledRect(i, j, 1, 1, 'black')
+      } else if (newLife1(neighbors1(i, j), i, j) === false) {
+        deadOrNo1[j][i] = 0
+        drawFilledRect(i, j, 1, 1, 'white')
+      } else {
+        drawFilledRect(i, j, 1, 1, 'red')
+      }
+    }
+  }
+  gameOfLife2();
+}
+
+const gameOfLife = () => {
+  gameOfLifeStart()
+  gameOfLife1()
+}
+
+animate(gameOfLife())
